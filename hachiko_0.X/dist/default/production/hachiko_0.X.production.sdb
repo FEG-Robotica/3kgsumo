@@ -1,0 +1,527 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4431 ]
+[d frameptr 4065 ]
+"1 C:\Users\vinim\Desktop\hachiko_0.X/bt.h
+[v _setBT setBT `(v  1 e 1 0 ]
+"27
+[v _testBuff testBuff `(v  1 e 1 0 ]
+"38
+[v _picUSART picUSART `(v  1 e 1 0 ]
+"44
+[v _readUSART readUSART `(uc  1 e 1 0 ]
+"48
+[v _stringUSART stringUSART `(v  1 e 1 0 ]
+"63 C:\Users\vinim\Desktop\hachiko_0.X/config.h
+[v _setIO setIO `(v  1 e 1 0 ]
+"1 C:\Users\vinim\Desktop\hachiko_0.X/pwm.h
+[v _setPWM setPWM `(v  1 e 1 0 ]
+"12 C:\Users\vinim\Desktop\hachiko_0.X/timer.h
+[v _setTMR0 setTMR0 `(v  1 e 1 0 ]
+"21
+[v _setTMR1 setTMR1 `(v  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"41 C:\Users\vinim\Desktop\hachiko_0.X\hachiko_0.c
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+"96
+[v _main main `(v  1 e 1 0 ]
+"609
+[v _moverMotor moverMotor `(v  1 e 1 0 ]
+"643
+[v _pararMotor pararMotor `(v  1 e 1 0 ]
+[v i2_pararMotor pararMotor `(v  1 e 1 0 ]
+"655
+[v _testarDistancia testarDistancia `(v  1 e 1 0 ]
+"700
+[v _testarLinha testarLinha `(v  1 e 1 0 ]
+"765
+[v _estrela estrela `(v  1 e 1 0 ]
+"790
+[v _arco arco `(v  1 e 1 0 ]
+"365 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f4431.h
+[v _OVDCONS OVDCONS `VEuc  1 e 1 @3946 ]
+"435
+[v _OVDCOND OVDCOND `VEuc  1 e 1 @3947 ]
+"567
+[v _DTCON DTCON `VEuc  1 e 1 @3949 ]
+"693
+[v _PWMCON1 PWMCON1 `VEuc  1 e 1 @3950 ]
+"759
+[v _PWMCON0 PWMCON0 `VEuc  1 e 1 @3951 ]
+"843
+[v _PDC3H PDC3H `VEuc  1 e 1 @3954 ]
+"850
+[v _PDC3L PDC3L `VEuc  1 e 1 @3955 ]
+"857
+[v _PDC2H PDC2H `VEuc  1 e 1 @3956 ]
+"864
+[v _PDC2L PDC2L `VEuc  1 e 1 @3957 ]
+"871
+[v _PDC1H PDC1H `VEuc  1 e 1 @3958 ]
+"878
+[v _PDC1L PDC1L `VEuc  1 e 1 @3959 ]
+"885
+[v _PDC0H PDC0H `VEuc  1 e 1 @3960 ]
+"892
+[v _PDC0L PDC0L `VEuc  1 e 1 @3961 ]
+"899
+[v _PTPERH PTPERH `VEuc  1 e 1 @3962 ]
+"906
+[v _PTPERL PTPERL `VEuc  1 e 1 @3963 ]
+"913
+[v _PTMRH PTMRH `VEuc  1 e 1 @3964 ]
+"920
+[v _PTMRL PTMRL `VEuc  1 e 1 @3965 ]
+"927
+[v _PTCON1 PTCON1 `VEuc  1 e 1 @3966 ]
+"954
+[v _PTCON0 PTCON0 `VEuc  1 e 1 @3967 ]
+[s S328 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"1077
+[s S337 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 AN4 1 0 :1:4 
+`uc 1 AN5 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+`uc 1 OSC1 1 0 :1:7 
+]
+[s S346 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+`uc 1 CLKO 1 0 :1:6 
+`uc 1 CLKI 1 0 :1:7 
+]
+[s S354 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 RJPU 1 0 :1:7 
+]
+[u S358 . 1 `S328 1 . 1 0 `S337 1 . 1 0 `S346 1 . 1 0 `S354 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES358  1 e 1 @3968 ]
+"1197
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+[s S535 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"1218
+[s S544 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S547 . 1 `S535 1 . 1 0 `S544 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES547  1 e 1 @3969 ]
+[s S394 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"1339
+[s S403 . 1 `uc 1 T1OSO 1 0 :1:0 
+`uc 1 T1OSI 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 INT0 1 0 :1:3 
+`uc 1 INT1 1 0 :1:4 
+`uc 1 INT2 1 0 :1:5 
+`uc 1 TX 1 0 :1:6 
+`uc 1 RX 1 0 :1:7 
+]
+[s S412 . 1 `uc 1 T13CKI 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T0CKI 1 0 :1:3 
+`uc 1 SDA 1 0 :1:4 
+`uc 1 SCK 1 0 :1:5 
+`uc 1 CK 1 0 :1:6 
+`uc 1 DT 1 0 :1:7 
+]
+[s S421 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_FLTA 1 0 :1:1 
+]
+[s S424 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_FLTB 1 0 :1:2 
+]
+[s S427 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_SS 1 0 :1:6 
+]
+[s S430 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nFLTA 1 0 :1:1 
+`uc 1 nFLTB 1 0 :1:2 
+`uc 1 T5CKI 1 0 :1:3 
+`uc 1 SDI 1 0 :1:4 
+`uc 1 SCL 1 0 :1:5 
+`uc 1 nSS 1 0 :1:6 
+`uc 1 SDO 1 0 :1:7 
+]
+[s S439 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 FLTA 1 0 :1:1 
+`uc 1 FLTB 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 SS 1 0 :1:6 
+]
+[s S445 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+`uc 1 PA1 1 0 :1:2 
+]
+[u S449 . 1 `S394 1 . 1 0 `S403 1 . 1 0 `S412 1 . 1 0 `S421 1 . 1 0 `S424 1 . 1 0 `S427 1 . 1 0 `S430 1 . 1 0 `S439 1 . 1 0 `S445 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES449  1 e 1 @3970 ]
+"1534
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S290 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"1555
+[s S299 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S302 . 1 `S290 1 . 1 0 `S299 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES302  1 e 1 @3971 ]
+"2273
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"2495
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"2717
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"2939
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"3161
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"3263
+[v _ADCHS ADCHS `VEuc  1 e 1 @3993 ]
+[s S173 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"3556
+[s S181 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TBIE 1 0 :1:4 
+]
+[s S184 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+]
+[u S188 . 1 `S173 1 . 1 0 `S181 1 . 1 0 `S184 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES188  1 e 1 @3997 ]
+[s S138 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"3636
+[s S146 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TBIF 1 0 :1:4 
+]
+[s S149 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[u S153 . 1 `S138 1 . 1 0 `S146 1 . 1 0 `S149 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES153  1 e 1 @3998 ]
+[s S84 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4414
+[s S93 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S96 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S99 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S102 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S105 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S107 . 1 `S84 1 . 1 0 `S93 1 . 1 0 `S96 1 . 1 0 `S99 1 . 1 0 `S102 1 . 1 0 `S105 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES107  1 e 1 @4011 ]
+[s S32 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"4622
+[s S41 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S50 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S53 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S55 . 1 `S32 1 . 1 0 `S41 1 . 1 0 `S50 1 . 1 0 `S53 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES55  1 e 1 @4012 ]
+"4839
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"4851
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"4863
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"5152
+[v _ANSEL0 ANSEL0 `VEuc  1 e 1 @4024 ]
+"5214
+[v _ANSEL1 ANSEL1 `VEuc  1 e 1 @4025 ]
+"6453
+[v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
+"6460
+[v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
+"6871
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"6878
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S241 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"7339
+[s S250 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S259 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S263 . 1 `S241 1 . 1 0 `S250 1 . 1 0 `S259 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES263  1 e 1 @4082 ]
+"8695
+[v _PSA PSA `VEb  1 e 0 @32427 ]
+"8884
+[v _RD16 RD16 `VEb  1 e 0 @32367 ]
+"9151
+[v _T016BIT T016BIT `VEb  1 e 0 @32430 ]
+"9157
+[v _T0CS T0CS `VEb  1 e 0 @32429 ]
+"9169
+[v _T0PS0 T0PS0 `VEb  1 e 0 @32424 ]
+"9187
+[v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @32364 ]
+"9196
+[v _T1OSCEN T1OSCEN `VEb  1 e 0 @32363 ]
+"9208
+[v _T1RUN T1RUN `VEb  1 e 0 @32366 ]
+"9211
+[v _T1SYNC T1SYNC `VEb  1 e 0 @32362 ]
+"9262
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"9268
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"9271
+[v _TMR1CS TMR1CS `VEb  1 e 0 @32361 ]
+"9277
+[v _TMR1IF TMR1IF `VEb  1 e 0 @31984 ]
+"9283
+[v _TMR1ON TMR1ON `VEb  1 e 0 @32360 ]
+"25 C:\Users\vinim\Desktop\hachiko_0.X\hachiko_0.c
+[v _acao acao `*.2uc  1 e 2 0 ]
+"26
+[v _velocidade velocidade `ui  1 e 2 0 ]
+"27
+[v _ini ini `i  1 e 2 0 ]
+"96
+[v _main main `(v  1 e 1 0 ]
+{
+"313
+[v main@cont_tmr_703 cont_tmr `uc  1 a 1 20 ]
+"312
+[v main@cont_zig cont_zig `uc  1 a 1 16 ]
+"218
+[v main@cont cont `i  1 a 2 17 ]
+"217
+[v main@aux aux `uc  1 a 1 19 ]
+"146
+[v main@cont_tmr cont_tmr `uc  1 a 1 15 ]
+"607
+} 0
+"700
+[v _testarLinha testarLinha `(v  1 e 1 0 ]
+{
+"728
+} 0
+"48 C:\Users\vinim\Desktop\hachiko_0.X/bt.h
+[v _stringUSART stringUSART `(v  1 e 1 0 ]
+{
+"49
+[v stringUSART@i i `i  1 a 2 5 ]
+"48
+[v stringUSART@frase frase `*.32uc  1 p 2 1 ]
+"57
+} 0
+"21 C:\Users\vinim\Desktop\hachiko_0.X/timer.h
+[v _setTMR1 setTMR1 `(v  1 e 1 0 ]
+{
+"42
+} 0
+"12
+[v _setTMR0 setTMR0 `(v  1 e 1 0 ]
+{
+"20
+} 0
+"1 C:\Users\vinim\Desktop\hachiko_0.X/pwm.h
+[v _setPWM setPWM `(v  1 e 1 0 ]
+{
+"16
+} 0
+"63 C:\Users\vinim\Desktop\hachiko_0.X/config.h
+[v _setIO setIO `(v  1 e 1 0 ]
+{
+"73
+} 0
+"1 C:\Users\vinim\Desktop\hachiko_0.X/bt.h
+[v _setBT setBT `(v  1 e 1 0 ]
+{
+"26
+} 0
+"38
+[v _picUSART picUSART `(v  1 e 1 0 ]
+{
+[v picUSART@status status `uc  1 a 1 wreg ]
+[v picUSART@status status `uc  1 a 1 wreg ]
+[v picUSART@status status `uc  1 a 1 1 ]
+"43
+} 0
+"27
+[v _testBuff testBuff `(v  1 e 1 0 ]
+{
+"29
+} 0
+"765 C:\Users\vinim\Desktop\hachiko_0.X\hachiko_0.c
+[v _estrela estrela `(v  1 e 1 0 ]
+{
+"786
+} 0
+"655
+[v _testarDistancia testarDistancia `(v  1 e 1 0 ]
+{
+"699
+} 0
+"643
+[v _pararMotor pararMotor `(v  1 e 1 0 ]
+{
+"654
+} 0
+"609
+[v _moverMotor moverMotor `(v  1 e 1 0 ]
+{
+[v moverMotor@lado lado `uc  1 a 1 wreg ]
+[v moverMotor@lado lado `uc  1 a 1 wreg ]
+[v moverMotor@sentido sentido `uc  1 p 1 7 ]
+[v moverMotor@velocidade velocidade `ui  1 p 2 8 ]
+[v moverMotor@lado lado `uc  1 a 1 10 ]
+"641
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 5 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 1 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 3 ]
+"53
+} 0
+"41 C:\Users\vinim\Desktop\hachiko_0.X\hachiko_0.c
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+{
+"94
+} 0
+"643
+[v i2_pararMotor pararMotor `(v  1 e 1 0 ]
+{
+"654
+} 0
+"44 C:\Users\vinim\Desktop\hachiko_0.X/bt.h
+[v _readUSART readUSART `(uc  1 e 1 0 ]
+{
+"45
+[v readUSART@ler ler `uc  1 a 1 0 ]
+"47
+} 0
