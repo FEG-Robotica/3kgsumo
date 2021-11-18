@@ -6,11 +6,11 @@
 #include "timer.h"
 
 #define _XTAL_FREQ      20000000        //mudar para 20 MHz quando for testar na placa
-#define dist_dir        PORTAbits.RA0   //RA0
+#define dist_dir        PORTAbits.RA2   //RA0
 #define dist_fdir       PORTAbits.RA3   //RA1
 #define dist_cent       PORTCbits.RC0   //RC0   
-#define dist_fesq       PORTAbits.RA2   //RA2
-#define dist_esq        PORTAbits.RA4   //RA4
+#define dist_fesq       PORTAbits.RA0   //RA2
+#define dist_esq        PORTAbits.RA1   //RA4
 #define lin_fdir        PORTCbits.RC3
 #define lin_tdir        PORTCbits.RC5
 #define lin_tesq        PORTEbits.RE1
@@ -101,7 +101,7 @@ void main(void) {
     setTMR0();
     setTMR1();
     
-    ADCHS = 0b01000010;         //habilita os pinos AN7 e AN8(RE1 e RE2, respectivamente) como canais de conversao analogica digital
+    //ADCHS = 0b01000010;         //habilita os pinos AN7 e AN8(RE1 e RE2, respectivamente) como canais de conversao analogica digital
     
     
     INTCONbits.GIE = 1;         //habilita interrupção global
@@ -110,10 +110,20 @@ void main(void) {
     led0 = 0;
     led1 = 1;
     
+    //mtr_dir = 1;
+    //mtr_esq = 1;
+    
     //TMR0L = 0x3D;
     //TMR0H = 0xB4;             //começa tmr0 em aproximadamente 12,1072 ms
     
-    while(ini == 0);
+    while(ini == 0){
+    /*    moverMotor('e','f',50);
+        __delay_ms(6000);
+        pararMotor();
+        moverMotor('d','f',50);
+        __delay_ms(6000);
+        pararMotor();*/
+    }
     stringUSART("aqui");
     
     while(1){
@@ -568,19 +578,19 @@ void main(void) {
             __delay_ms(100);
             picUSART('0');
         }
-        else if(!dist_fdir){
+        if(!dist_fdir){
             __delay_ms(100);
             picUSART('1');
         }
-        else if(!dist_cent){
+        if(!dist_cent){
             __delay_ms(100);
             picUSART('2');
         }
-        else if(!dist_fesq){
+        if(!dist_fesq){
             __delay_ms(100);
             picUSART('3');
         }
-        else if(!dist_esq){
+        if(!dist_esq){
             __delay_ms(100);
             picUSART('4');
         }
