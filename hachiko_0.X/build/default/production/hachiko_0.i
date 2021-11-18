@@ -4,46 +4,46 @@
 # 288 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "hachiko_0.c" 2
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\xc8debug.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 1 3
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 1 3
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 2 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
 
 
 
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int wchar_t;
-# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+# 122 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
-# 176 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+# 168 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __int24 int24_t;
-# 212 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+# 204 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __uint24 uint24_t;
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
 
 
 int atoi (const char *);
@@ -57,8 +57,6 @@ long double strtold (const char *restrict, char **restrict);
 
 
 
-
-
 long strtol (const char *restrict, char **restrict, int);
 unsigned long strtoul (const char *restrict, char **restrict, int);
 long long strtoll (const char *restrict, char **restrict, int);
@@ -66,17 +64,13 @@ unsigned long long strtoull (const char *restrict, char **restrict, int);
 
 int rand (void);
 void srand (unsigned);
-# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 3
+
           void abort (void);
 int atexit (void (*) (void));
           void exit (int);
           void _Exit (int);
-# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 3
+
 void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-
-
-
 
 __attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
 
@@ -92,14 +86,17 @@ div_t div (int, int);
 ldiv_t ldiv (long, long);
 lldiv_t lldiv (long long, long long);
 
-
 typedef struct { unsigned int quot, rem; } udiv_t;
 typedef struct { unsigned long quot, rem; } uldiv_t;
 udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
-# 104 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 3
+
+
+
+
+
 size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\xc8debug.h" 2 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 2 3
 
 
 
@@ -110,29 +107,135 @@ size_t __ctype_get_mb_cur_max(void);
 
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 1 3
+# 23 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 2 3
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\builtins.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
 
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\htc.h" 1 3
+typedef short int16_t;
+# 173 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int32_t;
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 2 3
+
+
+typedef long long int64_t;
+# 188 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18_chip_select.h" 1 3
-# 534 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18_chip_select.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 1 3
-# 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\__at.h" 1 3
-# 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 2 3
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 209 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\builtins.h" 2 3
+
+
+
+#pragma intrinsic(__nop)
+extern void __nop(void);
+
+
+#pragma intrinsic(_delay)
+extern __attribute__((nonreentrant)) void _delay(uint32_t);
+#pragma intrinsic(_delaywdt)
+extern __attribute__((nonreentrant)) void _delaywdt(uint32_t);
+
+#pragma intrinsic(_delay3)
+extern __attribute__((nonreentrant)) void _delay3(uint8_t);
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 2 3
+# 33 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18.h" 1 3
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\htc.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18.h" 2 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18_chip_select.h" 1 3
+# 630 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18_chip_select.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 1 3
+# 45 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\__at.h" 1 3
+# 45 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 2 3
 
 
 
@@ -161,7 +264,7 @@ typedef union {
     };
 } DFLTCONbits_t;
 extern volatile DFLTCONbits_t DFLTCONbits __attribute__((address(0xF60)));
-# 116 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 117 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char CAP3CON __attribute__((address(0xF61)));
 
 __asm("CAP3CON equ 0F61h");
@@ -182,7 +285,7 @@ typedef union {
     };
 } CAP3CONbits_t;
 extern volatile CAP3CONbits_t CAP3CONbits __attribute__((address(0xF61)));
-# 175 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 176 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char CAP2CON __attribute__((address(0xF62)));
 
 __asm("CAP2CON equ 0F62h");
@@ -203,7 +306,7 @@ typedef union {
     };
 } CAP2CONbits_t;
 extern volatile CAP2CONbits_t CAP2CONbits __attribute__((address(0xF62)));
-# 234 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 235 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char CAP1CON __attribute__((address(0xF63)));
 
 __asm("CAP1CON equ 0F63h");
@@ -224,7 +327,7 @@ typedef union {
     };
 } CAP1CONbits_t;
 extern volatile CAP1CONbits_t CAP1CONbits __attribute__((address(0xF63)));
-# 293 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 294 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char CAP3BUFL __attribute__((address(0xF64)));
 
 __asm("CAP3BUFL equ 0F64h");
@@ -318,7 +421,7 @@ typedef union {
     };
 } OVDCONSbits_t;
 extern volatile OVDCONSbits_t OVDCONSbits __attribute__((address(0xF6A)));
-# 435 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 436 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char OVDCOND __attribute__((address(0xF6B)));
 
 __asm("OVDCOND equ 0F6Bh");
@@ -340,7 +443,7 @@ typedef union {
     };
 } OVDCONDbits_t;
 extern volatile OVDCONDbits_t OVDCONDbits __attribute__((address(0xF6B)));
-# 505 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 506 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char FLTCONFIG __attribute__((address(0xF6C)));
 
 __asm("FLTCONFIG equ 0F6Ch");
@@ -359,7 +462,7 @@ typedef union {
     };
 } FLTCONFIGbits_t;
 extern volatile FLTCONFIGbits_t FLTCONFIGbits __attribute__((address(0xF6C)));
-# 567 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 568 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char DTCON __attribute__((address(0xF6D)));
 
 __asm("DTCON equ 0F6Dh");
@@ -392,7 +495,7 @@ typedef union {
     };
 } DTCONbits_t;
 extern volatile DTCONbits_t DTCONbits __attribute__((address(0xF6D)));
-# 693 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 694 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PWMCON1 __attribute__((address(0xF6E)));
 
 __asm("PWMCON1 equ 0F6Eh");
@@ -415,7 +518,7 @@ typedef union {
     };
 } PWMCON1bits_t;
 extern volatile PWMCON1bits_t PWMCON1bits __attribute__((address(0xF6E)));
-# 759 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 760 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PWMCON0 __attribute__((address(0xF6F)));
 
 __asm("PWMCON0 equ 0F6Fh");
@@ -437,7 +540,7 @@ typedef union {
     };
 } PWMCON0bits_t;
 extern volatile PWMCON0bits_t PWMCON0bits __attribute__((address(0xF6F)));
-# 829 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 830 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char SEVTCMPH __attribute__((address(0xF70)));
 
 __asm("SEVTCMPH equ 0F70h");
@@ -549,7 +652,7 @@ typedef union {
     };
 } PTCON1bits_t;
 extern volatile PTCON1bits_t PTCON1bits __attribute__((address(0xF7E)));
-# 954 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 955 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PTCON0 __attribute__((address(0xF7F)));
 
 __asm("PTCON0 equ 0F7Fh");
@@ -573,7 +676,7 @@ typedef union {
     };
 } PTCON0bits_t;
 extern volatile PTCON0bits_t PTCON0bits __attribute__((address(0xF7F)));
-# 1036 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1037 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PORTA __attribute__((address(0xF80)));
 
 __asm("PORTA equ 0F80h");
@@ -616,7 +719,7 @@ typedef union {
     };
 } PORTAbits_t;
 extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
-# 1197 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1198 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PORTB __attribute__((address(0xF81)));
 
 __asm("PORTB equ 0F81h");
@@ -639,7 +742,7 @@ typedef union {
     };
 } PORTBbits_t;
 extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
-# 1268 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1269 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PORTC __attribute__((address(0xF82)));
 
 __asm("PORTC equ 0F82h");
@@ -712,7 +815,7 @@ typedef union {
     };
 } PORTCbits_t;
 extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
-# 1534 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1535 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PORTD __attribute__((address(0xF83)));
 
 __asm("PORTD equ 0F83h");
@@ -735,7 +838,7 @@ typedef union {
     };
 } PORTDbits_t;
 extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
-# 1605 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1606 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PORTE __attribute__((address(0xF84)));
 
 __asm("PORTE equ 0F84h");
@@ -778,7 +881,7 @@ typedef union {
     };
 } PORTEbits_t;
 extern volatile PORTEbits_t PORTEbits __attribute__((address(0xF84)));
-# 1731 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1732 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short TMR5 __attribute__((address(0xF87)));
 
 __asm("TMR5 equ 0F87h");
@@ -828,7 +931,7 @@ typedef union {
     };
 } LATAbits_t;
 extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
-# 1864 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1865 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char LATB __attribute__((address(0xF8A)));
 
 __asm("LATB equ 0F8Ah");
@@ -857,7 +960,7 @@ typedef union {
     };
 } LATBbits_t;
 extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
-# 1976 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 1977 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char LATC __attribute__((address(0xF8B)));
 
 __asm("LATC equ 0F8Bh");
@@ -886,7 +989,7 @@ typedef union {
     };
 } LATCbits_t;
 extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
-# 2088 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2089 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char LATD __attribute__((address(0xF8C)));
 
 __asm("LATD equ 0F8Ch");
@@ -915,7 +1018,7 @@ typedef union {
     };
 } LATDbits_t;
 extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
-# 2200 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2201 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 
 __asm("LATE equ 0F8Dh");
@@ -934,7 +1037,7 @@ typedef union {
     };
 } LATEbits_t;
 extern volatile LATEbits_t LATEbits __attribute__((address(0xF8D)));
-# 2252 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2253 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short PR5 __attribute__((address(0xF90)));
 
 __asm("PR5 equ 0F90h");
@@ -989,7 +1092,7 @@ typedef union {
     };
 } TRISAbits_t;
 extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
-# 2388 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2389 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned TRISA0 :1;
@@ -1013,7 +1116,7 @@ typedef union {
     };
 } DDRAbits_t;
 extern volatile DDRAbits_t DDRAbits __attribute__((address(0xF92)));
-# 2495 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2496 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char TRISB __attribute__((address(0xF93)));
 
 __asm("TRISB equ 0F93h");
@@ -1047,7 +1150,7 @@ typedef union {
     };
 } TRISBbits_t;
 extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
-# 2610 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2611 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned TRISB0 :1;
@@ -1071,7 +1174,7 @@ typedef union {
     };
 } DDRBbits_t;
 extern volatile DDRBbits_t DDRBbits __attribute__((address(0xF93)));
-# 2717 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2718 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char TRISC __attribute__((address(0xF94)));
 
 __asm("TRISC equ 0F94h");
@@ -1105,7 +1208,7 @@ typedef union {
     };
 } TRISCbits_t;
 extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
-# 2832 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2833 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned TRISC0 :1;
@@ -1129,7 +1232,7 @@ typedef union {
     };
 } DDRCbits_t;
 extern volatile DDRCbits_t DDRCbits __attribute__((address(0xF94)));
-# 2939 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 2940 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char TRISD __attribute__((address(0xF95)));
 
 __asm("TRISD equ 0F95h");
@@ -1163,7 +1266,7 @@ typedef union {
     };
 } TRISDbits_t;
 extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
-# 3054 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3055 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned TRISD0 :1;
@@ -1187,7 +1290,7 @@ typedef union {
     };
 } DDRDbits_t;
 extern volatile DDRDbits_t DDRDbits __attribute__((address(0xF95)));
-# 3161 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3162 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char TRISE __attribute__((address(0xF96)));
 
 __asm("TRISE equ 0F96h");
@@ -1211,7 +1314,7 @@ typedef union {
     };
 } TRISEbits_t;
 extern volatile TRISEbits_t TRISEbits __attribute__((address(0xF96)));
-# 3216 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3217 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned TRISE0 :1;
@@ -1225,7 +1328,7 @@ typedef union {
     };
 } DDREbits_t;
 extern volatile DDREbits_t DDREbits __attribute__((address(0xF96)));
-# 3263 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3264 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char ADCHS __attribute__((address(0xF99)));
 
 __asm("ADCHS equ 0F99h");
@@ -1260,7 +1363,7 @@ typedef union {
     };
 } ADCHSbits_t;
 extern volatile ADCHSbits_t ADCHSbits __attribute__((address(0xF99)));
-# 3401 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3402 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char ADCON3 __attribute__((address(0xF9A)));
 
 __asm("ADCON3 equ 0F9Ah");
@@ -1284,7 +1387,7 @@ typedef union {
     };
 } ADCON3bits_t;
 extern volatile ADCON3bits_t ADCON3bits __attribute__((address(0xF9A)));
-# 3473 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3474 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char OSCTUNE __attribute__((address(0xF9B)));
 
 __asm("OSCTUNE equ 0F9Bh");
@@ -1304,7 +1407,7 @@ typedef union {
     };
 } OSCTUNEbits_t;
 extern volatile OSCTUNEbits_t OSCTUNEbits __attribute__((address(0xF9B)));
-# 3531 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3532 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PIE1 __attribute__((address(0xF9D)));
 
 __asm("PIE1 equ 0F9Dh");
@@ -1331,7 +1434,7 @@ typedef union {
     };
 } PIE1bits_t;
 extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
-# 3611 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3612 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PIR1 __attribute__((address(0xF9E)));
 
 __asm("PIR1 equ 0F9Eh");
@@ -1358,7 +1461,7 @@ typedef union {
     };
 } PIR1bits_t;
 extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-# 3691 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3692 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char IPR1 __attribute__((address(0xF9F)));
 
 __asm("IPR1 equ 0F9Fh");
@@ -1385,7 +1488,7 @@ typedef union {
     };
 } IPR1bits_t;
 extern volatile IPR1bits_t IPR1bits __attribute__((address(0xF9F)));
-# 3771 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3772 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PIE2 __attribute__((address(0xFA0)));
 
 __asm("PIE2 equ 0FA0h");
@@ -1403,7 +1506,7 @@ typedef union {
     };
 } PIE2bits_t;
 extern volatile PIE2bits_t PIE2bits __attribute__((address(0xFA0)));
-# 3812 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3813 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PIR2 __attribute__((address(0xFA1)));
 
 __asm("PIR2 equ 0FA1h");
@@ -1421,7 +1524,7 @@ typedef union {
     };
 } PIR2bits_t;
 extern volatile PIR2bits_t PIR2bits __attribute__((address(0xFA1)));
-# 3853 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3854 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char IPR2 __attribute__((address(0xFA2)));
 
 __asm("IPR2 equ 0FA2h");
@@ -1439,7 +1542,7 @@ typedef union {
     };
 } IPR2bits_t;
 extern volatile IPR2bits_t IPR2bits __attribute__((address(0xFA2)));
-# 3894 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3895 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PIE3 __attribute__((address(0xFA3)));
 
 __asm("PIE3 equ 0FA3h");
@@ -1468,7 +1571,7 @@ typedef union {
     };
 } PIE3bits_t;
 extern volatile PIE3bits_t PIE3bits __attribute__((address(0xFA3)));
-# 3986 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 3987 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PIR3 __attribute__((address(0xFA4)));
 
 __asm("PIR3 equ 0FA4h");
@@ -1490,7 +1593,7 @@ typedef union {
     };
 } PIR3bits_t;
 extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
-# 4046 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4047 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char IPR3 __attribute__((address(0xFA5)));
 
 __asm("IPR3 equ 0FA5h");
@@ -1512,7 +1615,7 @@ typedef union {
     };
 } IPR3bits_t;
 extern volatile IPR3bits_t IPR3bits __attribute__((address(0xFA5)));
-# 4106 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4107 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char EECON1 __attribute__((address(0xFA6)));
 
 __asm("EECON1 equ 0FA6h");
@@ -1535,7 +1638,7 @@ typedef union {
     };
 } EECON1bits_t;
 extern volatile EECON1bits_t EECON1bits __attribute__((address(0xFA6)));
-# 4172 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4173 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char EECON2 __attribute__((address(0xFA7)));
 
 __asm("EECON2 equ 0FA7h");
@@ -1594,7 +1697,7 @@ typedef union {
     };
 } BAUDCONbits_t;
 extern volatile BAUDCONbits_t BAUDCONbits __attribute__((address(0xFAA)));
-# 4287 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4288 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned ABDEN :1;
@@ -1622,7 +1725,7 @@ typedef union {
     };
 } BAUDCTLbits_t;
 extern volatile BAUDCTLbits_t BAUDCTLbits __attribute__((address(0xFAA)));
-# 4373 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4374 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char RCSTA __attribute__((address(0xFAB)));
 
 __asm("RCSTA equ 0FABh");
@@ -1665,7 +1768,7 @@ typedef union {
     };
 } RCSTAbits_t;
 extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
-# 4482 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4483 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned RX9D :1;
@@ -1698,7 +1801,7 @@ typedef union {
     };
 } RCSTA1bits_t;
 extern volatile RCSTA1bits_t RCSTA1bits __attribute__((address(0xFAB)));
-# 4583 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4584 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char TXSTA __attribute__((address(0xFAC)));
 
 __asm("TXSTA equ 0FACh");
@@ -1739,7 +1842,7 @@ typedef union {
     };
 } TXSTAbits_t;
 extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
-# 4715 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4716 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned TX9D :1;
@@ -1770,7 +1873,7 @@ typedef union {
     };
 } TXSTA1bits_t;
 extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0xFAC)));
-# 4839 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 4840 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
 
 __asm("TXREG equ 0FADh");
@@ -1867,7 +1970,7 @@ typedef union {
     };
 } QEICONbits_t;
 extern volatile QEICONbits_t QEICONbits __attribute__((address(0xFB6)));
-# 5034 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5035 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char T5CON __attribute__((address(0xFB7)));
 
 __asm("T5CON equ 0FB7h");
@@ -1907,7 +2010,7 @@ typedef union {
     };
 } T5CONbits_t;
 extern volatile T5CONbits_t T5CONbits __attribute__((address(0xFB7)));
-# 5152 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5153 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char ANSEL0 __attribute__((address(0xFB8)));
 
 __asm("ANSEL0 equ 0FB8h");
@@ -1926,7 +2029,7 @@ typedef union {
     };
 } ANSEL0bits_t;
 extern volatile ANSEL0bits_t ANSEL0bits __attribute__((address(0xFB8)));
-# 5214 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5215 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char ANSEL1 __attribute__((address(0xFB9)));
 
 __asm("ANSEL1 equ 0FB9h");
@@ -1938,7 +2041,7 @@ typedef union {
     };
 } ANSEL1bits_t;
 extern volatile ANSEL1bits_t ANSEL1bits __attribute__((address(0xFB9)));
-# 5234 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5235 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char CCP2CON __attribute__((address(0xFBA)));
 
 __asm("CCP2CON equ 0FBAh");
@@ -1964,7 +2067,7 @@ typedef union {
     };
 } CCP2CONbits_t;
 extern volatile CCP2CONbits_t CCP2CONbits __attribute__((address(0xFBA)));
-# 5313 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5314 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short CCPR2 __attribute__((address(0xFBB)));
 
 __asm("CCPR2 equ 0FBBh");
@@ -2011,7 +2114,7 @@ typedef union {
     };
 } CCP1CONbits_t;
 extern volatile CCP1CONbits_t CCP1CONbits __attribute__((address(0xFBD)));
-# 5413 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5414 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short CCPR1 __attribute__((address(0xFBE)));
 
 __asm("CCPR1 equ 0FBEh");
@@ -2055,7 +2158,7 @@ typedef union {
     };
 } ADCON2bits_t;
 extern volatile ADCON2bits_t ADCON2bits __attribute__((address(0xFC0)));
-# 5510 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5511 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
 
 __asm("ADCON1 equ 0FC1h");
@@ -2088,7 +2191,7 @@ typedef union {
     };
 } ADCON1bits_t;
 extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
-# 5606 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5607 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char ADCON0 __attribute__((address(0xFC2)));
 
 __asm("ADCON0 equ 0FC2h");
@@ -2134,7 +2237,7 @@ typedef union {
     };
 } ADCON0bits_t;
 extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
-# 5725 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5726 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short ADRES __attribute__((address(0xFC3)));
 
 __asm("ADRES equ 0FC3h");
@@ -2182,7 +2285,7 @@ typedef union {
     };
 } SSPCONbits_t;
 extern volatile SSPCONbits_t SSPCONbits __attribute__((address(0xFC6)));
-# 5819 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5820 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned SSPM :4;
@@ -2199,7 +2302,7 @@ typedef union {
     };
 } SSPCON1bits_t;
 extern volatile SSPCON1bits_t SSPCON1bits __attribute__((address(0xFC6)));
-# 5884 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 5885 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char SSPSTAT __attribute__((address(0xFC7)));
 
 __asm("SSPSTAT equ 0FC7h");
@@ -2277,7 +2380,7 @@ typedef union {
     };
 } SSPSTATbits_t;
 extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0xFC7)));
-# 6105 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6106 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char SSPADD __attribute__((address(0xFC8)));
 
 __asm("SSPADD equ 0FC8h");
@@ -2321,7 +2424,7 @@ typedef union {
     };
 } T2CONbits_t;
 extern volatile T2CONbits_t T2CONbits __attribute__((address(0xFCA)));
-# 6217 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6218 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char PR2 __attribute__((address(0xFCB)));
 
 __asm("PR2 equ 0FCBh");
@@ -2354,7 +2457,7 @@ typedef union {
     };
 } PR2bits_t;
 extern volatile PR2bits_t PR2bits __attribute__((address(0xFCB)));
-# 6276 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6277 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 typedef union {
     struct {
         unsigned :7;
@@ -2377,7 +2480,7 @@ typedef union {
     };
 } MEMCONbits_t;
 extern volatile MEMCONbits_t MEMCONbits __attribute__((address(0xFCB)));
-# 6327 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6328 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char TMR2 __attribute__((address(0xFCC)));
 
 __asm("TMR2 equ 0FCCh");
@@ -2423,7 +2526,7 @@ typedef union {
     };
 } T1CONbits_t;
 extern volatile T1CONbits_t T1CONbits __attribute__((address(0xFCD)));
-# 6446 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6447 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short TMR1 __attribute__((address(0xFCE)));
 
 __asm("TMR1 equ 0FCEh");
@@ -2494,7 +2597,7 @@ typedef union {
     };
 } RCONbits_t;
 extern volatile RCONbits_t RCONbits __attribute__((address(0xFD0)));
-# 6610 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6611 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char WDTCON __attribute__((address(0xFD1)));
 
 __asm("WDTCON equ 0FD1h");
@@ -2508,7 +2611,7 @@ typedef union {
     };
 } WDTCONbits_t;
 extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0xFD1)));
-# 6637 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6638 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char LVDCON __attribute__((address(0xFD2)));
 
 __asm("LVDCON equ 0FD2h");
@@ -2530,7 +2633,7 @@ typedef union {
     };
 } LVDCONbits_t;
 extern volatile LVDCONbits_t LVDCONbits __attribute__((address(0xFD2)));
-# 6702 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6703 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 
 __asm("OSCCON equ 0FD3h");
@@ -2558,7 +2661,7 @@ typedef union {
     };
 } OSCCONbits_t;
 extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
-# 6788 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6789 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
 
 __asm("T0CON equ 0FD5h");
@@ -2581,7 +2684,7 @@ typedef union {
     };
 } T0CONbits_t;
 extern volatile T0CONbits_t T0CONbits __attribute__((address(0xFD5)));
-# 6864 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6865 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short TMR0 __attribute__((address(0xFD6)));
 
 __asm("TMR0 equ 0FD6h");
@@ -2625,7 +2728,7 @@ typedef union {
     };
 } STATUSbits_t;
 extern volatile STATUSbits_t STATUSbits __attribute__((address(0xFD8)));
-# 6956 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 6957 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short FSR2 __attribute__((address(0xFD9)));
 
 __asm("FSR2 equ 0FD9h");
@@ -2836,7 +2939,7 @@ typedef union {
     };
 } INTCON3bits_t;
 extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
-# 7230 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 7231 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char INTCON2 __attribute__((address(0xFF1)));
 
 __asm("INTCON2 equ 0FF1h");
@@ -2865,7 +2968,7 @@ typedef union {
     };
 } INTCON2bits_t;
 extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
-# 7307 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 7308 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned char INTCON __attribute__((address(0xFF2)));
 
 __asm("INTCON equ 0FF2h");
@@ -2899,7 +3002,7 @@ typedef union {
     };
 } INTCONbits_t;
 extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-# 7424 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 7425 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile unsigned short PROD __attribute__((address(0xFF3)));
 
 __asm("PROD equ 0FF3h");
@@ -3018,7 +3121,7 @@ typedef union {
     };
 } STKPTRbits_t;
 extern volatile STKPTRbits_t STKPTRbits __attribute__((address(0xFFC)));
-# 7592 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 7593 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile __uint24 TOS __attribute__((address(0xFFD)));
 
 
@@ -3044,7 +3147,7 @@ __asm("TOSH equ 0FFEh");
 extern volatile unsigned char TOSU __attribute__((address(0xFFF)));
 
 __asm("TOSU equ 0FFFh");
-# 7627 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18f4431.h" 3
+# 7628 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\proc\\pic18f4431.h" 3
 extern volatile __bit ABDEN __attribute__((address(0x7D50)));
 
 
@@ -5083,9 +5186,9 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 534 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18_chip_select.h" 2 3
-# 8 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 2 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 3
+# 630 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18_chip_select.h" 2 3
+# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18.h" 2 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
@@ -5095,31 +5198,20 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\errata.h" 1 3
-# 26 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 2 3
-# 49 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 3
-#pragma intrinsic(__nop)
-extern void __nop(void);
-# 154 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\errata.h" 1 3
+# 27 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18.h" 2 3
+# 156 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
 __attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
 __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
-# 174 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\pic18.h" 3
+# 188 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\pic18.h" 3
+__attribute__((__unsupported__("The READTIMER" "3" "() macro is not available with the current device."))) unsigned short __readtimer3(void);
+
+
+
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
-
-
-
-
-
-
-#pragma intrinsic(_delay)
-extern __attribute__((nonreentrant)) void _delay(unsigned long);
-#pragma intrinsic(_delaywdt)
-extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
-#pragma intrinsic(_delay3)
-extern __attribute__((nonreentrant)) void _delay3(unsigned char);
-# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
+# 33 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 2 3
 # 1 "hachiko_0.c" 2
 
 
@@ -5377,7 +5469,7 @@ void main(void) {
     setTMR0();
     setTMR1();
 
-    ADCHS = 0b01000010;
+
 
 
     INTCONbits.GIE = 1;
@@ -5389,7 +5481,17 @@ void main(void) {
 
 
 
-    while(ini == 0);
+
+
+
+    while(ini == 0){
+
+
+
+
+
+
+    }
     stringUSART("aqui");
 
     while(1){
@@ -5421,45 +5523,45 @@ void main(void) {
             TMR0H = 0xF8;
             char cont_tmr = 0x00;
             while(cont_tmr < 0x64){
-                if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('d','f',75);
                     moverMotor('e','f',90);
                 }
-                else if(!PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                else if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','t',60);
                     moverMotor('d','f',60);
                 }
-                else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','f',60);
 
                 }
-                else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','f',60);
 
                 }
-                else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','t',60);
                 }
-                else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','t',60);
                 }
-                else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','t',60);
                     moverMotor('d','f',60);
                 }
-                else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','t',60);
                     moverMotor('d','f',60);
                 }
-                else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA0){
+                else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','t',60);
                 }
-                else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('d','f',60);
                     moverMotor('e','f',60);
                 }
@@ -5500,41 +5602,41 @@ void main(void) {
                     cont++;
                 }
                 if(cont < 10){
-                    if(!PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('d','f',60);
                         moverMotor('e','f',60);
                     }
@@ -5574,7 +5676,7 @@ void main(void) {
         }
 
         if(acao == "zigzag"){
-# 312 "hachiko_0.c"
+# 322 "hachiko_0.c"
             char cont_zig = 0x00;
             char cont_tmr = 0x00;
             moverMotor('d','f',60);
@@ -5597,41 +5699,41 @@ void main(void) {
                         TMR1H = 0x0B;
                         cont_tmr++;
                     }
-                    if(!PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('d','f',60);
                         moverMotor('e','f',60);
                     }
@@ -5653,37 +5755,37 @@ void main(void) {
                         TMR1H = 0x0B;
                         cont_tmr++;
                     }
-                    if(!PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA0){
+                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
@@ -5782,7 +5884,7 @@ void main(void) {
 
             PORTBbits.RB7 = 1;
             PORTBbits.RB6 = 1;
-# 534 "hachiko_0.c"
+# 544 "hachiko_0.c"
             moverMotor('d','f',80);
             moverMotor('e','f',80);
             _delay((unsigned long)((500)*(20000000/4000.0)));
@@ -5816,27 +5918,27 @@ void main(void) {
 
         }
 
-        if(!PORTAbits.RA0){
+        if(!PORTAbits.RA2){
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('0');
         }
-        else if(!PORTAbits.RA3){
+        if(!PORTAbits.RA3){
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('1');
         }
-        else if(!PORTCbits.RC0){
+        if(!PORTCbits.RC0){
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('2');
         }
-        else if(!PORTAbits.RA2){
+        if(!PORTAbits.RA0){
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('3');
         }
-        else if(!PORTAbits.RA4){
+        if(!PORTAbits.RA1){
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('4');
         }
-# 604 "hachiko_0.c"
+# 614 "hachiko_0.c"
     }
 
     return;
@@ -5889,41 +5991,41 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
-    if(!PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','t',80);
         moverMotor('d','f',80);
     }
-    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','f',80);
         moverMotor('d','f',80);
 
     }
-    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','f',80);
         moverMotor('d','f',80);
 
     }
-    else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('d','f',80);
         moverMotor('e','f',80);
     }
-    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
-        moverMotor('e','f',80);
-        moverMotor('d','t',80);
-    }
-    else if(PORTAbits.RA4 && PORTAbits.RA2 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA0){
+    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','f',80);
         moverMotor('d','t',80);
     }
-    else if(PORTAbits.RA4 && !PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','f',80);
+        moverMotor('d','t',80);
+    }
+    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','t',80);
         moverMotor('d','f',80);
     }
-    else if(PORTAbits.RA4 && !PORTAbits.RA2 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA0){
+    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','t',80);
         moverMotor('d','f',80);
     }
-    else if(PORTAbits.RA4 && PORTAbits.RA2 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA0){
+    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
         moverMotor('e','f',80);
         moverMotor('d','t',80);
     }
