@@ -329,8 +329,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9278
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic18f4431.h: 9278: extern volatile __bit TMR1IF __attribute__((address(0x7CF0)));
 [v _TMR1IF `Vb ~T0 @X0 0 e@31984 ]
-"33 hachiko_0.c
-[; ;hachiko_0.c: 33: void estrela();
+"34 hachiko_0.c
+[; ;hachiko_0.c: 34: void estrela();
 [v _estrela `(v ~T0 @X0 0 e? ]
 [v F183 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:\Program Files\Microchip\xc8\v2.32\pic\include\builtins.h
@@ -1316,469 +1316,469 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `i
 ]
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"41
-[; ;hachiko_0.c: 41: void __attribute__((picinterrupt(("")))) ISR(void){
+"42
+[; ;hachiko_0.c: 42: void __attribute__((picinterrupt(("")))) ISR(void){
 [v _ISR `(v ~T36 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"42
-[; ;hachiko_0.c: 42:     if(PIR1bits.RCIF){
+"43
+[; ;hachiko_0.c: 43:     if(PIR1bits.RCIF){
 [e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 334  ]
 {
-"43
-[; ;hachiko_0.c: 43:         PIR1bits.RCIF = 0x00;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
 "44
-[; ;hachiko_0.c: 44:         if(RCSTAbits.FERR || RCSTAbits.OERR){
+[; ;hachiko_0.c: 44:         PIR1bits.RCIF = 0x00;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"45
+[; ;hachiko_0.c: 45:         if(RCSTAbits.FERR || RCSTAbits.OERR){
 [e $ ! || != -> . . _RCSTAbits 0 2 `i -> 0 `i != -> . . _RCSTAbits 0 1 `i -> 0 `i 335  ]
 {
-"45
-[; ;hachiko_0.c: 45:             RCSTAbits.CREN = 0x00;
-[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
 "46
-[; ;hachiko_0.c: 46:             RCSTAbits.CREN = 0x01;
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 46:             RCSTAbits.CREN = 0x00;
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
 "47
-[; ;hachiko_0.c: 47:         }
+[; ;hachiko_0.c: 47:             RCSTAbits.CREN = 0x01;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"48
+[; ;hachiko_0.c: 48:         }
 }
 [e :U 335 ]
-"49
-[; ;hachiko_0.c: 49:         if(readUSART() == 'L') acao = "linha";
+"50
+[; ;hachiko_0.c: 50:         if(readUSART() == 'L') acao = "linha";
 [e $ ! == -> ( _readUSART ..  `ui -> 76 `ui 336  ]
 [e = _acao :s 1C ]
 [e :U 336 ]
-"51
-[; ;hachiko_0.c: 51:         if(readUSART() == 'D') acao = "distancia";
+"52
+[; ;hachiko_0.c: 52:         if(readUSART() == 'D') acao = "distancia";
 [e $ ! == -> ( _readUSART ..  `ui -> 68 `ui 337  ]
 [e = _acao :s 2C ]
 [e :U 337 ]
-"53
-[; ;hachiko_0.c: 53:         if(readUSART() == 'T') acao = "toquinho";
+"54
+[; ;hachiko_0.c: 54:         if(readUSART() == 'T') acao = "toquinho";
 [e $ ! == -> ( _readUSART ..  `ui -> 84 `ui 338  ]
 [e = _acao :s 3C ]
 [e :U 338 ]
-"55
-[; ;hachiko_0.c: 55:         if(readUSART() == 'A') acao = "arco";
+"56
+[; ;hachiko_0.c: 56:         if(readUSART() == 'A') acao = "arco";
 [e $ ! == -> ( _readUSART ..  `ui -> 65 `ui 339  ]
 [e = _acao :s 4C ]
 [e :U 339 ]
-"57
-[; ;hachiko_0.c: 57:         if(readUSART() == 'E') acao = "estrela";
+"58
+[; ;hachiko_0.c: 58:         if(readUSART() == 'E') acao = "estrela";
 [e $ ! == -> ( _readUSART ..  `ui -> 69 `ui 340  ]
 [e = _acao :s 5C ]
 [e :U 340 ]
-"59
-[; ;hachiko_0.c: 59:         if(readUSART() == 'Z') acao = "zigzag";
+"60
+[; ;hachiko_0.c: 60:         if(readUSART() == 'Z') acao = "zigzag";
 [e $ ! == -> ( _readUSART ..  `ui -> 90 `ui 341  ]
 [e = _acao :s 6C ]
 [e :U 341 ]
-"61
-[; ;hachiko_0.c: 61:         if(readUSART() == 'R') acao = "teste";
+"62
+[; ;hachiko_0.c: 62:         if(readUSART() == 'R') acao = "teste";
 [e $ ! == -> ( _readUSART ..  `ui -> 82 `ui 342  ]
 [e = _acao :s 7C ]
 [e :U 342 ]
-"63
-[; ;hachiko_0.c: 63:         if(readUSART() == 'X') acao = "gd";
+"64
+[; ;hachiko_0.c: 64:         if(readUSART() == 'X') acao = "gd";
 [e $ ! == -> ( _readUSART ..  `ui -> 88 `ui 343  ]
 [e = _acao :s 8C ]
 [e :U 343 ]
-"65
-[; ;hachiko_0.c: 65:         if(readUSART() == 'Y') acao = "ge";
+"66
+[; ;hachiko_0.c: 66:         if(readUSART() == 'Y') acao = "ge";
 [e $ ! == -> ( _readUSART ..  `ui -> 89 `ui 344  ]
 [e = _acao :s 9C ]
 [e :U 344 ]
-"67
-[; ;hachiko_0.c: 67:         if(readUSART() == 'd') acao = "direito";
+"68
+[; ;hachiko_0.c: 68:         if(readUSART() == 'd') acao = "direito";
 [e $ ! == -> ( _readUSART ..  `ui -> 100 `ui 345  ]
 [e = _acao :s 10C ]
 [e :U 345 ]
-"69
-[; ;hachiko_0.c: 69:         if(readUSART() == 'e') acao = "esquerdo";
+"70
+[; ;hachiko_0.c: 70:         if(readUSART() == 'e') acao = "esquerdo";
 [e $ ! == -> ( _readUSART ..  `ui -> 101 `ui 346  ]
 [e = _acao :s 11C ]
 [e :U 346 ]
-"71
-[; ;hachiko_0.c: 71:         if(readUSART() == 'f') acao = "frente";
+"72
+[; ;hachiko_0.c: 72:         if(readUSART() == 'f') acao = "frente";
 [e $ ! == -> ( _readUSART ..  `ui -> 102 `ui 347  ]
 [e = _acao :s 12C ]
 [e :U 347 ]
-"73
-[; ;hachiko_0.c: 73:         if(readUSART() == 't') acao = "tras";
+"74
+[; ;hachiko_0.c: 74:         if(readUSART() == 't') acao = "tras";
 [e $ ! == -> ( _readUSART ..  `ui -> 116 `ui 348  ]
 [e = _acao :s 13C ]
 [e :U 348 ]
-"75
-[; ;hachiko_0.c: 75:         if(readUSART() == 'm') acao = "motor";
+"76
+[; ;hachiko_0.c: 76:         if(readUSART() == 'm') acao = "motor";
 [e $ ! == -> ( _readUSART ..  `ui -> 109 `ui 349  ]
 [e = _acao :s 14C ]
 [e :U 349 ]
-"77
-[; ;hachiko_0.c: 77:         if(readUSART() == '+'){
+"78
+[; ;hachiko_0.c: 78:         if(readUSART() == '+'){
 [e $ ! == -> ( _readUSART ..  `ui -> 43 `ui 350  ]
 {
-"78
-[; ;hachiko_0.c: 78:             velocidade += 10*600/100;
-[e =+ _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "79
-[; ;hachiko_0.c: 79:             if(velocidade >= 600) velocidade = 10*600/100;
+[; ;hachiko_0.c: 79:             velocidade += 10*600/100;
+[e =+ _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
+"80
+[; ;hachiko_0.c: 80:             if(velocidade >= 600) velocidade = 10*600/100;
 [e $ ! >= _velocidade -> -> 600 `i `ui 351  ]
 [e = _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 [e :U 351 ]
-"80
-[; ;hachiko_0.c: 80:         }
+"81
+[; ;hachiko_0.c: 81:         }
 }
 [e :U 350 ]
-"82
-[; ;hachiko_0.c: 82:         if(readUSART() == '-'){
+"83
+[; ;hachiko_0.c: 83:         if(readUSART() == '-'){
 [e $ ! == -> ( _readUSART ..  `ui -> 45 `ui 352  ]
 {
-"83
-[; ;hachiko_0.c: 83:             velocidade -= 10*600/100;
-[e =- _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "84
-[; ;hachiko_0.c: 84:             if(velocidade <= 59) velocidade = 50*600/100;
+[; ;hachiko_0.c: 84:             velocidade -= 10*600/100;
+[e =- _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
+"85
+[; ;hachiko_0.c: 85:             if(velocidade <= 59) velocidade = 50*600/100;
 [e $ ! <= _velocidade -> -> 59 `i `ui 353  ]
 [e = _velocidade -> / * -> 50 `i -> 600 `i -> 100 `i `ui ]
 [e :U 353 ]
-"85
-[; ;hachiko_0.c: 85:         }
+"86
+[; ;hachiko_0.c: 86:         }
 }
 [e :U 352 ]
-"87
-[; ;hachiko_0.c: 87:         if(readUSART() == 'G') ini = 1;
+"88
+[; ;hachiko_0.c: 88:         if(readUSART() == 'G') ini = 1;
 [e $ ! == -> ( _readUSART ..  `ui -> 71 `ui 354  ]
 [e = _ini -> 1 `i ]
 [e :U 354 ]
-"89
-[; ;hachiko_0.c: 89:         if(readUSART() == 'P'){
+"90
+[; ;hachiko_0.c: 90:         if(readUSART() == 'P'){
 [e $ ! == -> ( _readUSART ..  `ui -> 80 `ui 355  ]
 {
-"90
-[; ;hachiko_0.c: 90:             pararMotor();
-[e ( _pararMotor ..  ]
 "91
-[; ;hachiko_0.c: 91:             acao = "parar";
-[e = _acao :s 15C ]
+[; ;hachiko_0.c: 91:             pararMotor();
+[e ( _pararMotor ..  ]
 "92
-[; ;hachiko_0.c: 92:         }
+[; ;hachiko_0.c: 92:             acao = "parar";
+[e = _acao :s 15C ]
+"93
+[; ;hachiko_0.c: 93:         }
 }
 [e :U 355 ]
-"93
-[; ;hachiko_0.c: 93:     }
+"94
+[; ;hachiko_0.c: 94:     }
 }
 [e :U 334 ]
-"94
-[; ;hachiko_0.c: 94: }
+"95
+[; ;hachiko_0.c: 95: }
 [e :UE 333 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"96
-[; ;hachiko_0.c: 96: void main(void) {
+"97
+[; ;hachiko_0.c: 97: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"98
-[; ;hachiko_0.c: 98:     setIO();
-[e ( _setIO ..  ]
 "99
-[; ;hachiko_0.c: 99:     setBT();
-[e ( _setBT ..  ]
+[; ;hachiko_0.c: 99:     setIO();
+[e ( _setIO ..  ]
 "100
-[; ;hachiko_0.c: 100:     setPWM();
-[e ( _setPWM ..  ]
+[; ;hachiko_0.c: 100:     setBT();
+[e ( _setBT ..  ]
 "101
-[; ;hachiko_0.c: 101:     setTMR0();
-[e ( _setTMR0 ..  ]
+[; ;hachiko_0.c: 101:     setPWM();
+[e ( _setPWM ..  ]
 "102
-[; ;hachiko_0.c: 102:     setTMR1();
+[; ;hachiko_0.c: 102:     setTMR0();
+[e ( _setTMR0 ..  ]
+"103
+[; ;hachiko_0.c: 103:     setTMR1();
 [e ( _setTMR1 ..  ]
-"107
-[; ;hachiko_0.c: 107:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "108
-[; ;hachiko_0.c: 108:     INTCONbits.PEIE = 1;
+[; ;hachiko_0.c: 108:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"109
+[; ;hachiko_0.c: 109:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"110
-[; ;hachiko_0.c: 110:     PORTDbits.RD0 = 0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "111
-[; ;hachiko_0.c: 111:     PORTDbits.RD1 = 1;
+[; ;hachiko_0.c: 111:     PORTDbits.RD0 = 0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"112
+[; ;hachiko_0.c: 112:     PORTDbits.RD1 = 1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"119
-[; ;hachiko_0.c: 119:     while(ini == 0){
+"120
+[; ;hachiko_0.c: 120:     while(ini == 0){
 [e $U 357  ]
 [e :U 358 ]
 {
-"126
-[; ;hachiko_0.c: 126:     }
+"127
+[; ;hachiko_0.c: 127:     }
 }
 [e :U 357 ]
-"119
-[; ;hachiko_0.c: 119:     while(ini == 0){
+"120
+[; ;hachiko_0.c: 120:     while(ini == 0){
 [e $ == _ini -> 0 `i 358  ]
 [e :U 359 ]
-"127
-[; ;hachiko_0.c: 127:     stringUSART("aqui");
+"128
+[; ;hachiko_0.c: 128:     stringUSART("aqui");
 [e ( _stringUSART (1 :s 16C ]
-"129
-[; ;hachiko_0.c: 129:     while(1){
+"130
+[; ;hachiko_0.c: 130:     while(1){
 [e :U 361 ]
 {
-"130
-[; ;hachiko_0.c: 130:         if(acao == "linha"){
+"131
+[; ;hachiko_0.c: 131:         if(acao == "linha"){
 [e $ ! == _acao :s 17C 363  ]
 {
-"131
-[; ;hachiko_0.c: 131:             while(1){
+"132
+[; ;hachiko_0.c: 132:             while(1){
 [e :U 365 ]
 {
-"132
-[; ;hachiko_0.c: 132:                 testarLinha();
+"133
+[; ;hachiko_0.c: 133:                 testarLinha();
 [e ( _testarLinha ..  ]
-"134
-[; ;hachiko_0.c: 134:                 if(acao == "parar"){
+"135
+[; ;hachiko_0.c: 135:                 if(acao == "parar"){
 [e $ ! == _acao :s 18C 367  ]
 {
-"135
-[; ;hachiko_0.c: 135:                     pararMotor();
-[e ( _pararMotor ..  ]
 "136
-[; ;hachiko_0.c: 136:                     break;
-[e $U 366  ]
+[; ;hachiko_0.c: 136:                     pararMotor();
+[e ( _pararMotor ..  ]
 "137
-[; ;hachiko_0.c: 137:                 }
+[; ;hachiko_0.c: 137:                     break;
+[e $U 366  ]
+"138
+[; ;hachiko_0.c: 138:                 }
 }
 [e :U 367 ]
-"138
-[; ;hachiko_0.c: 138:             }
+"139
+[; ;hachiko_0.c: 139:             }
 }
 [e :U 364 ]
 [e $U 365  ]
 [e :U 366 ]
-"139
-[; ;hachiko_0.c: 139:         }
+"140
+[; ;hachiko_0.c: 140:         }
 }
 [e :U 363 ]
-"141
-[; ;hachiko_0.c: 141:         if(acao == "distancia"){
+"142
+[; ;hachiko_0.c: 142:         if(acao == "distancia"){
 [e $ ! == _acao :s 19C 368  ]
 {
-"142
-[; ;hachiko_0.c: 142:             while(1){
+"143
+[; ;hachiko_0.c: 143:             while(1){
 [e :U 370 ]
 {
-"143
-[; ;hachiko_0.c: 143:                 testarDistancia();
+"144
+[; ;hachiko_0.c: 144:                 testarDistancia();
 [e ( _testarDistancia ..  ]
-"145
-[; ;hachiko_0.c: 145:                 if(acao == "parar"){
+"146
+[; ;hachiko_0.c: 146:                 if(acao == "parar"){
 [e $ ! == _acao :s 20C 372  ]
 {
-"146
-[; ;hachiko_0.c: 146:                     pararMotor();
-[e ( _pararMotor ..  ]
 "147
-[; ;hachiko_0.c: 147:                     break;
-[e $U 371  ]
+[; ;hachiko_0.c: 147:                     pararMotor();
+[e ( _pararMotor ..  ]
 "148
-[; ;hachiko_0.c: 148:                 }
+[; ;hachiko_0.c: 148:                     break;
+[e $U 371  ]
+"149
+[; ;hachiko_0.c: 149:                 }
 }
 [e :U 372 ]
-"149
-[; ;hachiko_0.c: 149:             }
+"150
+[; ;hachiko_0.c: 150:             }
 }
 [e :U 369 ]
 [e $U 370  ]
 [e :U 371 ]
-"150
-[; ;hachiko_0.c: 150:         }
+"151
+[; ;hachiko_0.c: 151:         }
 }
 [e :U 368 ]
-"152
-[; ;hachiko_0.c: 152:         if(acao == "arco"){
+"153
+[; ;hachiko_0.c: 153:         if(acao == "arco"){
 [e $ ! == _acao :s 21C 373  ]
 {
-"153
-[; ;hachiko_0.c: 153:             TMR0ON = 1;
-[e = _TMR0ON -> -> 1 `i `b ]
 "154
-[; ;hachiko_0.c: 154:             TMR0L = 0x78;
-[e = _TMR0L -> -> 120 `i `uc ]
+[; ;hachiko_0.c: 154:             TMR0ON = 1;
+[e = _TMR0ON -> -> 1 `i `b ]
 "155
-[; ;hachiko_0.c: 155:             TMR0H = 0xF8;
-[e = _TMR0H -> -> 248 `i `uc ]
+[; ;hachiko_0.c: 155:             TMR0L = 0x78;
+[e = _TMR0L -> -> 120 `i `uc ]
 "156
-[; ;hachiko_0.c: 156:             char cont_tmr = 0x00;
+[; ;hachiko_0.c: 156:             TMR0H = 0xF8;
+[e = _TMR0H -> -> 248 `i `uc ]
+"157
+[; ;hachiko_0.c: 157:             char cont_tmr = 0x00;
 [v _cont_tmr `uc ~T0 @X0 1 a ]
 [e = _cont_tmr -> -> 0 `i `uc ]
-"157
-[; ;hachiko_0.c: 157:             while(cont_tmr < 0x64){
+"158
+[; ;hachiko_0.c: 158:             while(cont_tmr < 0x64){
 [e $U 374  ]
 [e :U 375 ]
 {
-"158
-[; ;hachiko_0.c: 158:                 if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 377  ]
-{
 "159
-[; ;hachiko_0.c: 159:                     moverMotor('d','f',75);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 75 `i `ui ]
+[; ;hachiko_0.c: 159:                 if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 377  ]
+{
 "160
-[; ;hachiko_0.c: 160:                     moverMotor('e','f',90);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 90 `i `ui ]
+[; ;hachiko_0.c: 160:                     moverMotor('d','f',75);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 75 `i `ui ]
 "161
-[; ;hachiko_0.c: 161:                 }
+[; ;hachiko_0.c: 161:                     moverMotor('e','f',90);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 90 `i `ui ]
+"162
+[; ;hachiko_0.c: 162:                 }
 }
 [e $U 378  ]
-"162
-[; ;hachiko_0.c: 162:                 else if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 377 ]
-[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 379  ]
-{
 "163
-[; ;hachiko_0.c: 163:                     moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 163:                 else if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 377 ]
+[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 379  ]
+{
 "164
-[; ;hachiko_0.c: 164:                     moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 164:                     moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "165
-[; ;hachiko_0.c: 165:                 }
+[; ;hachiko_0.c: 165:                     moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"166
+[; ;hachiko_0.c: 166:                 }
 }
 [e $U 380  ]
-"166
-[; ;hachiko_0.c: 166:                 else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 379 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 381  ]
-{
 "167
-[; ;hachiko_0.c: 167:                     moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 167:                 else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 379 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 381  ]
+{
 "168
-[; ;hachiko_0.c: 168:                     moverMotor('d','f',60);
+[; ;hachiko_0.c: 168:                     moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"169
+[; ;hachiko_0.c: 169:                     moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"170
-[; ;hachiko_0.c: 170:                 }
+"171
+[; ;hachiko_0.c: 171:                 }
 }
 [e $U 382  ]
-"171
-[; ;hachiko_0.c: 171:                 else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 381 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 383  ]
-{
 "172
-[; ;hachiko_0.c: 172:                     moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 172:                 else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 381 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 383  ]
+{
 "173
-[; ;hachiko_0.c: 173:                     moverMotor('d','f',60);
+[; ;hachiko_0.c: 173:                     moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"174
+[; ;hachiko_0.c: 174:                     moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"175
-[; ;hachiko_0.c: 175:                 }
+"176
+[; ;hachiko_0.c: 176:                 }
 }
 [e $U 384  ]
-"176
-[; ;hachiko_0.c: 176:                 else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 383 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 385  ]
-{
 "177
-[; ;hachiko_0.c: 177:                     moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 177:                 else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 383 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 385  ]
+{
 "178
-[; ;hachiko_0.c: 178:                     moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 178:                     moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "179
-[; ;hachiko_0.c: 179:                 }
+[; ;hachiko_0.c: 179:                     moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"180
+[; ;hachiko_0.c: 180:                 }
 }
 [e $U 386  ]
-"180
-[; ;hachiko_0.c: 180:                 else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 385 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 387  ]
-{
 "181
-[; ;hachiko_0.c: 181:                     moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 181:                 else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 385 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 387  ]
+{
 "182
-[; ;hachiko_0.c: 182:                     moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 182:                     moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "183
-[; ;hachiko_0.c: 183:                 }
+[; ;hachiko_0.c: 183:                     moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"184
+[; ;hachiko_0.c: 184:                 }
 }
 [e $U 388  ]
-"184
-[; ;hachiko_0.c: 184:                 else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 387 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 389  ]
-{
 "185
-[; ;hachiko_0.c: 185:                     moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 185:                 else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 387 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 389  ]
+{
 "186
-[; ;hachiko_0.c: 186:                     moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 186:                     moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "187
-[; ;hachiko_0.c: 187:                 }
+[; ;hachiko_0.c: 187:                     moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"188
+[; ;hachiko_0.c: 188:                 }
 }
 [e $U 390  ]
-"188
-[; ;hachiko_0.c: 188:                 else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 389 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 391  ]
-{
 "189
-[; ;hachiko_0.c: 189:                     moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 189:                 else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 389 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 391  ]
+{
 "190
-[; ;hachiko_0.c: 190:                     moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 190:                     moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "191
-[; ;hachiko_0.c: 191:                 }
+[; ;hachiko_0.c: 191:                     moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"192
+[; ;hachiko_0.c: 192:                 }
 }
 [e $U 392  ]
-"192
-[; ;hachiko_0.c: 192:                 else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
-[e :U 391 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 393  ]
-{
 "193
-[; ;hachiko_0.c: 193:                     moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 193:                 else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+[e :U 391 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 393  ]
+{
 "194
-[; ;hachiko_0.c: 194:                     moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 194:                     moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "195
-[; ;hachiko_0.c: 195:                 }
+[; ;hachiko_0.c: 195:                     moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"196
+[; ;hachiko_0.c: 196:                 }
 }
 [e $U 394  ]
-"196
-[; ;hachiko_0.c: 196:                 else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 393 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 395  ]
-{
 "197
-[; ;hachiko_0.c: 197:                     moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 197:                 else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 393 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 395  ]
+{
 "198
-[; ;hachiko_0.c: 198:                     moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 198:                     moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "199
-[; ;hachiko_0.c: 199:                 }
+[; ;hachiko_0.c: 199:                     moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"200
+[; ;hachiko_0.c: 200:                 }
 }
 [e $U 396  ]
-"200
-[; ;hachiko_0.c: 200:                 else{
+"201
+[; ;hachiko_0.c: 201:                 else{
 [e :U 395 ]
 {
-"201
-[; ;hachiko_0.c: 201:                     moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "202
-[; ;hachiko_0.c: 202:                     moverMotor('e','f',90);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 90 `i `ui ]
+[; ;hachiko_0.c: 202:                     moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "203
-[; ;hachiko_0.c: 203:                 }
+[; ;hachiko_0.c: 203:                     moverMotor('e','f',90);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 90 `i `ui ]
+"204
+[; ;hachiko_0.c: 204:                 }
 }
 [e :U 396 ]
 [e :U 394 ]
@@ -1790,270 +1790,270 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 382 ]
 [e :U 380 ]
 [e :U 378 ]
-"205
-[; ;hachiko_0.c: 205:                 if(TMR0IF){
+"206
+[; ;hachiko_0.c: 206:                 if(TMR0IF){
 [e $ ! _TMR0IF 397  ]
 {
-"206
-[; ;hachiko_0.c: 206:                     TMR0IF = 0;
-[e = _TMR0IF -> -> 0 `i `b ]
 "207
-[; ;hachiko_0.c: 207:                     TMR0L = 0x78;
-[e = _TMR0L -> -> 120 `i `uc ]
+[; ;hachiko_0.c: 207:                     TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
 "208
-[; ;hachiko_0.c: 208:                     TMR0H = 0xF8;
-[e = _TMR0H -> -> 248 `i `uc ]
+[; ;hachiko_0.c: 208:                     TMR0L = 0x78;
+[e = _TMR0L -> -> 120 `i `uc ]
 "209
-[; ;hachiko_0.c: 209:                     cont_tmr++;
-[e ++ _cont_tmr -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 209:                     TMR0H = 0xF8;
+[e = _TMR0H -> -> 248 `i `uc ]
 "210
-[; ;hachiko_0.c: 210:                 }
+[; ;hachiko_0.c: 210:                     cont_tmr++;
+[e ++ _cont_tmr -> -> 1 `i `uc ]
+"211
+[; ;hachiko_0.c: 211:                 }
 }
 [e :U 397 ]
-"212
-[; ;hachiko_0.c: 212:                 if(acao == "parar"){
+"213
+[; ;hachiko_0.c: 213:                 if(acao == "parar"){
 [e $ ! == _acao :s 22C 398  ]
 {
-"213
-[; ;hachiko_0.c: 213:                     pararMotor();
-[e ( _pararMotor ..  ]
 "214
-[; ;hachiko_0.c: 214:                     break;
-[e $U 376  ]
+[; ;hachiko_0.c: 214:                     pararMotor();
+[e ( _pararMotor ..  ]
 "215
-[; ;hachiko_0.c: 215:                 }
+[; ;hachiko_0.c: 215:                     break;
+[e $U 376  ]
+"216
+[; ;hachiko_0.c: 216:                 }
 }
 [e :U 398 ]
-"216
-[; ;hachiko_0.c: 216:             }
+"217
+[; ;hachiko_0.c: 217:             }
 }
 [e :U 374 ]
-"157
-[; ;hachiko_0.c: 157:             while(cont_tmr < 0x64){
+"158
+[; ;hachiko_0.c: 158:             while(cont_tmr < 0x64){
 [e $ < -> _cont_tmr `i -> 100 `i 375  ]
 [e :U 376 ]
-"217
-[; ;hachiko_0.c: 217:             TMR0ON = 0;
-[e = _TMR0ON -> -> 0 `i `b ]
 "218
-[; ;hachiko_0.c: 218:         }
+[; ;hachiko_0.c: 218:             TMR0ON = 0;
+[e = _TMR0ON -> -> 0 `i `b ]
+"219
+[; ;hachiko_0.c: 219:         }
 }
 [e :U 373 ]
-"220
-[; ;hachiko_0.c: 220:         if(acao == "toquinho"){
+"221
+[; ;hachiko_0.c: 221:         if(acao == "toquinho"){
 [e $ ! == _acao :s 23C 399  ]
 {
-"224
-[; ;hachiko_0.c: 224:             TMR1ON = 1;
-[e = _TMR1ON -> -> 1 `i `b ]
 "225
-[; ;hachiko_0.c: 225:             TMR1L = 0xDE;
-[e = _TMR1L -> -> 222 `i `uc ]
+[; ;hachiko_0.c: 225:             TMR1ON = 1;
+[e = _TMR1ON -> -> 1 `i `b ]
 "226
-[; ;hachiko_0.c: 226:             TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
+[; ;hachiko_0.c: 226:             TMR1L = 0xDE;
+[e = _TMR1L -> -> 222 `i `uc ]
 "227
-[; ;hachiko_0.c: 227:             char aux = 0x00;
+[; ;hachiko_0.c: 227:             TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
+"228
+[; ;hachiko_0.c: 228:             char aux = 0x00;
 [v _aux `uc ~T0 @X0 1 a ]
 [e = _aux -> -> 0 `i `uc ]
-"228
-[; ;hachiko_0.c: 228:             int cont = 0;
+"229
+[; ;hachiko_0.c: 229:             int cont = 0;
 [v _cont `i ~T0 @X0 1 a ]
 [e = _cont -> 0 `i ]
-"229
-[; ;hachiko_0.c: 229:             while(aux < 0x0A){
+"230
+[; ;hachiko_0.c: 230:             while(aux < 0x0A){
 [e $U 400  ]
 [e :U 401 ]
 {
-"230
-[; ;hachiko_0.c: 230:                 if(TMR1IF){
+"231
+[; ;hachiko_0.c: 231:                 if(TMR1IF){
 [e $ ! _TMR1IF 403  ]
 {
-"231
-[; ;hachiko_0.c: 231:                     TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
 "232
-[; ;hachiko_0.c: 232:                     TMR1L = 0xDE;
-[e = _TMR1L -> -> 222 `i `uc ]
+[; ;hachiko_0.c: 232:                     TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
 "233
-[; ;hachiko_0.c: 233:                     TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
+[; ;hachiko_0.c: 233:                     TMR1L = 0xDE;
+[e = _TMR1L -> -> 222 `i `uc ]
 "234
-[; ;hachiko_0.c: 234:                     cont++;
-[e ++ _cont -> 1 `i ]
+[; ;hachiko_0.c: 234:                     TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
 "235
-[; ;hachiko_0.c: 235:                 }
+[; ;hachiko_0.c: 235:                     cont++;
+[e ++ _cont -> 1 `i ]
+"236
+[; ;hachiko_0.c: 236:                 }
 }
 [e :U 403 ]
-"236
-[; ;hachiko_0.c: 236:                 if(cont < 10){
+"237
+[; ;hachiko_0.c: 237:                 if(cont < 10){
 [e $ ! < _cont -> 10 `i 404  ]
 {
-"237
-[; ;hachiko_0.c: 237:                     if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 405  ]
-{
 "238
-[; ;hachiko_0.c: 238:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 238:                     if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 405  ]
+{
 "239
-[; ;hachiko_0.c: 239:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 239:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "240
-[; ;hachiko_0.c: 240:                     }
+[; ;hachiko_0.c: 240:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"241
+[; ;hachiko_0.c: 241:                     }
 }
 [e $U 406  ]
-"241
-[; ;hachiko_0.c: 241:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 405 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 407  ]
-{
 "242
-[; ;hachiko_0.c: 242:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 242:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 405 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 407  ]
+{
 "243
-[; ;hachiko_0.c: 243:                         moverMotor('d','f',60);
+[; ;hachiko_0.c: 243:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"244
+[; ;hachiko_0.c: 244:                         moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"245
-[; ;hachiko_0.c: 245:                     }
+"246
+[; ;hachiko_0.c: 246:                     }
 }
 [e $U 408  ]
-"246
-[; ;hachiko_0.c: 246:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 407 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 409  ]
-{
 "247
-[; ;hachiko_0.c: 247:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 247:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 407 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 409  ]
+{
 "248
-[; ;hachiko_0.c: 248:                         moverMotor('d','f',60);
+[; ;hachiko_0.c: 248:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"249
+[; ;hachiko_0.c: 249:                         moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"250
-[; ;hachiko_0.c: 250:                     }
+"251
+[; ;hachiko_0.c: 251:                     }
 }
 [e $U 410  ]
-"251
-[; ;hachiko_0.c: 251:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 409 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 411  ]
-{
 "252
-[; ;hachiko_0.c: 252:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 252:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 409 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 411  ]
+{
 "253
-[; ;hachiko_0.c: 253:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 253:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "254
-[; ;hachiko_0.c: 254:                     }
+[; ;hachiko_0.c: 254:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"255
+[; ;hachiko_0.c: 255:                     }
 }
 [e $U 412  ]
-"255
-[; ;hachiko_0.c: 255:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 411 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 413  ]
-{
 "256
-[; ;hachiko_0.c: 256:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 256:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 411 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 413  ]
+{
 "257
-[; ;hachiko_0.c: 257:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 257:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "258
-[; ;hachiko_0.c: 258:                     }
+[; ;hachiko_0.c: 258:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"259
+[; ;hachiko_0.c: 259:                     }
 }
 [e $U 414  ]
-"259
-[; ;hachiko_0.c: 259:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 413 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 415  ]
-{
 "260
-[; ;hachiko_0.c: 260:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 260:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 413 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 415  ]
+{
 "261
-[; ;hachiko_0.c: 261:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 261:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "262
-[; ;hachiko_0.c: 262:                     }
+[; ;hachiko_0.c: 262:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"263
+[; ;hachiko_0.c: 263:                     }
 }
 [e $U 416  ]
-"263
-[; ;hachiko_0.c: 263:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 415 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 417  ]
-{
 "264
-[; ;hachiko_0.c: 264:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 264:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 415 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 417  ]
+{
 "265
-[; ;hachiko_0.c: 265:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 265:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "266
-[; ;hachiko_0.c: 266:                     }
+[; ;hachiko_0.c: 266:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"267
+[; ;hachiko_0.c: 267:                     }
 }
 [e $U 418  ]
-"267
-[; ;hachiko_0.c: 267:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
-[e :U 417 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 419  ]
-{
 "268
-[; ;hachiko_0.c: 268:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 268:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+[e :U 417 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 419  ]
+{
 "269
-[; ;hachiko_0.c: 269:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 269:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "270
-[; ;hachiko_0.c: 270:                     }
+[; ;hachiko_0.c: 270:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"271
+[; ;hachiko_0.c: 271:                     }
 }
 [e $U 420  ]
-"271
-[; ;hachiko_0.c: 271:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 419 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 421  ]
-{
 "272
-[; ;hachiko_0.c: 272:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 272:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 419 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 421  ]
+{
 "273
-[; ;hachiko_0.c: 273:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 273:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "274
-[; ;hachiko_0.c: 274:                     }
+[; ;hachiko_0.c: 274:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"275
+[; ;hachiko_0.c: 275:                     }
 }
 [e $U 422  ]
-"275
-[; ;hachiko_0.c: 275:                     else{
+"276
+[; ;hachiko_0.c: 276:                     else{
 [e :U 421 ]
 {
-"276
-[; ;hachiko_0.c: 276:                         if(cont < 1){
+"277
+[; ;hachiko_0.c: 277:                         if(cont < 1){
 [e $ ! < _cont -> 1 `i 423  ]
 {
-"277
-[; ;hachiko_0.c: 277:                             moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "278
-[; ;hachiko_0.c: 278:                             moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 278:                             moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "279
-[; ;hachiko_0.c: 279:                         }
+[; ;hachiko_0.c: 279:                             moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"280
+[; ;hachiko_0.c: 280:                         }
 }
 [e $U 424  ]
-"280
-[; ;hachiko_0.c: 280:                         else{
+"281
+[; ;hachiko_0.c: 281:                         else{
 [e :U 423 ]
 {
-"281
-[; ;hachiko_0.c: 281:                             pararMotor();
-[e ( _pararMotor ..  ]
 "282
-[; ;hachiko_0.c: 282:                         }
+[; ;hachiko_0.c: 282:                             pararMotor();
+[e ( _pararMotor ..  ]
+"283
+[; ;hachiko_0.c: 283:                         }
 }
 [e :U 424 ]
-"283
-[; ;hachiko_0.c: 283:                     }
+"284
+[; ;hachiko_0.c: 284:                     }
 }
 [e :U 422 ]
 [e :U 420 ]
@@ -2064,297 +2064,297 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 410 ]
 [e :U 408 ]
 [e :U 406 ]
-"284
-[; ;hachiko_0.c: 284:                 }
+"285
+[; ;hachiko_0.c: 285:                 }
 }
 [e $U 425  ]
-"285
-[; ;hachiko_0.c: 285:                 else{
+"286
+[; ;hachiko_0.c: 286:                 else{
 [e :U 404 ]
 {
-"286
-[; ;hachiko_0.c: 286:                     cont = 0;
-[e = _cont -> 0 `i ]
 "287
-[; ;hachiko_0.c: 287:                     aux++;
-[e ++ _aux -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 287:                     cont = 0;
+[e = _cont -> 0 `i ]
 "288
-[; ;hachiko_0.c: 288:                     picUSART(aux + 48);
-[e ( _picUSART (1 -> + -> _aux `i -> 48 `i `uc ]
+[; ;hachiko_0.c: 288:                     aux++;
+[e ++ _aux -> -> 1 `i `uc ]
 "289
-[; ;hachiko_0.c: 289:                 }
+[; ;hachiko_0.c: 289:                     picUSART(aux + 48);
+[e ( _picUSART (1 -> + -> _aux `i -> 48 `i `uc ]
+"290
+[; ;hachiko_0.c: 290:                 }
 }
 [e :U 425 ]
-"291
-[; ;hachiko_0.c: 291:                 if(acao == "parar"){
+"292
+[; ;hachiko_0.c: 292:                 if(acao == "parar"){
 [e $ ! == _acao :s 24C 426  ]
 {
-"292
-[; ;hachiko_0.c: 292:                     pararMotor();
-[e ( _pararMotor ..  ]
 "293
-[; ;hachiko_0.c: 293:                     break;
-[e $U 402  ]
+[; ;hachiko_0.c: 293:                     pararMotor();
+[e ( _pararMotor ..  ]
 "294
-[; ;hachiko_0.c: 294:                 }
+[; ;hachiko_0.c: 294:                     break;
+[e $U 402  ]
+"295
+[; ;hachiko_0.c: 295:                 }
 }
 [e :U 426 ]
-"295
-[; ;hachiko_0.c: 295:             }
+"296
+[; ;hachiko_0.c: 296:             }
 }
 [e :U 400 ]
-"229
-[; ;hachiko_0.c: 229:             while(aux < 0x0A){
+"230
+[; ;hachiko_0.c: 230:             while(aux < 0x0A){
 [e $ < -> _aux `i -> 10 `i 401  ]
 [e :U 402 ]
-"296
-[; ;hachiko_0.c: 296:             TMR1ON = 0;
-[e = _TMR1ON -> -> 0 `i `b ]
 "297
-[; ;hachiko_0.c: 297:         }
+[; ;hachiko_0.c: 297:             TMR1ON = 0;
+[e = _TMR1ON -> -> 0 `i `b ]
+"298
+[; ;hachiko_0.c: 298:         }
 }
 [e :U 399 ]
-"299
-[; ;hachiko_0.c: 299:         if(acao == "estrela"){
+"300
+[; ;hachiko_0.c: 300:         if(acao == "estrela"){
 [e $ ! == _acao :s 25C 427  ]
 {
-"300
-[; ;hachiko_0.c: 300:             while(1){
+"301
+[; ;hachiko_0.c: 301:             while(1){
 [e :U 429 ]
 {
-"301
-[; ;hachiko_0.c: 301:                 estrela();
+"302
+[; ;hachiko_0.c: 302:                 estrela();
 [e ( _estrela ..  ]
-"303
-[; ;hachiko_0.c: 303:                 if(acao == "parar"){
+"304
+[; ;hachiko_0.c: 304:                 if(acao == "parar"){
 [e $ ! == _acao :s 26C 431  ]
 {
-"304
-[; ;hachiko_0.c: 304:                     pararMotor();
-[e ( _pararMotor ..  ]
 "305
-[; ;hachiko_0.c: 305:                     break;
-[e $U 430  ]
+[; ;hachiko_0.c: 305:                     pararMotor();
+[e ( _pararMotor ..  ]
 "306
-[; ;hachiko_0.c: 306:                 }
+[; ;hachiko_0.c: 306:                     break;
+[e $U 430  ]
+"307
+[; ;hachiko_0.c: 307:                 }
 }
 [e :U 431 ]
-"307
-[; ;hachiko_0.c: 307:             }
+"308
+[; ;hachiko_0.c: 308:             }
 }
 [e :U 428 ]
 [e $U 429  ]
 [e :U 430 ]
-"308
-[; ;hachiko_0.c: 308:         }
+"309
+[; ;hachiko_0.c: 309:         }
 }
 [e :U 427 ]
-"310
-[; ;hachiko_0.c: 310:         if(acao == "zigzag"){
+"311
+[; ;hachiko_0.c: 311:         if(acao == "zigzag"){
 [e $ ! == _acao :s 27C 432  ]
 {
-"322
-[; ;hachiko_0.c: 322:             char cont_zig = 0x00;
+"323
+[; ;hachiko_0.c: 323:             char cont_zig = 0x00;
 [v _cont_zig `uc ~T0 @X0 1 a ]
 [e = _cont_zig -> -> 0 `i `uc ]
-"323
-[; ;hachiko_0.c: 323:             char cont_tmr = 0x00;
+"324
+[; ;hachiko_0.c: 324:             char cont_tmr = 0x00;
 [v _cont_tmr `uc ~T0 @X0 1 a ]
 [e = _cont_tmr -> -> 0 `i `uc ]
-"324
-[; ;hachiko_0.c: 324:             moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "325
-[; ;hachiko_0.c: 325:             moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 325:             moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "326
-[; ;hachiko_0.c: 326:             _delay((unsigned long)((70)*(20000000/4000.0)));
+[; ;hachiko_0.c: 326:             moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"327
+[; ;hachiko_0.c: 327:             _delay((unsigned long)((70)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 70 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"330
-[; ;hachiko_0.c: 330:             TMR1ON = 1;
-[e = _TMR1ON -> -> 1 `i `b ]
 "331
-[; ;hachiko_0.c: 331:             TMR1L = 0xDE;
-[e = _TMR1L -> -> 222 `i `uc ]
+[; ;hachiko_0.c: 331:             TMR1ON = 1;
+[e = _TMR1ON -> -> 1 `i `b ]
 "332
-[; ;hachiko_0.c: 332:             TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
+[; ;hachiko_0.c: 332:             TMR1L = 0xDE;
+[e = _TMR1L -> -> 222 `i `uc ]
 "333
-[; ;hachiko_0.c: 333:             while(cont_zig < 0x0C){
+[; ;hachiko_0.c: 333:             TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
+"334
+[; ;hachiko_0.c: 334:             while(cont_zig < 0x0C){
 [e $U 433  ]
 [e :U 434 ]
 {
-"334
-[; ;hachiko_0.c: 334:                 while(cont_tmr < 0x19){
+"335
+[; ;hachiko_0.c: 335:                 while(cont_tmr < 0x19){
 [e $U 436  ]
 [e :U 437 ]
 {
-"335
-[; ;hachiko_0.c: 335:                     if(TMR1IF){
+"336
+[; ;hachiko_0.c: 336:                     if(TMR1IF){
 [e $ ! _TMR1IF 439  ]
 {
-"339
-[; ;hachiko_0.c: 339:                         TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
 "340
-[; ;hachiko_0.c: 340:                         TMR1L = 0xDE;
-[e = _TMR1L -> -> 222 `i `uc ]
+[; ;hachiko_0.c: 340:                         TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
 "341
-[; ;hachiko_0.c: 341:                         TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
+[; ;hachiko_0.c: 341:                         TMR1L = 0xDE;
+[e = _TMR1L -> -> 222 `i `uc ]
 "342
-[; ;hachiko_0.c: 342:                         cont_tmr++;
-[e ++ _cont_tmr -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 342:                         TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
 "343
-[; ;hachiko_0.c: 343:                     }
+[; ;hachiko_0.c: 343:                         cont_tmr++;
+[e ++ _cont_tmr -> -> 1 `i `uc ]
+"344
+[; ;hachiko_0.c: 344:                     }
 }
 [e :U 439 ]
-"344
-[; ;hachiko_0.c: 344:                     if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 440  ]
-{
 "345
-[; ;hachiko_0.c: 345:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 345:                     if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 440  ]
+{
 "346
-[; ;hachiko_0.c: 346:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 346:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "347
-[; ;hachiko_0.c: 347:                     }
+[; ;hachiko_0.c: 347:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"348
+[; ;hachiko_0.c: 348:                     }
 }
 [e $U 441  ]
-"348
-[; ;hachiko_0.c: 348:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 440 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 442  ]
-{
 "349
-[; ;hachiko_0.c: 349:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 349:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 440 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 442  ]
+{
 "350
-[; ;hachiko_0.c: 350:                         moverMotor('d','f',60);
+[; ;hachiko_0.c: 350:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"351
+[; ;hachiko_0.c: 351:                         moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"352
-[; ;hachiko_0.c: 352:                     }
+"353
+[; ;hachiko_0.c: 353:                     }
 }
 [e $U 443  ]
-"353
-[; ;hachiko_0.c: 353:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 442 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 444  ]
-{
 "354
-[; ;hachiko_0.c: 354:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 354:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 442 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 444  ]
+{
 "355
-[; ;hachiko_0.c: 355:                         moverMotor('d','f',60);
+[; ;hachiko_0.c: 355:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"356
+[; ;hachiko_0.c: 356:                         moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"357
-[; ;hachiko_0.c: 357:                     }
+"358
+[; ;hachiko_0.c: 358:                     }
 }
 [e $U 445  ]
-"358
-[; ;hachiko_0.c: 358:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 444 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 446  ]
-{
 "359
-[; ;hachiko_0.c: 359:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 359:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 444 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 446  ]
+{
 "360
-[; ;hachiko_0.c: 360:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 360:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "361
-[; ;hachiko_0.c: 361:                     }
+[; ;hachiko_0.c: 361:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"362
+[; ;hachiko_0.c: 362:                     }
 }
 [e $U 447  ]
-"362
-[; ;hachiko_0.c: 362:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 446 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 448  ]
-{
 "363
-[; ;hachiko_0.c: 363:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 363:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 446 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 448  ]
+{
 "364
-[; ;hachiko_0.c: 364:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 364:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "365
-[; ;hachiko_0.c: 365:                     }
+[; ;hachiko_0.c: 365:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"366
+[; ;hachiko_0.c: 366:                     }
 }
 [e $U 449  ]
-"366
-[; ;hachiko_0.c: 366:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 448 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 450  ]
-{
 "367
-[; ;hachiko_0.c: 367:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 367:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 448 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 450  ]
+{
 "368
-[; ;hachiko_0.c: 368:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 368:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "369
-[; ;hachiko_0.c: 369:                     }
+[; ;hachiko_0.c: 369:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"370
+[; ;hachiko_0.c: 370:                     }
 }
 [e $U 451  ]
-"370
-[; ;hachiko_0.c: 370:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 450 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 452  ]
-{
 "371
-[; ;hachiko_0.c: 371:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 371:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 450 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 452  ]
+{
 "372
-[; ;hachiko_0.c: 372:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 372:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "373
-[; ;hachiko_0.c: 373:                     }
+[; ;hachiko_0.c: 373:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"374
+[; ;hachiko_0.c: 374:                     }
 }
 [e $U 453  ]
-"374
-[; ;hachiko_0.c: 374:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
-[e :U 452 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 454  ]
-{
 "375
-[; ;hachiko_0.c: 375:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 375:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+[e :U 452 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 454  ]
+{
 "376
-[; ;hachiko_0.c: 376:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 376:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "377
-[; ;hachiko_0.c: 377:                     }
+[; ;hachiko_0.c: 377:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"378
+[; ;hachiko_0.c: 378:                     }
 }
 [e $U 455  ]
-"378
-[; ;hachiko_0.c: 378:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 454 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 456  ]
-{
 "379
-[; ;hachiko_0.c: 379:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 379:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 454 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 456  ]
+{
 "380
-[; ;hachiko_0.c: 380:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 380:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "381
-[; ;hachiko_0.c: 381:                     }
+[; ;hachiko_0.c: 381:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"382
+[; ;hachiko_0.c: 382:                     }
 }
 [e $U 457  ]
-"382
-[; ;hachiko_0.c: 382:                     else{
+"383
+[; ;hachiko_0.c: 383:                     else{
 [e :U 456 ]
 {
-"383
-[; ;hachiko_0.c: 383:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "384
-[; ;hachiko_0.c: 384:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 384:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "385
-[; ;hachiko_0.c: 385:                     }
+[; ;hachiko_0.c: 385:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"386
+[; ;hachiko_0.c: 386:                     }
 }
 [e :U 457 ]
 [e :U 455 ]
@@ -2365,179 +2365,179 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 445 ]
 [e :U 443 ]
 [e :U 441 ]
-"386
-[; ;hachiko_0.c: 386:                 }
+"387
+[; ;hachiko_0.c: 387:                 }
 }
 [e :U 436 ]
-"334
-[; ;hachiko_0.c: 334:                 while(cont_tmr < 0x19){
+"335
+[; ;hachiko_0.c: 335:                 while(cont_tmr < 0x19){
 [e $ < -> _cont_tmr `i -> 25 `i 437  ]
 [e :U 438 ]
-"387
-[; ;hachiko_0.c: 387:                 cont_tmr = 0x00;
-[e = _cont_tmr -> -> 0 `i `uc ]
 "388
-[; ;hachiko_0.c: 388:                 pararMotor();
-[e ( _pararMotor ..  ]
+[; ;hachiko_0.c: 388:                 cont_tmr = 0x00;
+[e = _cont_tmr -> -> 0 `i `uc ]
 "389
-[; ;hachiko_0.c: 389:                 _delay((unsigned long)((10)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;hachiko_0.c: 389:                 pararMotor();
+[e ( _pararMotor ..  ]
 "390
-[; ;hachiko_0.c: 390:                 while(cont_tmr < 0x07){
+[; ;hachiko_0.c: 390:                 _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"391
+[; ;hachiko_0.c: 391:                 while(cont_tmr < 0x07){
 [e $U 458  ]
 [e :U 459 ]
 {
-"391
-[; ;hachiko_0.c: 391:                     if(TMR1IF){
+"392
+[; ;hachiko_0.c: 392:                     if(TMR1IF){
 [e $ ! _TMR1IF 461  ]
 {
-"395
-[; ;hachiko_0.c: 395:                         TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
 "396
-[; ;hachiko_0.c: 396:                         TMR1L = 0xDE;
-[e = _TMR1L -> -> 222 `i `uc ]
+[; ;hachiko_0.c: 396:                         TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
 "397
-[; ;hachiko_0.c: 397:                         TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
+[; ;hachiko_0.c: 397:                         TMR1L = 0xDE;
+[e = _TMR1L -> -> 222 `i `uc ]
 "398
-[; ;hachiko_0.c: 398:                         cont_tmr++;
-[e ++ _cont_tmr -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 398:                         TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
 "399
-[; ;hachiko_0.c: 399:                     }
+[; ;hachiko_0.c: 399:                         cont_tmr++;
+[e ++ _cont_tmr -> -> 1 `i `uc ]
+"400
+[; ;hachiko_0.c: 400:                     }
 }
 [e :U 461 ]
-"400
-[; ;hachiko_0.c: 400:                     if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 462  ]
-{
 "401
-[; ;hachiko_0.c: 401:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 401:                     if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 462  ]
+{
 "402
-[; ;hachiko_0.c: 402:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 402:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "403
-[; ;hachiko_0.c: 403:                     }
+[; ;hachiko_0.c: 403:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"404
+[; ;hachiko_0.c: 404:                     }
 }
 [e $U 463  ]
-"404
-[; ;hachiko_0.c: 404:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 462 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 464  ]
-{
 "405
-[; ;hachiko_0.c: 405:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 405:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 462 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 464  ]
+{
 "406
-[; ;hachiko_0.c: 406:                         moverMotor('d','f',60);
+[; ;hachiko_0.c: 406:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"407
+[; ;hachiko_0.c: 407:                         moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"408
-[; ;hachiko_0.c: 408:                     }
+"409
+[; ;hachiko_0.c: 409:                     }
 }
 [e $U 465  ]
-"409
-[; ;hachiko_0.c: 409:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 464 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 466  ]
-{
 "410
-[; ;hachiko_0.c: 410:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 410:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 464 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 466  ]
+{
 "411
-[; ;hachiko_0.c: 411:                         moverMotor('d','f',60);
+[; ;hachiko_0.c: 411:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"412
+[; ;hachiko_0.c: 412:                         moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"413
-[; ;hachiko_0.c: 413:                     }
+"414
+[; ;hachiko_0.c: 414:                     }
 }
 [e $U 467  ]
-"414
-[; ;hachiko_0.c: 414:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 466 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 468  ]
-{
 "415
-[; ;hachiko_0.c: 415:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 415:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 466 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 468  ]
+{
 "416
-[; ;hachiko_0.c: 416:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 416:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "417
-[; ;hachiko_0.c: 417:                     }
+[; ;hachiko_0.c: 417:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"418
+[; ;hachiko_0.c: 418:                     }
 }
 [e $U 469  ]
-"418
-[; ;hachiko_0.c: 418:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 468 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 470  ]
-{
 "419
-[; ;hachiko_0.c: 419:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 419:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 468 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 470  ]
+{
 "420
-[; ;hachiko_0.c: 420:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 420:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "421
-[; ;hachiko_0.c: 421:                     }
+[; ;hachiko_0.c: 421:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"422
+[; ;hachiko_0.c: 422:                     }
 }
 [e $U 471  ]
-"422
-[; ;hachiko_0.c: 422:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 470 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 472  ]
-{
 "423
-[; ;hachiko_0.c: 423:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 423:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 470 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 472  ]
+{
 "424
-[; ;hachiko_0.c: 424:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 424:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "425
-[; ;hachiko_0.c: 425:                     }
+[; ;hachiko_0.c: 425:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"426
+[; ;hachiko_0.c: 426:                     }
 }
 [e $U 473  ]
-"426
-[; ;hachiko_0.c: 426:                     else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e :U 472 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 474  ]
-{
 "427
-[; ;hachiko_0.c: 427:                         moverMotor('e','t',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 427:                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e :U 472 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 474  ]
+{
 "428
-[; ;hachiko_0.c: 428:                         moverMotor('d','f',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 428:                         moverMotor('e','t',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "429
-[; ;hachiko_0.c: 429:                     }
+[; ;hachiko_0.c: 429:                         moverMotor('d','f',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"430
+[; ;hachiko_0.c: 430:                     }
 }
 [e $U 475  ]
-"430
-[; ;hachiko_0.c: 430:                     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
-[e :U 474 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 476  ]
-{
 "431
-[; ;hachiko_0.c: 431:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 431:                     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+[e :U 474 ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 476  ]
+{
 "432
-[; ;hachiko_0.c: 432:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 432:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
 "433
-[; ;hachiko_0.c: 433:                     }
+[; ;hachiko_0.c: 433:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
+"434
+[; ;hachiko_0.c: 434:                     }
 }
 [e $U 477  ]
-"434
-[; ;hachiko_0.c: 434:                     else{
+"435
+[; ;hachiko_0.c: 435:                     else{
 [e :U 476 ]
 {
-"435
-[; ;hachiko_0.c: 435:                         moverMotor('d','t',60);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "436
-[; ;hachiko_0.c: 436:                         moverMotor('e','f',60);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+[; ;hachiko_0.c: 436:                         moverMotor('d','t',60);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
 "437
-[; ;hachiko_0.c: 437:                     }
+[; ;hachiko_0.c: 437:                         moverMotor('e','f',60);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
+"438
+[; ;hachiko_0.c: 438:                     }
 }
 [e :U 477 ]
 [e :U 475 ]
@@ -2547,482 +2547,482 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 467 ]
 [e :U 465 ]
 [e :U 463 ]
-"438
-[; ;hachiko_0.c: 438:                 }
+"439
+[; ;hachiko_0.c: 439:                 }
 }
 [e :U 458 ]
-"390
-[; ;hachiko_0.c: 390:                 while(cont_tmr < 0x07){
+"391
+[; ;hachiko_0.c: 391:                 while(cont_tmr < 0x07){
 [e $ < -> _cont_tmr `i -> 7 `i 459  ]
 [e :U 460 ]
-"439
-[; ;hachiko_0.c: 439:                 pararMotor();
-[e ( _pararMotor ..  ]
 "440
-[; ;hachiko_0.c: 440:                 _delay((unsigned long)((10)*(20000000/4000.0)));
+[; ;hachiko_0.c: 440:                 pararMotor();
+[e ( _pararMotor ..  ]
+"441
+[; ;hachiko_0.c: 441:                 _delay((unsigned long)((10)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"442
-[; ;hachiko_0.c: 442:                 if(acao == "parar"){
+"443
+[; ;hachiko_0.c: 443:                 if(acao == "parar"){
 [e $ ! == _acao :s 28C 478  ]
 {
-"443
-[; ;hachiko_0.c: 443:                     pararMotor();
-[e ( _pararMotor ..  ]
 "444
-[; ;hachiko_0.c: 444:                     break;
-[e $U 435  ]
+[; ;hachiko_0.c: 444:                     pararMotor();
+[e ( _pararMotor ..  ]
 "445
-[; ;hachiko_0.c: 445:                 }
+[; ;hachiko_0.c: 445:                     break;
+[e $U 435  ]
+"446
+[; ;hachiko_0.c: 446:                 }
 }
 [e :U 478 ]
-"446
-[; ;hachiko_0.c: 446:                 cont_zig++;
-[e ++ _cont_zig -> -> 1 `i `uc ]
 "447
-[; ;hachiko_0.c: 447:             }
+[; ;hachiko_0.c: 447:                 cont_zig++;
+[e ++ _cont_zig -> -> 1 `i `uc ]
+"448
+[; ;hachiko_0.c: 448:             }
 }
 [e :U 433 ]
-"333
-[; ;hachiko_0.c: 333:             while(cont_zig < 0x0C){
+"334
+[; ;hachiko_0.c: 334:             while(cont_zig < 0x0C){
 [e $ < -> _cont_zig `i -> 12 `i 434  ]
 [e :U 435 ]
-"448
-[; ;hachiko_0.c: 448:             TMR1ON = 0;
-[e = _TMR1ON -> -> 0 `i `b ]
 "449
-[; ;hachiko_0.c: 449:             acao = " ";
-[e = _acao :s 29C ]
+[; ;hachiko_0.c: 449:             TMR1ON = 0;
+[e = _TMR1ON -> -> 0 `i `b ]
 "450
-[; ;hachiko_0.c: 450:         }
+[; ;hachiko_0.c: 450:             acao = " ";
+[e = _acao :s 29C ]
+"451
+[; ;hachiko_0.c: 451:         }
 }
 [e :U 432 ]
-"453
-[; ;hachiko_0.c: 453:         if(acao == "esquerdo"){
+"454
+[; ;hachiko_0.c: 454:         if(acao == "esquerdo"){
 [e $ ! == _acao :s 30C 479  ]
 {
-"454
-[; ;hachiko_0.c: 454:             velocidade = 10*600/100;
-[e = _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "455
-[; ;hachiko_0.c: 455:             PORTBbits.RB7 = 1;
-[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 455:             velocidade = 10*600/100;
+[e = _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "456
-[; ;hachiko_0.c: 456:             while(1){
+[; ;hachiko_0.c: 456:             PORTBbits.RB7 = 1;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"457
+[; ;hachiko_0.c: 457:             while(1){
 [e :U 481 ]
 {
-"457
-[; ;hachiko_0.c: 457:                 if(acao == "tras"){
+"458
+[; ;hachiko_0.c: 458:                 if(acao == "tras"){
 [e $ ! == _acao :s 31C 483  ]
 {
-"458
-[; ;hachiko_0.c: 458:                     PDC1L = velocidade & 0xFF;
-[e = _PDC1L -> & _velocidade -> -> 255 `i `ui `uc ]
 "459
-[; ;hachiko_0.c: 459:                     PDC1H = (velocidade >> 8) & 0xFF;
-[e = _PDC1H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 459:                     PDC1L = 0x00;
+[e = _PDC1L -> -> 0 `i `uc ]
 "460
-[; ;hachiko_0.c: 460:                     PDC2L = 0x00;
-[e = _PDC2L -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 460:                     PDC1H = 0x00;
+[e = _PDC1H -> -> 0 `i `uc ]
 "461
-[; ;hachiko_0.c: 461:                     PDC2H = 0x00;
-[e = _PDC2H -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 461:                     PDC2L = velocidade & 0xFF;
+[e = _PDC2L -> & _velocidade -> -> 255 `i `ui `uc ]
 "462
-[; ;hachiko_0.c: 462:                 }
+[; ;hachiko_0.c: 462:                     PDC2H = (velocidade >> 8) & 0xFF;
+[e = _PDC2H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+"463
+[; ;hachiko_0.c: 463:                 }
 }
 [e $U 484  ]
-"463
-[; ;hachiko_0.c: 463:                 else if(acao == "frente"){
+"464
+[; ;hachiko_0.c: 464:                 else if(acao == "frente"){
 [e :U 483 ]
 [e $ ! == _acao :s 32C 485  ]
 {
-"464
-[; ;hachiko_0.c: 464:                     PDC1L = 0x00;
-[e = _PDC1L -> -> 0 `i `uc ]
 "465
-[; ;hachiko_0.c: 465:                     PDC1H = 0x00;
-[e = _PDC1H -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 465:                     PDC1L = velocidade & 0xFF;
+[e = _PDC1L -> & _velocidade -> -> 255 `i `ui `uc ]
 "466
-[; ;hachiko_0.c: 466:                     PDC2L = velocidade & 0xFF;
-[e = _PDC2L -> & _velocidade -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 466:                     PDC1H = (velocidade >> 8) & 0xFF;
+[e = _PDC1H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
 "467
-[; ;hachiko_0.c: 467:                     PDC2H = (velocidade >> 8) & 0xFF;
-[e = _PDC2H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 467:                     PDC2L = 0x00;
+[e = _PDC2L -> -> 0 `i `uc ]
 "468
-[; ;hachiko_0.c: 468:                 }
+[; ;hachiko_0.c: 468:                     PDC2H = 0x00;
+[e = _PDC2H -> -> 0 `i `uc ]
+"469
+[; ;hachiko_0.c: 469:                 }
 }
 [e :U 485 ]
 [e :U 484 ]
-"469
-[; ;hachiko_0.c: 469:                 if(acao == "parar") break;
+"470
+[; ;hachiko_0.c: 470:                 if(acao == "parar") break;
 [e $ ! == _acao :s 33C 486  ]
 [e $U 482  ]
 [e :U 486 ]
-"470
-[; ;hachiko_0.c: 470:             }
+"471
+[; ;hachiko_0.c: 471:             }
 }
 [e :U 480 ]
 [e $U 481  ]
 [e :U 482 ]
-"471
-[; ;hachiko_0.c: 471:         }
+"472
+[; ;hachiko_0.c: 472:         }
 }
 [e :U 479 ]
-"473
-[; ;hachiko_0.c: 473:         if(acao == "direito"){
+"474
+[; ;hachiko_0.c: 474:         if(acao == "direito"){
 [e $ ! == _acao :s 34C 487  ]
 {
-"474
-[; ;hachiko_0.c: 474:             velocidade = 10*600/100;
-[e = _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "475
-[; ;hachiko_0.c: 475:             PORTBbits.RB6 = 1;
-[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 475:             velocidade = 10*600/100;
+[e = _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "476
-[; ;hachiko_0.c: 476:             while(1){
+[; ;hachiko_0.c: 476:             PORTBbits.RB6 = 1;
+[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
+"477
+[; ;hachiko_0.c: 477:             while(1){
 [e :U 489 ]
 {
-"477
-[; ;hachiko_0.c: 477:                 if(acao == "frente"){
+"478
+[; ;hachiko_0.c: 478:                 if(acao == "frente"){
 [e $ ! == _acao :s 35C 491  ]
 {
-"478
-[; ;hachiko_0.c: 478:                     PDC0L = velocidade & 0xFF;
-[e = _PDC0L -> & _velocidade -> -> 255 `i `ui `uc ]
 "479
-[; ;hachiko_0.c: 479:                     PDC0H = (velocidade >> 8) & 0xFF;
-[e = _PDC0H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 479:                     PDC0L = velocidade & 0xFF;
+[e = _PDC0L -> & _velocidade -> -> 255 `i `ui `uc ]
 "480
-[; ;hachiko_0.c: 480:                     PDC3L = 0x00;
-[e = _PDC3L -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 480:                     PDC0H = (velocidade >> 8) & 0xFF;
+[e = _PDC0H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
 "481
-[; ;hachiko_0.c: 481:                     PDC3H = 0x00;
-[e = _PDC3H -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 481:                     PDC3L = 0x00;
+[e = _PDC3L -> -> 0 `i `uc ]
 "482
-[; ;hachiko_0.c: 482:                 }
+[; ;hachiko_0.c: 482:                     PDC3H = 0x00;
+[e = _PDC3H -> -> 0 `i `uc ]
+"483
+[; ;hachiko_0.c: 483:                 }
 }
 [e $U 492  ]
-"483
-[; ;hachiko_0.c: 483:                 else if(acao == "tras"){
+"484
+[; ;hachiko_0.c: 484:                 else if(acao == "tras"){
 [e :U 491 ]
 [e $ ! == _acao :s 36C 493  ]
 {
-"484
-[; ;hachiko_0.c: 484:                     PDC0L = 0x00;
-[e = _PDC0L -> -> 0 `i `uc ]
 "485
-[; ;hachiko_0.c: 485:                     PDC0H = 0x00;
-[e = _PDC0H -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 485:                     PDC0L = 0x00;
+[e = _PDC0L -> -> 0 `i `uc ]
 "486
-[; ;hachiko_0.c: 486:                     PDC3L = velocidade & 0xFF;
-[e = _PDC3L -> & _velocidade -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 486:                     PDC0H = 0x00;
+[e = _PDC0H -> -> 0 `i `uc ]
 "487
-[; ;hachiko_0.c: 487:                     PDC3H = (velocidade >> 8) & 0xFF;
-[e = _PDC3H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 487:                     PDC3L = velocidade & 0xFF;
+[e = _PDC3L -> & _velocidade -> -> 255 `i `ui `uc ]
 "488
-[; ;hachiko_0.c: 488:                 }
+[; ;hachiko_0.c: 488:                     PDC3H = (velocidade >> 8) & 0xFF;
+[e = _PDC3H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+"489
+[; ;hachiko_0.c: 489:                 }
 }
 [e :U 493 ]
 [e :U 492 ]
-"489
-[; ;hachiko_0.c: 489:                 if(acao == "parar") break;
+"490
+[; ;hachiko_0.c: 490:                 if(acao == "parar") break;
 [e $ ! == _acao :s 37C 494  ]
 [e $U 490  ]
 [e :U 494 ]
-"490
-[; ;hachiko_0.c: 490:             }
+"491
+[; ;hachiko_0.c: 491:             }
 }
 [e :U 488 ]
 [e $U 489  ]
 [e :U 490 ]
-"491
-[; ;hachiko_0.c: 491:         }
+"492
+[; ;hachiko_0.c: 492:         }
 }
 [e :U 487 ]
-"493
-[; ;hachiko_0.c: 493:         if(acao == "motor"){
+"494
+[; ;hachiko_0.c: 494:         if(acao == "motor"){
 [e $ ! == _acao :s 38C 495  ]
 {
-"494
-[; ;hachiko_0.c: 494:             velocidade = 10*600/100;
-[e = _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "495
-[; ;hachiko_0.c: 495:             PORTBbits.RB6 = 1;
-[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 495:             velocidade = 10*600/100;
+[e = _velocidade -> / * -> 10 `i -> 600 `i -> 100 `i `ui ]
 "496
-[; ;hachiko_0.c: 496:             PORTBbits.RB7 = 1;
-[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[; ;hachiko_0.c: 496:             PORTBbits.RB6 = 1;
+[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
 "497
-[; ;hachiko_0.c: 497:             while(1){
+[; ;hachiko_0.c: 497:             PORTBbits.RB7 = 1;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"498
+[; ;hachiko_0.c: 498:             while(1){
 [e :U 497 ]
 {
-"498
-[; ;hachiko_0.c: 498:                 if(acao == "frente"){
+"499
+[; ;hachiko_0.c: 499:                 if(acao == "frente"){
 [e $ ! == _acao :s 39C 499  ]
 {
-"499
-[; ;hachiko_0.c: 499:                     PDC0L = velocidade & 0xFF;
-[e = _PDC0L -> & _velocidade -> -> 255 `i `ui `uc ]
 "500
-[; ;hachiko_0.c: 500:                     PDC0H = (velocidade >> 8) & 0xFF;
-[e = _PDC0H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 500:                     PDC0L = velocidade & 0xFF;
+[e = _PDC0L -> & _velocidade -> -> 255 `i `ui `uc ]
 "501
-[; ;hachiko_0.c: 501:                     PDC3L = 0x00;
-[e = _PDC3L -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 501:                     PDC0H = (velocidade >> 8) & 0xFF;
+[e = _PDC0H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
 "502
-[; ;hachiko_0.c: 502:                     PDC3H = 0x00;
-[e = _PDC3H -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 502:                     PDC3L = 0x00;
+[e = _PDC3L -> -> 0 `i `uc ]
 "503
-[; ;hachiko_0.c: 503:                     PDC2L = velocidade & 0xFF;
-[e = _PDC2L -> & _velocidade -> -> 255 `i `ui `uc ]
-"504
-[; ;hachiko_0.c: 504:                     PDC2H = (velocidade >> 8) & 0xFF;
-[e = _PDC2H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+[; ;hachiko_0.c: 503:                     PDC3H = 0x00;
+[e = _PDC3H -> -> 0 `i `uc ]
 "505
-[; ;hachiko_0.c: 505:                     PDC1L = 0x00;
-[e = _PDC1L -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 505:                     PDC1L = velocidade & 0xFF;
+[e = _PDC1L -> & _velocidade -> -> 255 `i `ui `uc ]
 "506
-[; ;hachiko_0.c: 506:                     PDC1H = 0x00;
-[e = _PDC1H -> -> 0 `i `uc ]
+[; ;hachiko_0.c: 506:                     PDC1H = (velocidade >> 8) & 0xFF;
+[e = _PDC1H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
 "507
-[; ;hachiko_0.c: 507:                 }
+[; ;hachiko_0.c: 507:                     PDC2L = 0x00;
+[e = _PDC2L -> -> 0 `i `uc ]
+"508
+[; ;hachiko_0.c: 508:                     PDC2H = 0x00;
+[e = _PDC2H -> -> 0 `i `uc ]
+"515
+[; ;hachiko_0.c: 515:                 }
 }
 [e $U 500  ]
-"508
-[; ;hachiko_0.c: 508:                 else if(acao == "tras"){
+"516
+[; ;hachiko_0.c: 516:                 else if(acao == "tras"){
 [e :U 499 ]
 [e $ ! == _acao :s 40C 501  ]
 {
-"509
-[; ;hachiko_0.c: 509:                     PDC0L = 0x00;
-[e = _PDC0L -> -> 0 `i `uc ]
-"510
-[; ;hachiko_0.c: 510:                     PDC0H = 0x00;
-[e = _PDC0H -> -> 0 `i `uc ]
-"511
-[; ;hachiko_0.c: 511:                     PDC3L = velocidade & 0xFF;
-[e = _PDC3L -> & _velocidade -> -> 255 `i `ui `uc ]
-"512
-[; ;hachiko_0.c: 512:                     PDC3H = (velocidade >> 8) & 0xFF;
-[e = _PDC3H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
-"513
-[; ;hachiko_0.c: 513:                     PDC2L = 0x00;
-[e = _PDC2L -> -> 0 `i `uc ]
-"514
-[; ;hachiko_0.c: 514:                     PDC2H = 0x00;
-[e = _PDC2H -> -> 0 `i `uc ]
-"515
-[; ;hachiko_0.c: 515:                     PDC1L = velocidade & 0xFF;
-[e = _PDC1L -> & _velocidade -> -> 255 `i `ui `uc ]
-"516
-[; ;hachiko_0.c: 516:                     PDC1H = (velocidade >> 8) & 0xFF;
-[e = _PDC1H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
 "517
-[; ;hachiko_0.c: 517:                 }
+[; ;hachiko_0.c: 517:                     PDC0L = 0x00;
+[e = _PDC0L -> -> 0 `i `uc ]
+"518
+[; ;hachiko_0.c: 518:                     PDC0H = 0x00;
+[e = _PDC0H -> -> 0 `i `uc ]
+"519
+[; ;hachiko_0.c: 519:                     PDC3L = velocidade & 0xFF;
+[e = _PDC3L -> & _velocidade -> -> 255 `i `ui `uc ]
+"520
+[; ;hachiko_0.c: 520:                     PDC3H = (velocidade >> 8) & 0xFF;
+[e = _PDC3H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+"522
+[; ;hachiko_0.c: 522:                     PDC1L = 0x00;
+[e = _PDC1L -> -> 0 `i `uc ]
+"523
+[; ;hachiko_0.c: 523:                     PDC1H = 0x00;
+[e = _PDC1H -> -> 0 `i `uc ]
+"524
+[; ;hachiko_0.c: 524:                     PDC2L = velocidade & 0xFF;
+[e = _PDC2L -> & _velocidade -> -> 255 `i `ui `uc ]
+"525
+[; ;hachiko_0.c: 525:                     PDC2H = (velocidade >> 8) & 0xFF;
+[e = _PDC2H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+"532
+[; ;hachiko_0.c: 532:                 }
 }
 [e :U 501 ]
 [e :U 500 ]
-"518
-[; ;hachiko_0.c: 518:                 if(acao == "parar"){
+"533
+[; ;hachiko_0.c: 533:                 if(acao == "parar"){
 [e $ ! == _acao :s 41C 502  ]
 {
-"519
-[; ;hachiko_0.c: 519:                     pararMotor();
+"534
+[; ;hachiko_0.c: 534:                     pararMotor();
 [e ( _pararMotor ..  ]
-"520
-[; ;hachiko_0.c: 520:                     break;
+"535
+[; ;hachiko_0.c: 535:                     break;
 [e $U 498  ]
-"521
-[; ;hachiko_0.c: 521:                 }
+"536
+[; ;hachiko_0.c: 536:                 }
 }
 [e :U 502 ]
-"522
-[; ;hachiko_0.c: 522:             }
+"537
+[; ;hachiko_0.c: 537:             }
 }
 [e :U 496 ]
 [e $U 497  ]
 [e :U 498 ]
-"523
-[; ;hachiko_0.c: 523:         }
+"538
+[; ;hachiko_0.c: 538:         }
 }
 [e :U 495 ]
-"525
-[; ;hachiko_0.c: 525:         if(acao == "teste"){
+"540
+[; ;hachiko_0.c: 540:         if(acao == "teste"){
 [e $ ! == _acao :s 42C 503  ]
 {
-"527
-[; ;hachiko_0.c: 527:             PORTBbits.RB7 = 1;
+"542
+[; ;hachiko_0.c: 542:             PORTBbits.RB7 = 1;
 [e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
-"528
-[; ;hachiko_0.c: 528:             PORTBbits.RB6 = 1;
+"543
+[; ;hachiko_0.c: 543:             PORTBbits.RB6 = 1;
 [e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
-"544
-[; ;hachiko_0.c: 544:             moverMotor('d','f',80);
+"559
+[; ;hachiko_0.c: 559:             moverMotor('d','f',80);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"545
-[; ;hachiko_0.c: 545:             moverMotor('e','f',80);
+"560
+[; ;hachiko_0.c: 560:             moverMotor('e','f',80);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"546
-[; ;hachiko_0.c: 546:             _delay((unsigned long)((500)*(20000000/4000.0)));
+"561
+[; ;hachiko_0.c: 561:             _delay((unsigned long)((500)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"548
-[; ;hachiko_0.c: 548:             moverMotor('d','f',0);
+"563
+[; ;hachiko_0.c: 563:             moverMotor('d','f',0);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 0 `i `ui ]
-"549
-[; ;hachiko_0.c: 549:             moverMotor('e','f',0);
+"564
+[; ;hachiko_0.c: 564:             moverMotor('e','f',0);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 0 `i `ui ]
-"550
-[; ;hachiko_0.c: 550:             _delay((unsigned long)((2000)*(20000000/4000.0)));
+"565
+[; ;hachiko_0.c: 565:             _delay((unsigned long)((2000)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"551
-[; ;hachiko_0.c: 551:             moverMotor('d','t',80);
+"566
+[; ;hachiko_0.c: 566:             moverMotor('d','t',80);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"552
-[; ;hachiko_0.c: 552:             moverMotor('e','t',80);
+"567
+[; ;hachiko_0.c: 567:             moverMotor('e','t',80);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"553
-[; ;hachiko_0.c: 553:             _delay((unsigned long)((500)*(20000000/4000.0)));
+"568
+[; ;hachiko_0.c: 568:             _delay((unsigned long)((500)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"554
-[; ;hachiko_0.c: 554:             pararMotor();
+"569
+[; ;hachiko_0.c: 569:             pararMotor();
 [e ( _pararMotor ..  ]
-"555
-[; ;hachiko_0.c: 555:             acao = ' ';
+"570
+[; ;hachiko_0.c: 570:             acao = ' ';
 [e = _acao -> -> 32 `ui `*uc ]
-"557
-[; ;hachiko_0.c: 557:         }
+"572
+[; ;hachiko_0.c: 572:         }
 }
 [e :U 503 ]
-"559
-[; ;hachiko_0.c: 559:         if(acao == "gd"){
+"574
+[; ;hachiko_0.c: 574:         if(acao == "gd"){
 [e $ ! == _acao :s 43C 504  ]
 {
-"560
-[; ;hachiko_0.c: 560:             moverMotor('e','f',60);
+"575
+[; ;hachiko_0.c: 575:             moverMotor('e','f',60);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"561
-[; ;hachiko_0.c: 561:             moverMotor('d','t',60);
+"576
+[; ;hachiko_0.c: 576:             moverMotor('d','t',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"562
-[; ;hachiko_0.c: 562:             _delay((unsigned long)((300)*(20000000/4000.0)));
+"577
+[; ;hachiko_0.c: 577:             _delay((unsigned long)((300)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"563
-[; ;hachiko_0.c: 563:             pararMotor();
+"578
+[; ;hachiko_0.c: 578:             pararMotor();
 [e ( _pararMotor ..  ]
-"564
-[; ;hachiko_0.c: 564:             acao = ' ';
+"579
+[; ;hachiko_0.c: 579:             acao = ' ';
 [e = _acao -> -> 32 `ui `*uc ]
-"566
-[; ;hachiko_0.c: 566:         }
+"581
+[; ;hachiko_0.c: 581:         }
 }
 [e :U 504 ]
-"568
-[; ;hachiko_0.c: 568:         if(acao == "ge"){
+"583
+[; ;hachiko_0.c: 583:         if(acao == "ge"){
 [e $ ! == _acao :s 44C 505  ]
 {
-"569
-[; ;hachiko_0.c: 569:             moverMotor('e','t',60);
+"584
+[; ;hachiko_0.c: 584:             moverMotor('e','t',60);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"570
-[; ;hachiko_0.c: 570:             moverMotor('d','f',60);
+"585
+[; ;hachiko_0.c: 585:             moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"571
-[; ;hachiko_0.c: 571:             _delay((unsigned long)((300)*(20000000/4000.0)));
+"586
+[; ;hachiko_0.c: 586:             _delay((unsigned long)((300)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"572
-[; ;hachiko_0.c: 572:             pararMotor();
+"587
+[; ;hachiko_0.c: 587:             pararMotor();
 [e ( _pararMotor ..  ]
-"573
-[; ;hachiko_0.c: 573:             acao = ' ';
+"588
+[; ;hachiko_0.c: 588:             acao = ' ';
 [e = _acao -> -> 32 `ui `*uc ]
-"575
-[; ;hachiko_0.c: 575:         }
+"590
+[; ;hachiko_0.c: 590:         }
 }
 [e :U 505 ]
-"577
-[; ;hachiko_0.c: 577:         if(!PORTAbits.RA2){
+"592
+[; ;hachiko_0.c: 592:         if(!PORTAbits.RA2){
 [e $ ! ! != -> . . _PORTAbits 0 2 `i -> 0 `i 506  ]
 {
-"578
-[; ;hachiko_0.c: 578:             _delay((unsigned long)((100)*(20000000/4000.0)));
+"593
+[; ;hachiko_0.c: 593:             _delay((unsigned long)((100)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"579
-[; ;hachiko_0.c: 579:             picUSART('0');
+"594
+[; ;hachiko_0.c: 594:             picUSART('0');
 [e ( _picUSART (1 -> -> 48 `ui `uc ]
-"580
-[; ;hachiko_0.c: 580:         }
+"595
+[; ;hachiko_0.c: 595:         }
 }
 [e :U 506 ]
-"581
-[; ;hachiko_0.c: 581:         if(!PORTAbits.RA3){
+"596
+[; ;hachiko_0.c: 596:         if(!PORTAbits.RA3){
 [e $ ! ! != -> . . _PORTAbits 0 3 `i -> 0 `i 507  ]
 {
-"582
-[; ;hachiko_0.c: 582:             _delay((unsigned long)((100)*(20000000/4000.0)));
+"597
+[; ;hachiko_0.c: 597:             _delay((unsigned long)((100)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"583
-[; ;hachiko_0.c: 583:             picUSART('1');
+"598
+[; ;hachiko_0.c: 598:             picUSART('1');
 [e ( _picUSART (1 -> -> 49 `ui `uc ]
-"584
-[; ;hachiko_0.c: 584:         }
+"599
+[; ;hachiko_0.c: 599:         }
 }
 [e :U 507 ]
-"585
-[; ;hachiko_0.c: 585:         if(!PORTCbits.RC0){
+"600
+[; ;hachiko_0.c: 600:         if(!PORTCbits.RC0){
 [e $ ! ! != -> . . _PORTCbits 0 0 `i -> 0 `i 508  ]
 {
-"586
-[; ;hachiko_0.c: 586:             _delay((unsigned long)((100)*(20000000/4000.0)));
+"601
+[; ;hachiko_0.c: 601:             _delay((unsigned long)((100)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"587
-[; ;hachiko_0.c: 587:             picUSART('2');
+"602
+[; ;hachiko_0.c: 602:             picUSART('2');
 [e ( _picUSART (1 -> -> 50 `ui `uc ]
-"588
-[; ;hachiko_0.c: 588:         }
+"603
+[; ;hachiko_0.c: 603:         }
 }
 [e :U 508 ]
-"589
-[; ;hachiko_0.c: 589:         if(!PORTAbits.RA0){
-[e $ ! ! != -> . . _PORTAbits 0 0 `i -> 0 `i 509  ]
+"604
+[; ;hachiko_0.c: 604:         if(!PORTAbits.RA4){
+[e $ ! ! != -> . . _PORTAbits 0 4 `i -> 0 `i 509  ]
 {
-"590
-[; ;hachiko_0.c: 590:             _delay((unsigned long)((100)*(20000000/4000.0)));
+"605
+[; ;hachiko_0.c: 605:             _delay((unsigned long)((100)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"591
-[; ;hachiko_0.c: 591:             picUSART('3');
+"606
+[; ;hachiko_0.c: 606:             picUSART('3');
 [e ( _picUSART (1 -> -> 51 `ui `uc ]
-"592
-[; ;hachiko_0.c: 592:         }
+"607
+[; ;hachiko_0.c: 607:         }
 }
 [e :U 509 ]
-"593
-[; ;hachiko_0.c: 593:         if(!PORTAbits.RA1){
+"608
+[; ;hachiko_0.c: 608:         if(!PORTAbits.RA1){
 [e $ ! ! != -> . . _PORTAbits 0 1 `i -> 0 `i 510  ]
 {
-"594
-[; ;hachiko_0.c: 594:             _delay((unsigned long)((100)*(20000000/4000.0)));
+"609
+[; ;hachiko_0.c: 609:             _delay((unsigned long)((100)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"595
-[; ;hachiko_0.c: 595:             picUSART('4');
+"610
+[; ;hachiko_0.c: 610:             picUSART('4');
 [e ( _picUSART (1 -> -> 52 `ui `uc ]
-"596
-[; ;hachiko_0.c: 596:         }
+"611
+[; ;hachiko_0.c: 611:         }
 }
 [e :U 510 ]
-"614
-[; ;hachiko_0.c: 614:     }
+"629
+[; ;hachiko_0.c: 629:     }
 }
 [e :U 360 ]
 [e $U 361  ]
 [e :U 362 ]
-"616
-[; ;hachiko_0.c: 616:     return;
+"631
+[; ;hachiko_0.c: 631:     return;
 [e $UE 356  ]
-"617
-[; ;hachiko_0.c: 617: }
+"632
+[; ;hachiko_0.c: 632: }
 [e :UE 356 ]
 }
-"619
-[; ;hachiko_0.c: 619: void moverMotor(char lado, char sentido, unsigned int velocidade){
+"634
+[; ;hachiko_0.c: 634: void moverMotor(char lado, char sentido, unsigned int velocidade){
 [v _moverMotor `(v ~T0 @X0 1 ef3`uc`uc`ui ]
 {
 [e :U _moverMotor ]
@@ -3030,304 +3030,312 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _sentido `uc ~T0 @X0 1 r2 ]
 [v _velocidade `ui ~T0 @X0 1 r3 ]
 [f ]
-"620
-[; ;hachiko_0.c: 620:     velocidade *= 600/100;
+"635
+[; ;hachiko_0.c: 635:     velocidade *= 600/100;
 [e =* _velocidade -> / -> 600 `i -> 100 `i `ui ]
-"621
-[; ;hachiko_0.c: 621:     if(lado == 'e'){
+"636
+[; ;hachiko_0.c: 636:     if(lado == 'e'){
 [e $ ! == -> _lado `ui -> 101 `ui 512  ]
 {
-"622
-[; ;hachiko_0.c: 622:         PORTBbits.RB6 = 1;
+"637
+[; ;hachiko_0.c: 637:         PORTBbits.RB6 = 1;
 [e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
-"623
-[; ;hachiko_0.c: 623:         if(sentido == 'f'){
+"638
+[; ;hachiko_0.c: 638:         if(sentido == 'f'){
 [e $ ! == -> _sentido `ui -> 102 `ui 513  ]
 {
-"624
-[; ;hachiko_0.c: 624:             PDC2L = velocidade & 0b11111111;
-[e = _PDC2L -> & _velocidade -> -> 255 `i `ui `uc ]
-"625
-[; ;hachiko_0.c: 625:             PDC2H = (velocidade >> 8) & 0b11111111;
-[e = _PDC2H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
-"626
-[; ;hachiko_0.c: 626:             PDC1L = 0;
-[e = _PDC1L -> -> 0 `i `uc ]
-"627
-[; ;hachiko_0.c: 627:             PDC1H = 0;
-[e = _PDC1H -> -> 0 `i `uc ]
-"628
-[; ;hachiko_0.c: 628:         }
+"640
+[; ;hachiko_0.c: 640:             PDC1L = velocidade & 0xFF;
+[e = _PDC1L -> & _velocidade -> -> 255 `i `ui `uc ]
+"641
+[; ;hachiko_0.c: 641:             PDC1H = (velocidade >> 8) & 0xFF;
+[e = _PDC1H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+"642
+[; ;hachiko_0.c: 642:             PDC2L = 0x00;
+[e = _PDC2L -> -> 0 `i `uc ]
+"643
+[; ;hachiko_0.c: 643:             PDC2H = 0x00;
+[e = _PDC2H -> -> 0 `i `uc ]
+"650
+[; ;hachiko_0.c: 650:         }
 }
 [e $U 514  ]
-"629
-[; ;hachiko_0.c: 629:         else if(sentido == 't'){
+"651
+[; ;hachiko_0.c: 651:         else if(sentido == 't'){
 [e :U 513 ]
 [e $ ! == -> _sentido `ui -> 116 `ui 515  ]
 {
-"630
-[; ;hachiko_0.c: 630:             PDC1L = velocidade & 0b11111111;
-[e = _PDC1L -> & _velocidade -> -> 255 `i `ui `uc ]
-"631
-[; ;hachiko_0.c: 631:             PDC1H = (velocidade >> 8) & 0b11111111;
-[e = _PDC1H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
-"632
-[; ;hachiko_0.c: 632:             PDC2L = 0;
-[e = _PDC2L -> -> 0 `i `uc ]
-"633
-[; ;hachiko_0.c: 633:             PDC2H = 0;
-[e = _PDC2H -> -> 0 `i `uc ]
-"634
-[; ;hachiko_0.c: 634:         }
+"653
+[; ;hachiko_0.c: 653:             PDC1L = 0x00;
+[e = _PDC1L -> -> 0 `i `uc ]
+"654
+[; ;hachiko_0.c: 654:             PDC1H = 0x00;
+[e = _PDC1H -> -> 0 `i `uc ]
+"655
+[; ;hachiko_0.c: 655:             PDC2L = velocidade & 0xFF;
+[e = _PDC2L -> & _velocidade -> -> 255 `i `ui `uc ]
+"656
+[; ;hachiko_0.c: 656:             PDC2H = (velocidade >> 8) & 0xFF;
+[e = _PDC2H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
+"664
+[; ;hachiko_0.c: 664:         }
 }
 [e :U 515 ]
 [e :U 514 ]
-"635
-[; ;hachiko_0.c: 635:     }
+"665
+[; ;hachiko_0.c: 665:     }
 }
 [e $U 516  ]
-"636
-[; ;hachiko_0.c: 636:     else if(lado == 'd'){
+"666
+[; ;hachiko_0.c: 666:     else if(lado == 'd'){
 [e :U 512 ]
 [e $ ! == -> _lado `ui -> 100 `ui 517  ]
 {
-"637
-[; ;hachiko_0.c: 637:         PORTBbits.RB7 = 1;
+"667
+[; ;hachiko_0.c: 667:         PORTBbits.RB7 = 1;
 [e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
-"638
-[; ;hachiko_0.c: 638:         if(sentido == 'f'){
+"668
+[; ;hachiko_0.c: 668:         if(sentido == 'f'){
 [e $ ! == -> _sentido `ui -> 102 `ui 518  ]
 {
-"639
-[; ;hachiko_0.c: 639:             PDC0L = velocidade & 0b11111111;
+"669
+[; ;hachiko_0.c: 669:             PDC0L = velocidade & 0b11111111;
 [e = _PDC0L -> & _velocidade -> -> 255 `i `ui `uc ]
-"640
-[; ;hachiko_0.c: 640:             PDC0H = (velocidade >> 8) & 0b11111111;
+"670
+[; ;hachiko_0.c: 670:             PDC0H = (velocidade >> 8) & 0b11111111;
 [e = _PDC0H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
-"641
-[; ;hachiko_0.c: 641:             PDC3L = 0;
+"671
+[; ;hachiko_0.c: 671:             PDC3L = 0;
 [e = _PDC3L -> -> 0 `i `uc ]
-"642
-[; ;hachiko_0.c: 642:             PDC3H = 0;
+"672
+[; ;hachiko_0.c: 672:             PDC3H = 0;
 [e = _PDC3H -> -> 0 `i `uc ]
-"643
-[; ;hachiko_0.c: 643:         }
+"673
+[; ;hachiko_0.c: 673:         }
 }
 [e $U 519  ]
-"644
-[; ;hachiko_0.c: 644:         else if(sentido == 't'){
+"674
+[; ;hachiko_0.c: 674:         else if(sentido == 't'){
 [e :U 518 ]
 [e $ ! == -> _sentido `ui -> 116 `ui 520  ]
 {
-"645
-[; ;hachiko_0.c: 645:             PDC3L = velocidade & 0b11111111;
+"675
+[; ;hachiko_0.c: 675:             PDC3L = velocidade & 0b11111111;
 [e = _PDC3L -> & _velocidade -> -> 255 `i `ui `uc ]
-"646
-[; ;hachiko_0.c: 646:             PDC3H = (velocidade >> 8) & 0b11111111;
+"676
+[; ;hachiko_0.c: 676:             PDC3H = (velocidade >> 8) & 0b11111111;
 [e = _PDC3H -> & >> _velocidade -> 8 `i -> -> 255 `i `ui `uc ]
-"647
-[; ;hachiko_0.c: 647:             PDC0L = 0;
+"677
+[; ;hachiko_0.c: 677:             PDC0L = 0;
 [e = _PDC0L -> -> 0 `i `uc ]
-"648
-[; ;hachiko_0.c: 648:             PDC0H = 0;
+"678
+[; ;hachiko_0.c: 678:             PDC0H = 0;
 [e = _PDC0H -> -> 0 `i `uc ]
-"649
-[; ;hachiko_0.c: 649:         }
+"679
+[; ;hachiko_0.c: 679:         }
 }
 [e :U 520 ]
 [e :U 519 ]
-"650
-[; ;hachiko_0.c: 650:     }
+"680
+[; ;hachiko_0.c: 680:     }
 }
 [e :U 517 ]
 [e :U 516 ]
-"651
-[; ;hachiko_0.c: 651: }
+"681
+[; ;hachiko_0.c: 681: }
 [e :UE 511 ]
 }
-"653
-[; ;hachiko_0.c: 653: void pararMotor(){
+"683
+[; ;hachiko_0.c: 683: void pararMotor(){
 [v _pararMotor `(v ~T0 @X0 1 ef ]
 {
 [e :U _pararMotor ]
 [f ]
-"656
-[; ;hachiko_0.c: 656:     PDC0H = 0x00;
+"686
+[; ;hachiko_0.c: 686:     PDC0H = 0x00;
 [e = _PDC0H -> -> 0 `i `uc ]
-"657
-[; ;hachiko_0.c: 657:     PDC0L = 0x00;
+"687
+[; ;hachiko_0.c: 687:     PDC0L = 0x00;
 [e = _PDC0L -> -> 0 `i `uc ]
-"658
-[; ;hachiko_0.c: 658:     PDC1H = 0x00;
+"688
+[; ;hachiko_0.c: 688:     PDC1H = 0x00;
 [e = _PDC1H -> -> 0 `i `uc ]
-"659
-[; ;hachiko_0.c: 659:     PDC1L = 0x00;
+"689
+[; ;hachiko_0.c: 689:     PDC1L = 0x00;
 [e = _PDC1L -> -> 0 `i `uc ]
-"660
-[; ;hachiko_0.c: 660:     PDC2H = 0x00;
+"690
+[; ;hachiko_0.c: 690:     PDC2H = 0x00;
 [e = _PDC2H -> -> 0 `i `uc ]
-"661
-[; ;hachiko_0.c: 661:     PDC2L = 0x00;
+"691
+[; ;hachiko_0.c: 691:     PDC2L = 0x00;
 [e = _PDC2L -> -> 0 `i `uc ]
-"662
-[; ;hachiko_0.c: 662:     PDC3H = 0x00;
+"692
+[; ;hachiko_0.c: 692:     PDC3H = 0x00;
 [e = _PDC3H -> -> 0 `i `uc ]
-"663
-[; ;hachiko_0.c: 663:     PDC3L = 0x00;
+"693
+[; ;hachiko_0.c: 693:     PDC3L = 0x00;
 [e = _PDC3L -> -> 0 `i `uc ]
-"664
-[; ;hachiko_0.c: 664: }
+"694
+[; ;hachiko_0.c: 694: }
 [e :UE 521 ]
 }
-"665
-[; ;hachiko_0.c: 665: void testarDistancia(){
+"695
+[; ;hachiko_0.c: 695: void testarDistancia(){
 [v _testarDistancia `(v ~T0 @X0 1 ef ]
 {
 [e :U _testarDistancia ]
 [f ]
-"666
-[; ;hachiko_0.c: 666:     if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 523  ]
+"696
+[; ;hachiko_0.c: 696:     int velTest = 50;
+[v _velTest `i ~T0 @X0 1 a ]
+[e = _velTest -> 50 `i ]
+"697
+[; ;hachiko_0.c: 697:     int velTestParaFrente = 0;
+[v _velTestParaFrente `i ~T0 @X0 1 a ]
+[e = _velTestParaFrente -> 0 `i ]
+"698
+[; ;hachiko_0.c: 698:     if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+[e $ ! && && && && ! != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 523  ]
 {
-"667
-[; ;hachiko_0.c: 667:         moverMotor('e','t',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"668
-[; ;hachiko_0.c: 668:         moverMotor('d','f',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"669
-[; ;hachiko_0.c: 669:     }
+"699
+[; ;hachiko_0.c: 699:         moverMotor('e','t',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"700
+[; ;hachiko_0.c: 700:         moverMotor('d','f',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"701
+[; ;hachiko_0.c: 701:     }
 }
 [e $U 524  ]
-"670
-[; ;hachiko_0.c: 670:     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+"702
+[; ;hachiko_0.c: 702:     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
 [e :U 523 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 525  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 525  ]
 {
-"671
-[; ;hachiko_0.c: 671:         moverMotor('e','f',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"672
-[; ;hachiko_0.c: 672:         moverMotor('d','f',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"674
-[; ;hachiko_0.c: 674:     }
+"703
+[; ;hachiko_0.c: 703:         moverMotor('e','f',velTestParaFrente);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTestParaFrente `ui ]
+"704
+[; ;hachiko_0.c: 704:         moverMotor('d','f',velTestParaFrente);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTestParaFrente `ui ]
+"706
+[; ;hachiko_0.c: 706:     }
 }
 [e $U 526  ]
-"675
-[; ;hachiko_0.c: 675:     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+"707
+[; ;hachiko_0.c: 707:     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
 [e :U 525 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 527  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 527  ]
 {
-"676
-[; ;hachiko_0.c: 676:         moverMotor('e','f',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"677
-[; ;hachiko_0.c: 677:         moverMotor('d','f',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"679
-[; ;hachiko_0.c: 679:     }
+"708
+[; ;hachiko_0.c: 708:         moverMotor('e','f',velTestParaFrente);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTestParaFrente `ui ]
+"709
+[; ;hachiko_0.c: 709:         moverMotor('d','f',velTestParaFrente);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTestParaFrente `ui ]
+"711
+[; ;hachiko_0.c: 711:     }
 }
 [e $U 528  ]
-"680
-[; ;hachiko_0.c: 680:     else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+"712
+[; ;hachiko_0.c: 712:     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
 [e :U 527 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 529  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 529  ]
 {
-"681
-[; ;hachiko_0.c: 681:         moverMotor('d','f',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"682
-[; ;hachiko_0.c: 682:         moverMotor('e','f',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"683
-[; ;hachiko_0.c: 683:     }
+"713
+[; ;hachiko_0.c: 713:         moverMotor('d','f',velTestParaFrente);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTestParaFrente `ui ]
+"714
+[; ;hachiko_0.c: 714:         moverMotor('e','f',velTestParaFrente);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTestParaFrente `ui ]
+"715
+[; ;hachiko_0.c: 715:     }
 }
 [e $U 530  ]
-"684
-[; ;hachiko_0.c: 684:     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+"716
+[; ;hachiko_0.c: 716:     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
 [e :U 529 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 531  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 531  ]
 {
-"685
-[; ;hachiko_0.c: 685:         moverMotor('e','f',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"686
-[; ;hachiko_0.c: 686:         moverMotor('d','t',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"687
-[; ;hachiko_0.c: 687:     }
+"717
+[; ;hachiko_0.c: 717:         moverMotor('e','f',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"718
+[; ;hachiko_0.c: 718:         moverMotor('d','t',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"719
+[; ;hachiko_0.c: 719:     }
 }
 [e $U 532  ]
-"688
-[; ;hachiko_0.c: 688:     else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+"720
+[; ;hachiko_0.c: 720:     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
 [e :U 531 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 533  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i ! != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 533  ]
 {
-"689
-[; ;hachiko_0.c: 689:         moverMotor('e','f',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"690
-[; ;hachiko_0.c: 690:         moverMotor('d','t',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"691
-[; ;hachiko_0.c: 691:     }
+"721
+[; ;hachiko_0.c: 721:         moverMotor('e','f',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"722
+[; ;hachiko_0.c: 722:         moverMotor('d','t',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"723
+[; ;hachiko_0.c: 723:     }
 }
 [e $U 534  ]
-"692
-[; ;hachiko_0.c: 692:     else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+"724
+[; ;hachiko_0.c: 724:     else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
 [e :U 533 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 535  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 535  ]
 {
-"693
-[; ;hachiko_0.c: 693:         moverMotor('e','t',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"694
-[; ;hachiko_0.c: 694:         moverMotor('d','f',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"695
-[; ;hachiko_0.c: 695:     }
+"725
+[; ;hachiko_0.c: 725:         moverMotor('e','t',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"726
+[; ;hachiko_0.c: 726:         moverMotor('d','f',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"727
+[; ;hachiko_0.c: 727:     }
 }
 [e $U 536  ]
-"696
-[; ;hachiko_0.c: 696:     else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+"728
+[; ;hachiko_0.c: 728:     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
 [e :U 535 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 537  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i ! != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i != -> . . _PORTAbits 0 2 `i -> 0 `i 537  ]
 {
-"697
-[; ;hachiko_0.c: 697:         moverMotor('e','t',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"698
-[; ;hachiko_0.c: 698:         moverMotor('d','f',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"699
-[; ;hachiko_0.c: 699:     }
+"729
+[; ;hachiko_0.c: 729:         moverMotor('e','t',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"730
+[; ;hachiko_0.c: 730:         moverMotor('d','f',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"731
+[; ;hachiko_0.c: 731:     }
 }
 [e $U 538  ]
-"700
-[; ;hachiko_0.c: 700:     else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+"732
+[; ;hachiko_0.c: 732:     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
 [e :U 537 ]
-[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 0 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 539  ]
+[e $ ! && && && && != -> . . _PORTAbits 0 1 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i != -> . . _PORTCbits 0 0 `i -> 0 `i != -> . . _PORTAbits 0 3 `i -> 0 `i ! != -> . . _PORTAbits 0 2 `i -> 0 `i 539  ]
 {
-"701
-[; ;hachiko_0.c: 701:         moverMotor('e','f',80);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 80 `i `ui ]
-"702
-[; ;hachiko_0.c: 702:         moverMotor('d','t',80);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 80 `i `ui ]
-"703
-[; ;hachiko_0.c: 703:     }
+"733
+[; ;hachiko_0.c: 733:         moverMotor('e','f',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"734
+[; ;hachiko_0.c: 734:         moverMotor('d','t',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"735
+[; ;hachiko_0.c: 735:     }
 }
 [e $U 540  ]
-"704
-[; ;hachiko_0.c: 704:     else{
+"736
+[; ;hachiko_0.c: 736:     else{
 [e :U 539 ]
 {
-"707
-[; ;hachiko_0.c: 707:         pararMotor();
+"739
+[; ;hachiko_0.c: 739:         pararMotor();
 [e ( _pararMotor ..  ]
-"708
-[; ;hachiko_0.c: 708:     }
+"740
+[; ;hachiko_0.c: 740:     }
 }
 [e :U 540 ]
 [e :U 538 ]
@@ -3338,370 +3346,374 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 528 ]
 [e :U 526 ]
 [e :U 524 ]
-"709
-[; ;hachiko_0.c: 709: }
+"741
+[; ;hachiko_0.c: 741: }
 [e :UE 522 ]
 }
-"710
-[; ;hachiko_0.c: 710: void testarLinha(){
+"742
+[; ;hachiko_0.c: 742: void testarLinha(){
 [v _testarLinha `(v ~T0 @X0 1 ef ]
 {
 [e :U _testarLinha ]
 [f ]
-"711
-[; ;hachiko_0.c: 711:     if(PORTCbits.RC3 && PORTCbits.RC4){
+"743
+[; ;hachiko_0.c: 743:     int velTest = 30;
+[v _velTest `i ~T0 @X0 1 a ]
+[e = _velTest -> 30 `i ]
+"744
+[; ;hachiko_0.c: 744:     if(PORTCbits.RC3 && PORTCbits.RC4){
 [e $ ! && != -> . . _PORTCbits 0 3 `i -> 0 `i != -> . . _PORTCbits 0 4 `i -> 0 `i 542  ]
 {
-"712
-[; ;hachiko_0.c: 712:         moverMotor('d','f',70);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 70 `i `ui ]
-"713
-[; ;hachiko_0.c: 713:         moverMotor('e','f',70);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 70 `i `ui ]
-"715
-[; ;hachiko_0.c: 715:     }
+"745
+[; ;hachiko_0.c: 745:         moverMotor('d','f',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"746
+[; ;hachiko_0.c: 746:         moverMotor('e','f',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"748
+[; ;hachiko_0.c: 748:     }
 }
 [e $U 543  ]
-"716
-[; ;hachiko_0.c: 716:     else if(PORTCbits.RC3 && !PORTCbits.RC4){
+"749
+[; ;hachiko_0.c: 749:     else if(PORTCbits.RC3 && !PORTCbits.RC4){
 [e :U 542 ]
 [e $ ! && != -> . . _PORTCbits 0 3 `i -> 0 `i ! != -> . . _PORTCbits 0 4 `i -> 0 `i 544  ]
 {
-"717
-[; ;hachiko_0.c: 717:         moverMotor('d','f',70);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 70 `i `ui ]
-"718
-[; ;hachiko_0.c: 718:         moverMotor('e','t',70);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 70 `i `ui ]
-"719
-[; ;hachiko_0.c: 719:         _delay((unsigned long)((100)*(20000000/4000.0)));
+"750
+[; ;hachiko_0.c: 750:         moverMotor('d','f',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"751
+[; ;hachiko_0.c: 751:         moverMotor('e','t',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"752
+[; ;hachiko_0.c: 752:         _delay((unsigned long)((100)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"721
-[; ;hachiko_0.c: 721:     }
+"754
+[; ;hachiko_0.c: 754:     }
 }
 [e $U 545  ]
-"722
-[; ;hachiko_0.c: 722:     else if(!PORTCbits.RC3 && PORTCbits.RC4){
+"755
+[; ;hachiko_0.c: 755:     else if(!PORTCbits.RC3 && PORTCbits.RC4){
 [e :U 544 ]
 [e $ ! && ! != -> . . _PORTCbits 0 3 `i -> 0 `i != -> . . _PORTCbits 0 4 `i -> 0 `i 546  ]
 {
-"723
-[; ;hachiko_0.c: 723:         moverMotor('d','t',70);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 70 `i `ui ]
-"724
-[; ;hachiko_0.c: 724:         moverMotor('e','f',70);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 70 `i `ui ]
-"725
-[; ;hachiko_0.c: 725:         _delay((unsigned long)((100)*(20000000/4000.0)));
+"756
+[; ;hachiko_0.c: 756:         moverMotor('d','t',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"757
+[; ;hachiko_0.c: 757:         moverMotor('e','f',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"758
+[; ;hachiko_0.c: 758:         _delay((unsigned long)((100)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"727
-[; ;hachiko_0.c: 727:     }
+"760
+[; ;hachiko_0.c: 760:     }
 }
 [e $U 547  ]
-"728
-[; ;hachiko_0.c: 728:     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
+"761
+[; ;hachiko_0.c: 761:     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
 [e :U 546 ]
 [e $ ! && ! != -> . . _PORTCbits 0 3 `i -> 0 `i ! != -> . . _PORTCbits 0 4 `i -> 0 `i 548  ]
 {
-"729
-[; ;hachiko_0.c: 729:         moverMotor('d','t',70);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 70 `i `ui ]
-"730
-[; ;hachiko_0.c: 730:         moverMotor('e','t',70);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 70 `i `ui ]
-"731
-[; ;hachiko_0.c: 731:         _delay((unsigned long)((50)*(20000000/4000.0)));
+"762
+[; ;hachiko_0.c: 762:         moverMotor('d','t',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"763
+[; ;hachiko_0.c: 763:         moverMotor('e','t',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"764
+[; ;hachiko_0.c: 764:         _delay((unsigned long)((50)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"732
-[; ;hachiko_0.c: 732:         pararMotor();
+"765
+[; ;hachiko_0.c: 765:         pararMotor();
 [e ( _pararMotor ..  ]
-"733
-[; ;hachiko_0.c: 733:         _delay((unsigned long)((10)*(20000000/4000.0)));
+"766
+[; ;hachiko_0.c: 766:         _delay((unsigned long)((10)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"734
-[; ;hachiko_0.c: 734:         moverMotor('d','f',70);
-[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 70 `i `ui ]
-"735
-[; ;hachiko_0.c: 735:         moverMotor('e','t',70);
-[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 70 `i `ui ]
-"737
-[; ;hachiko_0.c: 737:     }
+"767
+[; ;hachiko_0.c: 767:         moverMotor('d','f',velTest);
+[e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> _velTest `ui ]
+"768
+[; ;hachiko_0.c: 768:         moverMotor('e','t',velTest);
+[e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> _velTest `ui ]
+"770
+[; ;hachiko_0.c: 770:     }
 }
 [e :U 548 ]
 [e :U 547 ]
 [e :U 545 ]
 [e :U 543 ]
-"738
-[; ;hachiko_0.c: 738: }
+"771
+[; ;hachiko_0.c: 771: }
 [e :UE 541 ]
 }
-"739
-[; ;hachiko_0.c: 739: void iniciar(){
+"772
+[; ;hachiko_0.c: 772: void iniciar(){
 [v _iniciar `(v ~T0 @X0 1 ef ]
 {
 [e :U _iniciar ]
 [f ]
-"740
-[; ;hachiko_0.c: 740:     if(readUSART() == 'G'){
+"773
+[; ;hachiko_0.c: 773:     if(readUSART() == 'G'){
 [e $ ! == -> ( _readUSART ..  `ui -> 71 `ui 550  ]
 {
-"741
-[; ;hachiko_0.c: 741:         picUSART('1');
+"774
+[; ;hachiko_0.c: 774:         picUSART('1');
 [e ( _picUSART (1 -> -> 49 `ui `uc ]
-"742
-[; ;hachiko_0.c: 742:         while(readUSART() == 'G');
+"775
+[; ;hachiko_0.c: 775:         while(readUSART() == 'G');
 [e $U 551  ]
 [e :U 552 ]
 [e :U 551 ]
 [e $ == -> ( _readUSART ..  `ui -> 71 `ui 552  ]
 [e :U 553 ]
-"743
-[; ;hachiko_0.c: 743:         }
+"776
+[; ;hachiko_0.c: 776:         }
 }
 [e $U 554  ]
-"744
-[; ;hachiko_0.c: 744:     else if(readUSART() == 'S'){
+"777
+[; ;hachiko_0.c: 777:     else if(readUSART() == 'S'){
 [e :U 550 ]
 [e $ ! == -> ( _readUSART ..  `ui -> 83 `ui 555  ]
 {
-"745
-[; ;hachiko_0.c: 745:         picUSART('0');
+"778
+[; ;hachiko_0.c: 778:         picUSART('0');
 [e ( _picUSART (1 -> -> 48 `ui `uc ]
-"746
-[; ;hachiko_0.c: 746:         while(readUSART() == 'S');
+"779
+[; ;hachiko_0.c: 779:         while(readUSART() == 'S');
 [e $U 556  ]
 [e :U 557 ]
 [e :U 556 ]
 [e $ == -> ( _readUSART ..  `ui -> 83 `ui 557  ]
 [e :U 558 ]
-"747
-[; ;hachiko_0.c: 747:     }
+"780
+[; ;hachiko_0.c: 780:     }
 }
 [e :U 555 ]
 [e :U 554 ]
-"748
-[; ;hachiko_0.c: 748: }
+"781
+[; ;hachiko_0.c: 781: }
 [e :UE 549 ]
 }
-"749
-[; ;hachiko_0.c: 749: void testarMotor(){
+"783
+[; ;hachiko_0.c: 783: void testarMotor(){
 [v _testarMotor `(v ~T0 @X0 1 ef ]
 {
 [e :U _testarMotor ]
 [f ]
-"750
-[; ;hachiko_0.c: 750:     moverMotor('d','f',50);
+"784
+[; ;hachiko_0.c: 784:     moverMotor('d','f',50);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 50 `i `ui ]
-"751
-[; ;hachiko_0.c: 751:     moverMotor('e','f',50);
+"785
+[; ;hachiko_0.c: 785:     moverMotor('e','f',50);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 50 `i `ui ]
-"752
-[; ;hachiko_0.c: 752:     _delay((unsigned long)((2000)*(20000000/4000.0)));
+"786
+[; ;hachiko_0.c: 786:     _delay((unsigned long)((2000)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"753
-[; ;hachiko_0.c: 753:     pararMotor();
+"787
+[; ;hachiko_0.c: 787:     pararMotor();
 [e ( _pararMotor ..  ]
-"754
-[; ;hachiko_0.c: 754:     _delay((unsigned long)((2000)*(20000000/4000.0)));
+"788
+[; ;hachiko_0.c: 788:     _delay((unsigned long)((2000)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"755
-[; ;hachiko_0.c: 755:     moverMotor('d','t',50);
+"789
+[; ;hachiko_0.c: 789:     moverMotor('d','t',50);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 50 `i `ui ]
-"756
-[; ;hachiko_0.c: 756:     moverMotor('e','t',50);
+"790
+[; ;hachiko_0.c: 790:     moverMotor('e','t',50);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 50 `i `ui ]
-"757
-[; ;hachiko_0.c: 757:     _delay((unsigned long)((2000)*(20000000/4000.0)));
+"791
+[; ;hachiko_0.c: 791:     _delay((unsigned long)((2000)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"758
-[; ;hachiko_0.c: 758:     pararMotor();
+"792
+[; ;hachiko_0.c: 792:     pararMotor();
 [e ( _pararMotor ..  ]
-"759
-[; ;hachiko_0.c: 759:     _delay((unsigned long)((2000)*(20000000/4000.0)));
+"793
+[; ;hachiko_0.c: 793:     _delay((unsigned long)((2000)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"760
-[; ;hachiko_0.c: 760: }
+"794
+[; ;hachiko_0.c: 794: }
 [e :UE 559 ]
 }
-"761
-[; ;hachiko_0.c: 761: void testarTMR(unsigned int b){
+"795
+[; ;hachiko_0.c: 795: void testarTMR(unsigned int b){
 [v _testarTMR `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _testarTMR ]
 [v _b `ui ~T0 @X0 1 r1 ]
 [f ]
-"762
-[; ;hachiko_0.c: 762:     b = (13 - b)*256/13;
+"796
+[; ;hachiko_0.c: 796:     b = (13 - b)*256/13;
 [e = _b / * - -> -> 13 `i `ui _b -> -> 256 `i `ui -> -> 13 `i `ui ]
-"763
-[; ;hachiko_0.c: 763:     if(TMR0IF){
+"797
+[; ;hachiko_0.c: 797:     if(TMR0IF){
 [e $ ! _TMR0IF 561  ]
 {
-"764
-[; ;hachiko_0.c: 764:         TMR0IF = 0;
+"798
+[; ;hachiko_0.c: 798:         TMR0IF = 0;
 [e = _TMR0IF -> -> 0 `i `b ]
-"765
-[; ;hachiko_0.c: 765:         TMR0L = b;
+"799
+[; ;hachiko_0.c: 799:         TMR0L = b;
 [e = _TMR0L -> _b `uc ]
-"769
-[; ;hachiko_0.c: 769:             PORTDbits.RD0 = ~PORTDbits.RD0;
+"803
+[; ;hachiko_0.c: 803:             PORTDbits.RD0 = ~PORTDbits.RD0;
 [e = . . _PORTDbits 0 0 -> ~ -> . . _PORTDbits 0 0 `i `uc ]
-"770
-[; ;hachiko_0.c: 770:             PORTDbits.RD1 = ~PORTDbits.RD1;
+"804
+[; ;hachiko_0.c: 804:             PORTDbits.RD1 = ~PORTDbits.RD1;
 [e = . . _PORTDbits 0 1 -> ~ -> . . _PORTDbits 0 1 `i `uc ]
-"773
-[; ;hachiko_0.c: 773:     }
+"807
+[; ;hachiko_0.c: 807:     }
 }
 [e :U 561 ]
-"774
-[; ;hachiko_0.c: 774: }
+"808
+[; ;hachiko_0.c: 808: }
 [e :UE 560 ]
 }
-"775
-[; ;hachiko_0.c: 775: void estrela(){
+"809
+[; ;hachiko_0.c: 809: void estrela(){
 [v _estrela `(v ~T0 @X0 1 ef ]
 {
 [e :U _estrela ]
 [f ]
-"776
-[; ;hachiko_0.c: 776:     if(PORTCbits.RC3 && PORTCbits.RC4){
+"810
+[; ;hachiko_0.c: 810:     if(PORTCbits.RC3 && PORTCbits.RC4){
 [e $ ! && != -> . . _PORTCbits 0 3 `i -> 0 `i != -> . . _PORTCbits 0 4 `i -> 0 `i 563  ]
 {
-"777
-[; ;hachiko_0.c: 777:         testarDistancia();
+"811
+[; ;hachiko_0.c: 811:         testarDistancia();
 [e ( _testarDistancia ..  ]
-"778
-[; ;hachiko_0.c: 778:     }
+"812
+[; ;hachiko_0.c: 812:     }
 }
 [e $U 564  ]
-"779
-[; ;hachiko_0.c: 779:     else if(!PORTCbits.RC3 && PORTCbits.RC4){
+"813
+[; ;hachiko_0.c: 813:     else if(!PORTCbits.RC3 && PORTCbits.RC4){
 [e :U 563 ]
 [e $ ! && ! != -> . . _PORTCbits 0 3 `i -> 0 `i != -> . . _PORTCbits 0 4 `i -> 0 `i 565  ]
 {
-"780
-[; ;hachiko_0.c: 780:         moverMotor('d','f',60);
+"814
+[; ;hachiko_0.c: 814:         moverMotor('d','f',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"781
-[; ;hachiko_0.c: 781:         moverMotor('e','t',60);
+"815
+[; ;hachiko_0.c: 815:         moverMotor('e','t',60);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"782
-[; ;hachiko_0.c: 782:     }
+"816
+[; ;hachiko_0.c: 816:     }
 }
 [e $U 566  ]
-"783
-[; ;hachiko_0.c: 783:     else if(PORTCbits.RC3 && !PORTCbits.RC4){
+"817
+[; ;hachiko_0.c: 817:     else if(PORTCbits.RC3 && !PORTCbits.RC4){
 [e :U 565 ]
 [e $ ! && != -> . . _PORTCbits 0 3 `i -> 0 `i ! != -> . . _PORTCbits 0 4 `i -> 0 `i 567  ]
 {
-"784
-[; ;hachiko_0.c: 784:         moverMotor('d','t',60);
+"818
+[; ;hachiko_0.c: 818:         moverMotor('d','t',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"785
-[; ;hachiko_0.c: 785:         moverMotor('e','f',60);
+"819
+[; ;hachiko_0.c: 819:         moverMotor('e','f',60);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"786
-[; ;hachiko_0.c: 786:     }
+"820
+[; ;hachiko_0.c: 820:     }
 }
 [e $U 568  ]
-"787
-[; ;hachiko_0.c: 787:     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
+"821
+[; ;hachiko_0.c: 821:     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
 [e :U 567 ]
 [e $ ! && ! != -> . . _PORTCbits 0 3 `i -> 0 `i ! != -> . . _PORTCbits 0 4 `i -> 0 `i 569  ]
 {
-"788
-[; ;hachiko_0.c: 788:         moverMotor('d','t',60);
+"822
+[; ;hachiko_0.c: 822:         moverMotor('d','t',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"789
-[; ;hachiko_0.c: 789:         moverMotor('e','t',60);
+"823
+[; ;hachiko_0.c: 823:         moverMotor('e','t',60);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"790
-[; ;hachiko_0.c: 790:         _delay((unsigned long)((50)*(20000000/4000.0)));
+"824
+[; ;hachiko_0.c: 824:         _delay((unsigned long)((50)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"791
-[; ;hachiko_0.c: 791:         pararMotor();
+"825
+[; ;hachiko_0.c: 825:         pararMotor();
 [e ( _pararMotor ..  ]
-"792
-[; ;hachiko_0.c: 792:         _delay((unsigned long)((50)*(20000000/4000.0)));
+"826
+[; ;hachiko_0.c: 826:         _delay((unsigned long)((50)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"793
-[; ;hachiko_0.c: 793:         moverMotor('d','t',60);
+"827
+[; ;hachiko_0.c: 827:         moverMotor('d','t',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"794
-[; ;hachiko_0.c: 794:         moverMotor('e','f',60);
+"828
+[; ;hachiko_0.c: 828:         moverMotor('e','f',60);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"795
-[; ;hachiko_0.c: 795:     }
+"829
+[; ;hachiko_0.c: 829:     }
 }
 [e :U 569 ]
 [e :U 568 ]
 [e :U 566 ]
 [e :U 564 ]
-"796
-[; ;hachiko_0.c: 796: }
+"830
+[; ;hachiko_0.c: 830: }
 [e :UE 562 ]
 }
-"797
-[; ;hachiko_0.c: 797: void toquinho(){
+"831
+[; ;hachiko_0.c: 831: void toquinho(){
 [v _toquinho `(v ~T0 @X0 1 ef ]
 {
 [e :U _toquinho ]
 [f ]
-"799
-[; ;hachiko_0.c: 799: }
+"833
+[; ;hachiko_0.c: 833: }
 [e :UE 570 ]
 }
-"800
-[; ;hachiko_0.c: 800: void arco(unsigned int velocidade_dir, unsigned int velocidade_esq){
+"834
+[; ;hachiko_0.c: 834: void arco(unsigned int velocidade_dir, unsigned int velocidade_esq){
 [v _arco `(v ~T0 @X0 1 ef2`ui`ui ]
 {
 [e :U _arco ]
 [v _velocidade_dir `ui ~T0 @X0 1 r1 ]
 [v _velocidade_esq `ui ~T0 @X0 1 r2 ]
 [f ]
-"803
-[; ;hachiko_0.c: 803:     moverMotor('d','f',velocidade_dir);
+"837
+[; ;hachiko_0.c: 837:     moverMotor('d','f',velocidade_dir);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 102 `ui `uc _velocidade_dir ]
-"804
-[; ;hachiko_0.c: 804:     moverMotor('e','f',velocidade_esq);
+"838
+[; ;hachiko_0.c: 838:     moverMotor('e','f',velocidade_esq);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc _velocidade_esq ]
-"805
-[; ;hachiko_0.c: 805: }
+"839
+[; ;hachiko_0.c: 839: }
 [e :UE 571 ]
 }
-"806
-[; ;hachiko_0.c: 806: void dibre(){
+"840
+[; ;hachiko_0.c: 840: void dibre(){
 [v _dibre `(v ~T0 @X0 1 ef ]
 {
 [e :U _dibre ]
 [f ]
-"811
-[; ;hachiko_0.c: 811:     arco(75,90);
+"845
+[; ;hachiko_0.c: 845:     arco(75,90);
 [e ( _arco (2 , -> -> 75 `i `ui -> -> 90 `i `ui ]
-"812
-[; ;hachiko_0.c: 812:     _delay((unsigned long)((70)*(20000000/4000.0)));
+"846
+[; ;hachiko_0.c: 846:     _delay((unsigned long)((70)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 70 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"813
-[; ;hachiko_0.c: 813:     moverMotor('e','f',60);
+"847
+[; ;hachiko_0.c: 847:     moverMotor('e','f',60);
 [e ( _moverMotor (3 , , -> -> 101 `ui `uc -> -> 102 `ui `uc -> -> 60 `i `ui ]
-"814
-[; ;hachiko_0.c: 814:     moverMotor('d','t',60);
+"848
+[; ;hachiko_0.c: 848:     moverMotor('d','t',60);
 [e ( _moverMotor (3 , , -> -> 100 `ui `uc -> -> 116 `ui `uc -> -> 60 `i `ui ]
-"815
-[; ;hachiko_0.c: 815:     _delay((unsigned long)((150)*(20000000/4000.0)));
+"849
+[; ;hachiko_0.c: 849:     _delay((unsigned long)((150)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"816
-[; ;hachiko_0.c: 816: }
+"850
+[; ;hachiko_0.c: 850: }
 [e :UE 572 ]
 }
-"817
-[; ;hachiko_0.c: 817: void pwmUSART(){
+"851
+[; ;hachiko_0.c: 851: void pwmUSART(){
 [v _pwmUSART `(v ~T0 @X0 1 ef ]
 {
 [e :U _pwmUSART ]
 [f ]
-"819
-[; ;hachiko_0.c: 819: }
+"853
+[; ;hachiko_0.c: 853: }
 [e :UE 573 ]
 }
 [a 13C 116 114 97 115 0 ]

@@ -5398,6 +5398,7 @@ void moverMotor(char lado, char sentido, unsigned int velocidade);
 void pararMotor();
 void testarDistancia();
 void testarLinha();
+
 void estrela();
 void iniciar();
 void sensorUSART();
@@ -5523,45 +5524,45 @@ void main(void) {
             TMR0H = 0xF8;
             char cont_tmr = 0x00;
             while(cont_tmr < 0x64){
-                if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('d','f',75);
                     moverMotor('e','f',90);
                 }
-                else if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                else if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','t',60);
                     moverMotor('d','f',60);
                 }
-                else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','f',60);
 
                 }
-                else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','f',60);
 
                 }
-                else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','t',60);
                 }
-                else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','t',60);
                 }
-                else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','t',60);
                     moverMotor('d','f',60);
                 }
-                else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','t',60);
                     moverMotor('d','f',60);
                 }
-                else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+                else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                     moverMotor('e','f',60);
                     moverMotor('d','t',60);
                 }
-                else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('d','f',60);
                     moverMotor('e','f',60);
                 }
@@ -5602,41 +5603,41 @@ void main(void) {
                     cont++;
                 }
                 if(cont < 10){
-                    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('d','f',60);
                         moverMotor('e','f',60);
                     }
@@ -5676,7 +5677,7 @@ void main(void) {
         }
 
         if(acao == "zigzag"){
-# 322 "hachiko_0.c"
+# 323 "hachiko_0.c"
             char cont_zig = 0x00;
             char cont_tmr = 0x00;
             moverMotor('d','f',60);
@@ -5699,41 +5700,41 @@ void main(void) {
                         TMR1H = 0x0B;
                         cont_tmr++;
                     }
-                    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('d','f',60);
                         moverMotor('e','f',60);
                     }
@@ -5755,37 +5756,37 @@ void main(void) {
                         TMR1H = 0x0B;
                         cont_tmr++;
                     }
-                    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','f',60);
 
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','t',60);
                         moverMotor('d','f',60);
                     }
-                    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
                         moverMotor('e','f',60);
                         moverMotor('d','t',60);
                     }
@@ -5813,16 +5814,16 @@ void main(void) {
             PORTBbits.RB7 = 1;
             while(1){
                 if(acao == "tras"){
-                    PDC1L = velocidade & 0xFF;
-                    PDC1H = (velocidade >> 8) & 0xFF;
-                    PDC2L = 0x00;
-                    PDC2H = 0x00;
-                }
-                else if(acao == "frente"){
                     PDC1L = 0x00;
                     PDC1H = 0x00;
                     PDC2L = velocidade & 0xFF;
                     PDC2H = (velocidade >> 8) & 0xFF;
+                }
+                else if(acao == "frente"){
+                    PDC1L = velocidade & 0xFF;
+                    PDC1H = (velocidade >> 8) & 0xFF;
+                    PDC2L = 0x00;
+                    PDC2H = 0x00;
                 }
                 if(acao == "parar") break;
             }
@@ -5858,20 +5859,34 @@ void main(void) {
                     PDC0H = (velocidade >> 8) & 0xFF;
                     PDC3L = 0x00;
                     PDC3H = 0x00;
-                    PDC2L = velocidade & 0xFF;
-                    PDC2H = (velocidade >> 8) & 0xFF;
-                    PDC1L = 0x00;
-                    PDC1H = 0x00;
+
+                    PDC1L = velocidade & 0xFF;
+                    PDC1H = (velocidade >> 8) & 0xFF;
+                    PDC2L = 0x00;
+                    PDC2H = 0x00;
+
+
+
+
+
+
                 }
                 else if(acao == "tras"){
                     PDC0L = 0x00;
                     PDC0H = 0x00;
                     PDC3L = velocidade & 0xFF;
                     PDC3H = (velocidade >> 8) & 0xFF;
-                    PDC2L = 0x00;
-                    PDC2H = 0x00;
-                    PDC1L = velocidade & 0xFF;
-                    PDC1H = (velocidade >> 8) & 0xFF;
+
+                    PDC1L = 0x00;
+                    PDC1H = 0x00;
+                    PDC2L = velocidade & 0xFF;
+                    PDC2H = (velocidade >> 8) & 0xFF;
+
+
+
+
+
+
                 }
                 if(acao == "parar"){
                     pararMotor();
@@ -5884,7 +5899,7 @@ void main(void) {
 
             PORTBbits.RB7 = 1;
             PORTBbits.RB6 = 1;
-# 544 "hachiko_0.c"
+# 559 "hachiko_0.c"
             moverMotor('d','f',80);
             moverMotor('e','f',80);
             _delay((unsigned long)((500)*(20000000/4000.0)));
@@ -5930,7 +5945,7 @@ void main(void) {
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('2');
         }
-        if(!PORTAbits.RA0){
+        if(!PORTAbits.RA4){
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('3');
         }
@@ -5938,7 +5953,7 @@ void main(void) {
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('4');
         }
-# 614 "hachiko_0.c"
+# 629 "hachiko_0.c"
     }
 
     return;
@@ -5949,16 +5964,31 @@ void moverMotor(char lado, char sentido, unsigned int velocidade){
     if(lado == 'e'){
         PORTBbits.RB6 = 1;
         if(sentido == 'f'){
-            PDC2L = velocidade & 0b11111111;
-            PDC2H = (velocidade >> 8) & 0b11111111;
-            PDC1L = 0;
-            PDC1H = 0;
+
+            PDC1L = velocidade & 0xFF;
+            PDC1H = (velocidade >> 8) & 0xFF;
+            PDC2L = 0x00;
+            PDC2H = 0x00;
+
+
+
+
+
+
         }
         else if(sentido == 't'){
-            PDC1L = velocidade & 0b11111111;
-            PDC1H = (velocidade >> 8) & 0b11111111;
-            PDC2L = 0;
-            PDC2H = 0;
+
+            PDC1L = 0x00;
+            PDC1H = 0x00;
+            PDC2L = velocidade & 0xFF;
+            PDC2H = (velocidade >> 8) & 0xFF;
+
+
+
+
+
+
+
         }
     }
     else if(lado == 'd'){
@@ -5991,43 +6021,45 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
-    if(!PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('e','t',80);
-        moverMotor('d','f',80);
+    int velTest = 50;
+    int velTestParaFrente = 0;
+    if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','t',velTest);
+        moverMotor('d','f',velTest);
     }
-    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('e','f',80);
-        moverMotor('d','f',80);
+    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','f',velTestParaFrente);
+        moverMotor('d','f',velTestParaFrente);
 
     }
-    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('e','f',80);
-        moverMotor('d','f',80);
+    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','f',velTestParaFrente);
+        moverMotor('d','f',velTestParaFrente);
 
     }
-    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('d','f',80);
-        moverMotor('e','f',80);
+    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('d','f',velTestParaFrente);
+        moverMotor('e','f',velTestParaFrente);
     }
-    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('e','f',80);
-        moverMotor('d','t',80);
+    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','f',velTest);
+        moverMotor('d','t',velTest);
     }
-    else if(PORTAbits.RA1 && PORTAbits.RA0 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('e','f',80);
-        moverMotor('d','t',80);
+    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','f',velTest);
+        moverMotor('d','t',velTest);
     }
-    else if(PORTAbits.RA1 && !PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('e','t',80);
-        moverMotor('d','f',80);
+    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','t',velTest);
+        moverMotor('d','f',velTest);
     }
-    else if(PORTAbits.RA1 && !PORTAbits.RA0 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-        moverMotor('e','t',80);
-        moverMotor('d','f',80);
+    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+        moverMotor('e','t',velTest);
+        moverMotor('d','f',velTest);
     }
-    else if(PORTAbits.RA1 && PORTAbits.RA0 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
-        moverMotor('e','f',80);
-        moverMotor('d','t',80);
+    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+        moverMotor('e','f',velTest);
+        moverMotor('d','t',velTest);
     }
     else{
 
@@ -6036,31 +6068,32 @@ void testarDistancia(){
     }
 }
 void testarLinha(){
+    int velTest = 30;
     if(PORTCbits.RC3 && PORTCbits.RC4){
-        moverMotor('d','f',70);
-        moverMotor('e','f',70);
+        moverMotor('d','f',velTest);
+        moverMotor('e','f',velTest);
 
     }
     else if(PORTCbits.RC3 && !PORTCbits.RC4){
-        moverMotor('d','f',70);
-        moverMotor('e','t',70);
+        moverMotor('d','f',velTest);
+        moverMotor('e','t',velTest);
         _delay((unsigned long)((100)*(20000000/4000.0)));
 
     }
     else if(!PORTCbits.RC3 && PORTCbits.RC4){
-        moverMotor('d','t',70);
-        moverMotor('e','f',70);
+        moverMotor('d','t',velTest);
+        moverMotor('e','f',velTest);
         _delay((unsigned long)((100)*(20000000/4000.0)));
 
     }
     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
-        moverMotor('d','t',70);
-        moverMotor('e','t',70);
+        moverMotor('d','t',velTest);
+        moverMotor('e','t',velTest);
         _delay((unsigned long)((50)*(20000000/4000.0)));
         pararMotor();
         _delay((unsigned long)((10)*(20000000/4000.0)));
-        moverMotor('d','f',70);
-        moverMotor('e','t',70);
+        moverMotor('d','f',velTest);
+        moverMotor('e','t',velTest);
 
     }
 }
@@ -6074,6 +6107,7 @@ void iniciar(){
         while(readUSART() == 'S');
     }
 }
+
 void testarMotor(){
     moverMotor('d','f',50);
     moverMotor('e','f',50);

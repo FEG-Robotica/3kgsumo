@@ -9,7 +9,7 @@
 #define dist_dir        PORTAbits.RA2   //RA0
 #define dist_fdir       PORTAbits.RA3   //RA1
 #define dist_cent       PORTCbits.RC0   //RC0   
-#define dist_fesq       PORTAbits.RA0   //RA2
+#define dist_fesq       PORTAbits.RA4   //RA2
 #define dist_esq        PORTAbits.RA1   //RA4
 #define lin_fdir        PORTCbits.RC3
 #define lin_tdir        PORTCbits.RC5
@@ -30,6 +30,7 @@ void moverMotor(char lado, char sentido, unsigned int velocidade);
 void pararMotor();
 void testarDistancia();
 void testarLinha();
+
 void estrela();
 void iniciar();
 void sensorUSART();
@@ -455,16 +456,16 @@ void main(void) {
             mtr_dir = 1;
             while(1){
                 if(acao == "tras"){
-                    PDC1L = velocidade & 0xFF;
-                    PDC1H = (velocidade >> 8) & 0xFF;
-                    PDC2L = 0x00;
-                    PDC2H = 0x00;
-                }
-                else if(acao == "frente"){
                     PDC1L = 0x00;
                     PDC1H = 0x00;
                     PDC2L = velocidade & 0xFF;
-                    PDC2H = (velocidade >> 8) & 0xFF;
+                    PDC2H = (velocidade >> 8) & 0xFF;            
+                }
+                else if(acao == "frente"){
+                    PDC1L = velocidade & 0xFF;
+                    PDC1H = (velocidade >> 8) & 0xFF;   
+                    PDC2L = 0x00;
+                    PDC2H = 0x00;
                 }
                 if(acao == "parar")   break;
             }
@@ -500,20 +501,34 @@ void main(void) {
                     PDC0H = (velocidade >> 8) & 0xFF;
                     PDC3L = 0x00;
                     PDC3H = 0x00;
+                    
+                    PDC1L = velocidade & 0xFF;
+                    PDC1H = (velocidade >> 8) & 0xFF;   
+                    PDC2L = 0x00;
+                    PDC2H = 0x00;
+                    /*
                     PDC2L = velocidade & 0xFF;              //btn: 953 mV; conector: 3V
                     PDC2H = (velocidade >> 8) & 0xFF;
                     PDC1L = 0x00;
                     PDC1H = 0x00;
+                     */
                 }
                 else if(acao == "tras"){
                     PDC0L = 0x00;
                     PDC0H = 0x00;
                     PDC3L = velocidade & 0xFF;              //btn: 948 mV; conector: 2,77V
                     PDC3H = (velocidade >> 8) & 0xFF;
+                    
+                    PDC1L = 0x00;
+                    PDC1H = 0x00;
+                    PDC2L = velocidade & 0xFF;
+                    PDC2H = (velocidade >> 8) & 0xFF;   
+                    /*                    
                     PDC2L = 0x00;
                     PDC2H = 0x00;
                     PDC1L = velocidade & 0xFF;              //btn: 950 mV; conector: 2,8V
                     PDC1H = (velocidade >> 8) & 0xFF;
+                     */
                 }
                 if(acao == "parar"){
                     pararMotor();
@@ -621,16 +636,31 @@ void moverMotor(char lado, char sentido, unsigned int velocidade){
     if(lado == 'e'){
         mtr_esq = 1; 
         if(sentido == 'f'){
+            
+            PDC1L = velocidade & 0xFF;
+            PDC1H = (velocidade >> 8) & 0xFF;   
+            PDC2L = 0x00;
+            PDC2H = 0x00;
+            /*
             PDC2L = velocidade & 0b11111111;
             PDC2H = (velocidade >> 8) & 0b11111111;
             PDC1L = 0;
             PDC1H = 0;
+            */
         }
         else if(sentido == 't'){
+            
+            PDC1L = 0x00;
+            PDC1H = 0x00;
+            PDC2L = velocidade & 0xFF;
+            PDC2H = (velocidade >> 8) & 0xFF;   
+            
+            /*
             PDC1L = velocidade & 0b11111111;
             PDC1H = (velocidade >> 8) & 0b11111111;
             PDC2L = 0;
             PDC2H = 0;
+            */
         }     
     }
     else if(lado == 'd'){
@@ -663,43 +693,45 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
+    int velTest = 50;
+    int velTestParaFrente = 0;
     if(!dist_esq && dist_fesq && dist_cent && dist_fdir && dist_dir){       //apenas sensor esquerdo
-        moverMotor('e','t',80);
-        moverMotor('d','f',80);
+        moverMotor('e','t',velTest);
+        moverMotor('d','f',velTest);
     }
     else if(dist_esq && dist_fesq && !dist_cent && dist_fdir && dist_dir){  //apenas sensor do centro
-        moverMotor('e','f',80);                                             //lembrar de mudar para 100 (0 apenas teste)
-        moverMotor('d','f',80);
+        moverMotor('e','f',velTestParaFrente);                                             //lembrar de mudar para 100 (0 apenas teste)
+        moverMotor('d','f',velTestParaFrente);
         //pararMotor();
     }
     else if(dist_esq && !dist_fesq && dist_cent && !dist_fdir && dist_dir){ //os frontais das pontas
-        moverMotor('e','f',80);                                             //lembrar de mudar para 100 (0 apenas teste)
-        moverMotor('d','f',80);
+        moverMotor('e','f',velTestParaFrente);                                             //lembrar de mudar para 100 (0 apenas teste)
+        moverMotor('d','f',velTestParaFrente);
         //pararMotor();
     }
     else if(dist_esq && !dist_fesq && !dist_cent && !dist_fdir && dist_dir){
-        moverMotor('d','f',80);
-        moverMotor('e','f',80);
+        moverMotor('d','f',velTestParaFrente);
+        moverMotor('e','f',velTestParaFrente);
     }
     else if(dist_esq && dist_fesq && dist_cent && !dist_fdir && dist_dir){  //apenas frontal direito
-        moverMotor('e','f',80);
-        moverMotor('d','t',80);
+        moverMotor('e','f',velTest);
+        moverMotor('d','t',velTest);
     }
     else if(dist_esq && dist_fesq && !dist_cent && !dist_fdir && dist_dir){ //frontal direito e central
-        moverMotor('e','f',80);
-        moverMotor('d','t',80);
+        moverMotor('e','f',velTest);
+        moverMotor('d','t',velTest);
     }
     else if(dist_esq && !dist_fesq && dist_cent && dist_fdir && dist_dir){  //apenas frontal esquerdo
-        moverMotor('e','t',80);
-        moverMotor('d','f',80);
+        moverMotor('e','t',velTest);
+        moverMotor('d','f',velTest);
     }
     else if(dist_esq && !dist_fesq && !dist_cent && dist_fdir && dist_dir){ //frontal esquerdo e central
-        moverMotor('e','t',80);
-        moverMotor('d','f',80);
+        moverMotor('e','t',velTest);
+        moverMotor('d','f',velTest);
     }
     else if(dist_esq && dist_fesq && dist_cent && dist_fdir && !dist_dir){  //apenas direito
-        moverMotor('e','f',80);
-        moverMotor('d','t',80);
+        moverMotor('e','f',velTest);
+        moverMotor('d','t',velTest);
     }
     else{
         //moverMotor('d','f',60);
@@ -708,31 +740,32 @@ void testarDistancia(){
     }
 }
 void testarLinha(){
+    int velTest = 30;
     if(lin_fdir && lin_fesq){
-        moverMotor('d','f',70);     //mudar pra frente
-        moverMotor('e','f',70);
+        moverMotor('d','f',velTest);     //mudar pra frente
+        moverMotor('e','f',velTest);
         //pararMotor();
     }
     else if(lin_fdir && !lin_fesq){
-        moverMotor('d','f',70);     //mudar pra frente
-        moverMotor('e','t',70);
+        moverMotor('d','f',velTest);     //mudar pra frente
+        moverMotor('e','t',velTest);
         __delay_ms(100);
         //pararMotor();
     }
     else if(!lin_fdir && lin_fesq){
-        moverMotor('d','t',70);     //mudar pra trás
-        moverMotor('e','f',70);
+        moverMotor('d','t',velTest);     //mudar pra trás
+        moverMotor('e','f',velTest);
         __delay_ms(100);
         //pararMotor();
     }
     else if(!lin_fdir && !lin_fesq){
-        moverMotor('d','t',70);     //mudar pra trás
-        moverMotor('e','t',70);
+        moverMotor('d','t',velTest);     //mudar pra trás
+        moverMotor('e','t',velTest);
         __delay_ms(50);
         pararMotor();
         __delay_ms(10);
-        moverMotor('d','f',70);     //mudar pra frente
-        moverMotor('e','t',70);
+        moverMotor('d','f',velTest);     //mudar pra frente
+        moverMotor('e','t',velTest);
         //pararMotor();
     }
 }
@@ -746,6 +779,7 @@ void iniciar(){
         while(readUSART() == 'S');
     }
 }
+
 void testarMotor(){
     moverMotor('d','f',50);
     moverMotor('e','f',50);

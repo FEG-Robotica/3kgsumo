@@ -49,22 +49,22 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"41 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
+"42 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"96
+"97
 [v _main main `(v  1 e 1 0 ]
-"619
+"634
 [v _moverMotor moverMotor `(v  1 e 1 0 ]
-"653
+"683
 [v _pararMotor pararMotor `(v  1 e 1 0 ]
 [v i2_pararMotor pararMotor `(v  1 e 1 0 ]
-"665
+"695
 [v _testarDistancia testarDistancia `(v  1 e 1 0 ]
-"710
+"742
 [v _testarLinha testarLinha `(v  1 e 1 0 ]
-"775
+"809
 [v _estrela estrela `(v  1 e 1 0 ]
-"800
+"834
 [v _arco arco `(v  1 e 1 0 ]
 "366 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic18f4431.h
 [v _OVDCONS OVDCONS `VEuc  1 e 1 @3946 ]
@@ -404,25 +404,25 @@
 [v _velocidade velocidade `ui  1 e 2 0 ]
 "27
 [v _ini ini `i  1 e 2 0 ]
-"96
+"97
 [v _main main `(v  1 e 1 0 ]
 {
+"324
+[v main@cont_tmr_702 cont_tmr `uc  1 a 1 22 ]
 "323
-[v main@cont_tmr_702 cont_tmr `uc  1 a 1 20 ]
-"322
-[v main@cont_zig cont_zig `uc  1 a 1 16 ]
+[v main@cont_zig cont_zig `uc  1 a 1 18 ]
+"229
+[v main@cont cont `i  1 a 2 19 ]
 "228
-[v main@cont cont `i  1 a 2 17 ]
-"227
-[v main@aux aux `uc  1 a 1 19 ]
-"156
-[v main@cont_tmr cont_tmr `uc  1 a 1 15 ]
-"617
+[v main@aux aux `uc  1 a 1 21 ]
+"157
+[v main@cont_tmr cont_tmr `uc  1 a 1 17 ]
+"632
 } 0
-"710
+"742
 [v _testarLinha testarLinha `(v  1 e 1 0 ]
 {
-"738
+"771
 } 0
 "48 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/bt.h
 [v _stringUSART stringUSART `(v  1 e 1 0 ]
@@ -471,22 +471,24 @@
 {
 "29
 } 0
-"775 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
+"809 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
 [v _estrela estrela `(v  1 e 1 0 ]
 {
-"796
+"830
 } 0
-"665
+"695
 [v _testarDistancia testarDistancia `(v  1 e 1 0 ]
 {
-"709
+"697
+[v testarDistancia@velTestParaFrente velTestParaFrente `i  1 a 2 11 ]
+"741
 } 0
-"653
+"683
 [v _pararMotor pararMotor `(v  1 e 1 0 ]
 {
-"664
+"694
 } 0
-"619
+"634
 [v _moverMotor moverMotor `(v  1 e 1 0 ]
 {
 [v moverMotor@lado lado `uc  1 a 1 wreg ]
@@ -494,7 +496,7 @@
 [v moverMotor@sentido sentido `uc  1 p 1 7 ]
 [v moverMotor@velocidade velocidade `ui  1 p 2 8 ]
 [v moverMotor@lado lado `uc  1 a 1 10 ]
-"651
+"681
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -506,15 +508,15 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 3 ]
 "53
 } 0
-"41 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
+"42 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"94
+"95
 } 0
-"653
+"683
 [v i2_pararMotor pararMotor `(v  1 e 1 0 ]
 {
-"664
+"694
 } 0
 "44 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/bt.h
 [v _readUSART readUSART `(uc  1 e 1 0 ]
