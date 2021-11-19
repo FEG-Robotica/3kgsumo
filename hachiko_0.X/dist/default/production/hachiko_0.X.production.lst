@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Thu Nov 18 22:01:26 2021
+                                                                                               Thu Nov 18 22:06:44 2021
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	18F4431
@@ -3858,7 +3858,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3840  001F1E  6E08               	movwf	moverMotor@sentido^0,c
   3841  001F20  0E00               	movlw	0
   3842  001F22  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3843  001F24  0E1E               	movlw	30
+  3843  001F24  0E14               	movlw	20
   3844  001F26  6E09               	movwf	moverMotor@velocidade^0,c
   3845  001F28  0E64               	movlw	100
   3846  001F2A  ECDF  F010         	call	_moverMotor
@@ -3868,7 +3868,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3850  001F30  6E08               	movwf	moverMotor@sentido^0,c
   3851  001F32  0E00               	movlw	0
   3852  001F34  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3853  001F36  0E1E               	movlw	30
+  3853  001F36  0E14               	movlw	20
   3854  001F38  6E09               	movwf	moverMotor@velocidade^0,c
   3855  001F3A  0E65               	movlw	101
   3856  001F3C  ECDF  F010         	call	_moverMotor
@@ -3894,7 +3894,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3876  001F62  6E08               	movwf	moverMotor@sentido^0,c
   3877  001F64  0E00               	movlw	0
   3878  001F66  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3879  001F68  0E1E               	movlw	30
+  3879  001F68  0E14               	movlw	20
   3880  001F6A  6E09               	movwf	moverMotor@velocidade^0,c
   3881  001F6C  0E64               	movlw	100
   3882  001F6E  ECDF  F010         	call	_moverMotor
@@ -3904,7 +3904,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3886  001F74  6E08               	movwf	moverMotor@sentido^0,c
   3887  001F76  0E00               	movlw	0
   3888  001F78  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3889  001F7A  0E1E               	movlw	30
+  3889  001F7A  0E14               	movlw	20
   3890  001F7C  6E09               	movwf	moverMotor@velocidade^0,c
   3891  001F7E  0E65               	movlw	101
   3892  001F80  ECDF  F010         	call	_moverMotor
@@ -3945,7 +3945,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3927  001FBC  6E08               	movwf	moverMotor@sentido^0,c
   3928  001FBE  0E00               	movlw	0
   3929  001FC0  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3930  001FC2  0E1E               	movlw	30
+  3930  001FC2  0E14               	movlw	20
   3931  001FC4  6E09               	movwf	moverMotor@velocidade^0,c
   3932  001FC6  0E64               	movlw	100
   3933  001FC8  ECDF  F010         	call	_moverMotor
@@ -3955,7 +3955,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3937  001FCE  6E08               	movwf	moverMotor@sentido^0,c
   3938  001FD0  0E00               	movlw	0
   3939  001FD2  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3940  001FD4  0E1E               	movlw	30
+  3940  001FD4  0E14               	movlw	20
   3941  001FD6  6E09               	movwf	moverMotor@velocidade^0,c
   3942  001FD8  0E65               	movlw	101
   3943  001FDA  ECDF  F010         	call	_moverMotor
@@ -3979,7 +3979,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3961  002000  6E08               	movwf	moverMotor@sentido^0,c
   3962  002002  0E00               	movlw	0
   3963  002004  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3964  002006  0E1E               	movlw	30
+  3964  002006  0E14               	movlw	20
   3965  002008  6E09               	movwf	moverMotor@velocidade^0,c
   3966  00200A  0E64               	movlw	100
   3967  00200C  ECDF  F010         	call	_moverMotor
@@ -3989,7 +3989,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3971  002012  6E08               	movwf	moverMotor@sentido^0,c
   3972  002014  0E00               	movlw	0
   3973  002016  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  3974  002018  0E1E               	movlw	30
+  3974  002018  0E14               	movlw	20
   3975  00201A  6E09               	movwf	moverMotor@velocidade^0,c
   3976  00201C  0E65               	movlw	101
   3977  00201E  ECDF  F010         	call	_moverMotor
@@ -4027,7 +4027,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4009  002050  6E08               	movwf	moverMotor@sentido^0,c
   4010  002052  0E00               	movlw	0
   4011  002054  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  4012  002056  0E1E               	movlw	30
+  4012  002056  0E14               	movlw	20
   4013  002058  6E09               	movwf	moverMotor@velocidade^0,c
   4014  00205A  0E64               	movlw	100
   4015  00205C  ECDF  F010         	call	_moverMotor
@@ -4037,7 +4037,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4019  002062  6E08               	movwf	moverMotor@sentido^0,c
   4020  002064  0E00               	movlw	0
   4021  002066  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  4022  002068  0E1E               	movlw	30
+  4022  002068  0E14               	movlw	20
   4023  00206A  6E09               	movwf	moverMotor@velocidade^0,c
   4024  00206C  0E65               	movlw	101
   4025  00206E  ECDF  F010         	call	_moverMotor
@@ -4878,7 +4878,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4859  001B64  6E08               	movwf	moverMotor@sentido^0,c
   4860  001B66  0E00               	movlw	0
   4861  001B68  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  4862  001B6A  0E32               	movlw	50
+  4862  001B6A  0E14               	movlw	20
   4863  001B6C  6E09               	movwf	moverMotor@velocidade^0,c
   4864  001B6E  0E65               	movlw	101
   4865  001B70  ECDF  F010         	call	_moverMotor
@@ -4888,7 +4888,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4869  001B76  6E08               	movwf	moverMotor@sentido^0,c
   4870  001B78  0E00               	movlw	0
   4871  001B7A  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  4872  001B7C  0E32               	movlw	50
+  4872  001B7C  0E14               	movlw	20
   4873  001B7E  6E09               	movwf	moverMotor@velocidade^0,c
   4874  001B80  0E64               	movlw	100
   4875  001B82  ECDF  F010         	call	_moverMotor
@@ -5094,7 +5094,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5075  001D1C  6E08               	movwf	moverMotor@sentido^0,c
   5076  001D1E  0E00               	movlw	0
   5077  001D20  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5078  001D22  0E32               	movlw	50
+  5078  001D22  0E14               	movlw	20
   5079  001D24  6E09               	movwf	moverMotor@velocidade^0,c
   5080  001D26  0E65               	movlw	101
   5081  001D28  ECDF  F010         	call	_moverMotor
@@ -5104,7 +5104,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5085  001D2E  6E08               	movwf	moverMotor@sentido^0,c
   5086  001D30  0E00               	movlw	0
   5087  001D32  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5088  001D34  0E32               	movlw	50
+  5088  001D34  0E14               	movlw	20
   5089  001D36  6E09               	movwf	moverMotor@velocidade^0,c
   5090  001D38  0E64               	movlw	100
   5091  001D3A  ECDF  F010         	call	_moverMotor
@@ -5148,7 +5148,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5129  001D8A  6E08               	movwf	moverMotor@sentido^0,c
   5130  001D8C  0E00               	movlw	0
   5131  001D8E  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5132  001D90  0E32               	movlw	50
+  5132  001D90  0E14               	movlw	20
   5133  001D92  6E09               	movwf	moverMotor@velocidade^0,c
   5134  001D94  0E65               	movlw	101
   5135  001D96  ECDF  F010         	call	_moverMotor
@@ -5158,7 +5158,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5139  001D9C  6E08               	movwf	moverMotor@sentido^0,c
   5140  001D9E  0E00               	movlw	0
   5141  001DA0  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5142  001DA2  0E32               	movlw	50
+  5142  001DA2  0E14               	movlw	20
   5143  001DA4  6E09               	movwf	moverMotor@velocidade^0,c
   5144  001DA6  0E64               	movlw	100
   5145  001DA8  ECDF  F010         	call	_moverMotor
@@ -5202,7 +5202,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5183  001DF8  6E08               	movwf	moverMotor@sentido^0,c
   5184  001DFA  0E00               	movlw	0
   5185  001DFC  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5186  001DFE  0E32               	movlw	50
+  5186  001DFE  0E14               	movlw	20
   5187  001E00  6E09               	movwf	moverMotor@velocidade^0,c
   5188  001E02  0E65               	movlw	101
   5189  001E04  ECDF  F010         	call	_moverMotor
@@ -5212,7 +5212,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5193  001E0A  6E08               	movwf	moverMotor@sentido^0,c
   5194  001E0C  0E00               	movlw	0
   5195  001E0E  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5196  001E10  0E32               	movlw	50
+  5196  001E10  0E14               	movlw	20
   5197  001E12  6E09               	movwf	moverMotor@velocidade^0,c
   5198  001E14  0E64               	movlw	100
   5199  001E16  ECDF  F010         	call	_moverMotor
@@ -5256,7 +5256,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5237  001E66  6E08               	movwf	moverMotor@sentido^0,c
   5238  001E68  0E00               	movlw	0
   5239  001E6A  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5240  001E6C  0E32               	movlw	50
+  5240  001E6C  0E14               	movlw	20
   5241  001E6E  6E09               	movwf	moverMotor@velocidade^0,c
   5242  001E70  0E65               	movlw	101
   5243  001E72  ECDF  F010         	call	_moverMotor
@@ -5266,7 +5266,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5247  001E78  6E08               	movwf	moverMotor@sentido^0,c
   5248  001E7A  0E00               	movlw	0
   5249  001E7C  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5250  001E7E  0E32               	movlw	50
+  5250  001E7E  0E14               	movlw	20
   5251  001E80  6E09               	movwf	moverMotor@velocidade^0,c
   5252  001E82  0E64               	movlw	100
   5253  001E84  ECDF  F010         	call	_moverMotor
@@ -5310,7 +5310,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5291  001ED4  6E08               	movwf	moverMotor@sentido^0,c
   5292  001ED6  0E00               	movlw	0
   5293  001ED8  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5294  001EDA  0E32               	movlw	50
+  5294  001EDA  0E14               	movlw	20
   5295  001EDC  6E09               	movwf	moverMotor@velocidade^0,c
   5296  001EDE  0E65               	movlw	101
   5297  001EE0  ECDF  F010         	call	_moverMotor
@@ -5320,7 +5320,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   5301  001EE6  6E08               	movwf	moverMotor@sentido^0,c
   5302  001EE8  0E00               	movlw	0
   5303  001EEA  6E0A               	movwf	(moverMotor@velocidade+1)^0,c
-  5304  001EEC  0E32               	movlw	50
+  5304  001EEC  0E14               	movlw	20
   5305  001EEE  6E09               	movwf	moverMotor@velocidade^0,c
   5306  001EF0  0E64               	movlw	100
   5307  001EF2  ECDF  F010         	call	_moverMotor
@@ -6591,7 +6591,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Thu Nov 18 22:01:26 2021
+Symbol Table                                                                                   Thu Nov 18 22:06:44 2021
 
                               u70 2416                                u71 2412  
              ___wmul@multiplicand 0004                               l131 23CE  

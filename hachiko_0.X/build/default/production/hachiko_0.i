@@ -6021,7 +6021,7 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
-    int velTest = 50;
+    int velTest = 20;
     int velTestParaFrente = 0;
     if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','t',velTest);
@@ -6068,7 +6068,7 @@ void testarDistancia(){
     }
 }
 void testarLinha(){
-    int velTest = 30;
+    int velTest = 20;
     if(PORTCbits.RC3 && PORTCbits.RC4){
         moverMotor('d','f',velTest);
         moverMotor('e','f',velTest);

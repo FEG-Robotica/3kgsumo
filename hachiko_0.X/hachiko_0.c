@@ -693,7 +693,7 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
-    int velTest = 50;
+    int velTest = 20;
     int velTestParaFrente = 0;
     if(!dist_esq && dist_fesq && dist_cent && dist_fdir && dist_dir){       //apenas sensor esquerdo
         moverMotor('e','t',velTest);
@@ -740,7 +740,7 @@ void testarDistancia(){
     }
 }
 void testarLinha(){
-    int velTest = 30;
+    int velTest = 20;
     if(lin_fdir && lin_fesq){
         moverMotor('d','f',velTest);     //mudar pra frente
         moverMotor('e','f',velTest);

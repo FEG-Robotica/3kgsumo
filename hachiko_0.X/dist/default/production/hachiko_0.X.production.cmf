@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+$C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 idloc IDLOC 5 200000 200000 8 1
 init CODE 0 276 276 4 1
 reset_vec CODE 0 0 0 4 1
@@ -79,7 +79,7 @@ MEDIUMCONST 242E-3FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\hachiko_0.X.production.o
-8 intcode CODE >7959:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
+8 intcode CODE >7959:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
 8 intcode CODE >42:C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
 A intcode CODE >43:C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
 18 intcode CODE >44:C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
@@ -676,24 +676,24 @@ FDA text0 CODE >359:C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo
 1AE2 text0 CODE >608:C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
 1AF0 text0 CODE >609:C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
 1B06 text0 CODE >610:C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
-2398 cinit CODE >833:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-2398 cinit CODE >835:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-2398 cinit CODE >838:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-2398 cinit CODE >864:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-239C cinit CODE >865:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-239E cinit CODE >866:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-239E cinit CODE >867:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23A0 cinit CODE >868:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23A2 cinit CODE >869:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23A4 cinit CODE >875:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23A4 cinit CODE >877:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23A6 cinit CODE >878:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23A8 cinit CODE >880:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23AA cinit CODE >881:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23AC cinit CODE >882:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23AE cinit CODE >883:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23B0 cinit CODE >884:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
-23B2 cinit CODE >885:C:\Users\Will\AppData\Local\Temp\xcAs9ik.s
+2398 cinit CODE >833:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+2398 cinit CODE >835:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+2398 cinit CODE >838:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+2398 cinit CODE >864:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+239C cinit CODE >865:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+239E cinit CODE >866:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+239E cinit CODE >867:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23A0 cinit CODE >868:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23A2 cinit CODE >869:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23A4 cinit CODE >875:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23A4 cinit CODE >877:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23A6 cinit CODE >878:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23A8 cinit CODE >880:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23AA cinit CODE >881:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23AC cinit CODE >882:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23AE cinit CODE >883:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23B0 cinit CODE >884:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
+23B2 cinit CODE >885:C:\Users\Will\AppData\Local\Temp\xcAs45o.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -714,21 +714,21 @@ __Hspace_4 60000E 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 _PWMCON0 F6F 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 _PWMCON1 F6E 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\hachiko_0.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 _picUSART 23E4 0 CODE 0 text8 dist/default/production\hachiko_0.X.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\hachiko_0.X.production.o
 testarDistancia@velTestParaFrente C 0 COMRAM 1 cstackCOMRAM dist/default/production\hachiko_0.X.production.o
 __Lsmallconst 300 0 SMALLCONST 0 smallconst dist/default/production\hachiko_0.X.production.o
 _RD16 7E6F 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 _T0CS 7EAD 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+___sp 0 0 STACK 2 stack C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 _acao 1C 0 COMRAM 1 bssCOMRAM dist/default/production\hachiko_0.X.production.o
 _lado 1F 0 COMRAM 1 bssCOMRAM dist/default/production\hachiko_0.X.production.o
 _main 36C 0 CODE 0 text0 dist/default/production\hachiko_0.X.production.o
 __size_of_estrela 0 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 btemp 20 0 COMRAM 1 temp dist/default/production\hachiko_0.X.production.o
 __end_of_picUSART 23F8 0 CODE 0 text8 dist/default/production\hachiko_0.X.production.o
-start 276 0 CODE 0 init C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+start 276 0 CODE 0 init C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 _stringUSART 229A 0 CODE 0 text2 dist/default/production\hachiko_0.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\hachiko_0.X.production.o
@@ -740,11 +740,11 @@ __Hpowerup 276 0 CODE 0 powerup dist/default/production\hachiko_0.X.production.o
 ttemp5 21 0 COMRAM 1 temp dist/default/production\hachiko_0.X.production.o
 ttemp6 24 0 COMRAM 1 temp dist/default/production\hachiko_0.X.production.o
 ttemp7 28 0 COMRAM 1 temp dist/default/production\hachiko_0.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
-intlevel0 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
-intlevel1 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
-intlevel2 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
-intlevel3 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+__accesstop 60 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs45o.o
+intlevel0 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs45o.o
+intlevel1 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs45o.o
+intlevel2 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs45o.o
+intlevel3 0 0 CODE 0 text C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\hachiko_0.X.production.o
 __size_of_setTMR0 0 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 __size_of_setTMR1 0 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
@@ -758,8 +758,8 @@ __end_of_testarDistancia 1F00 0 CODE 0 text11 dist/default/production\hachiko_0.
 _ANSEL0 FB8 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 _ANSEL1 FB9 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 __size_of_pararMotor 0 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Will\AppData\Local\Temp\xcAs45o.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 _velocidade 1A 0 COMRAM 1 bssCOMRAM dist/default/production\hachiko_0.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\hachiko_0.X.production.o
 __end_of___wmul 2354 0 CODE 0 text14 dist/default/production\hachiko_0.X.production.o
@@ -789,7 +789,7 @@ _TMR1CS 7E69 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 _TMR1IF 7CF0 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 _TMR1ON 7E68 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 i2_pararMotor 2376 0 CODE 0 text16 dist/default/production\hachiko_0.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+isa$xinst 0 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 __end_of_setPWM 232E 0 CODE 0 text5 dist/default/production\hachiko_0.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\hachiko_0.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\hachiko_0.X.production.o
@@ -815,7 +815,7 @@ __Htext9 0 0 ABS 0 text9 dist/default/production\hachiko_0.X.production.o
 __size_of_moverMotor 0 0 ABS 0 - dist/default/production\hachiko_0.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\hachiko_0.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\hachiko_0.X.production.o
-__smallconst 300 0 SMALLCONST 0 smallconst C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+__smallconst 300 0 SMALLCONST 0 smallconst C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\hachiko_0.X.production.o
 __Hconfig 30000E 0 CONFIG 4 config dist/default/production\hachiko_0.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\hachiko_0.X.production.o
@@ -916,10 +916,10 @@ main@cont 14 0 COMRAM 1 cstackCOMRAM dist/default/production\hachiko_0.X.product
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\hachiko_0.X.production.o
 _setPWM 22FA 0 CODE 0 text5 dist/default/production\hachiko_0.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\hachiko_0.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+isa$std 1 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 _testBuff 2408 0 CODE 0 text9 dist/default/production\hachiko_0.X.production.o
-stackhi 2FF 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
-stacklo 60 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+stackhi 2FF 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs45o.o
+stacklo 60 0 ABS 0 - C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\hachiko_0.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\hachiko_0.X.production.o
 _sentido 1E 0 COMRAM 1 bssCOMRAM dist/default/production\hachiko_0.X.production.o
@@ -968,7 +968,7 @@ __Ltext14 0 0 ABS 0 text14 dist/default/production\hachiko_0.X.production.o
 __Ltext16 0 0 ABS 0 text16 dist/default/production\hachiko_0.X.production.o
 __Ltext17 0 0 ABS 0 text17 dist/default/production\hachiko_0.X.production.o
 readUSART@ler 1 0 COMRAM 1 cstackCOMRAM dist/default/production\hachiko_0.X.production.o
-__ramtop 300 0 RAM 0 ramtop C:\Users\Will\AppData\Local\Temp\xcAs9ik.o
+__ramtop 300 0 RAM 0 ramtop C:\Users\Will\AppData\Local\Temp\xcAs45o.o
 __Lpowerup 276 0 CODE 0 powerup dist/default/production\hachiko_0.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\hachiko_0.X.production.o
 __psmallconst 300 0 SMALLCONST 0 smallconst dist/default/production\hachiko_0.X.production.o

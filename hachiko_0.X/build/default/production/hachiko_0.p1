@@ -3186,9 +3186,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _testarDistancia ]
 [f ]
 "696
-[; ;hachiko_0.c: 696:     int velTest = 50;
+[; ;hachiko_0.c: 696:     int velTest = 20;
 [v _velTest `i ~T0 @X0 1 a ]
-[e = _velTest -> 50 `i ]
+[e = _velTest -> 20 `i ]
 "697
 [; ;hachiko_0.c: 697:     int velTestParaFrente = 0;
 [v _velTestParaFrente `i ~T0 @X0 1 a ]
@@ -3357,9 +3357,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _testarLinha ]
 [f ]
 "743
-[; ;hachiko_0.c: 743:     int velTest = 30;
+[; ;hachiko_0.c: 743:     int velTest = 20;
 [v _velTest `i ~T0 @X0 1 a ]
-[e = _velTest -> 30 `i ]
+[e = _velTest -> 20 `i ]
 "744
 [; ;hachiko_0.c: 744:     if(PORTCbits.RC3 && PORTCbits.RC4){
 [e $ ! && != -> . . _PORTCbits 0 3 `i -> 0 `i != -> . . _PORTCbits 0 4 `i -> 0 `i 542  ]
