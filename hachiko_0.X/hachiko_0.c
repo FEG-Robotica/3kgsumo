@@ -502,16 +502,10 @@ void main(void) {
                     PDC3L = 0x00;
                     PDC3H = 0x00;
                     
-                    PDC1L = velocidade & 0xFF;
+                    PDC1L = velocidade & 0xFF;              //btn: 953 mV; conector: 3V
                     PDC1H = (velocidade >> 8) & 0xFF;   
                     PDC2L = 0x00;
                     PDC2H = 0x00;
-                    /*
-                    PDC2L = velocidade & 0xFF;              //btn: 953 mV; conector: 3V
-                    PDC2H = (velocidade >> 8) & 0xFF;
-                    PDC1L = 0x00;
-                    PDC1H = 0x00;
-                     */
                 }
                 else if(acao == "tras"){
                     PDC0L = 0x00;
@@ -521,14 +515,8 @@ void main(void) {
                     
                     PDC1L = 0x00;
                     PDC1H = 0x00;
-                    PDC2L = velocidade & 0xFF;
+                    PDC2L = velocidade & 0xFF;              //btn: 950 mV; conector: 2,8V
                     PDC2H = (velocidade >> 8) & 0xFF;   
-                    /*                    
-                    PDC2L = 0x00;
-                    PDC2H = 0x00;
-                    PDC1L = velocidade & 0xFF;              //btn: 950 mV; conector: 2,8V
-                    PDC1H = (velocidade >> 8) & 0xFF;
-                     */
                 }
                 if(acao == "parar"){
                     pararMotor();
@@ -635,18 +623,11 @@ void moverMotor(char lado, char sentido, unsigned int velocidade){
     velocidade *= velocidade_max/100;
     if(lado == 'e'){
         mtr_esq = 1; 
-        if(sentido == 'f'){
-            
+        if(sentido == 'f'){            
             PDC1L = velocidade & 0xFF;
             PDC1H = (velocidade >> 8) & 0xFF;   
             PDC2L = 0x00;
             PDC2H = 0x00;
-            /*
-            PDC2L = velocidade & 0b11111111;
-            PDC2H = (velocidade >> 8) & 0b11111111;
-            PDC1L = 0;
-            PDC1H = 0;
-            */
         }
         else if(sentido == 't'){
             
@@ -654,13 +635,6 @@ void moverMotor(char lado, char sentido, unsigned int velocidade){
             PDC1H = 0x00;
             PDC2L = velocidade & 0xFF;
             PDC2H = (velocidade >> 8) & 0xFF;   
-            
-            /*
-            PDC1L = velocidade & 0b11111111;
-            PDC1H = (velocidade >> 8) & 0b11111111;
-            PDC2L = 0;
-            PDC2H = 0;
-            */
         }     
     }
     else if(lado == 'd'){
@@ -693,19 +667,19 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
-    int velTest = 20;
-    int velTestParaFrente = 0;
+    int velTest = 30;
+    int velTestParaFrente = 0;                                              //lembrar de mudar para 100 (0 apenas teste)
     if(!dist_esq && dist_fesq && dist_cent && dist_fdir && dist_dir){       //apenas sensor esquerdo
         moverMotor('e','t',velTest);
         moverMotor('d','f',velTest);
     }
     else if(dist_esq && dist_fesq && !dist_cent && dist_fdir && dist_dir){  //apenas sensor do centro
-        moverMotor('e','f',velTestParaFrente);                                             //lembrar de mudar para 100 (0 apenas teste)
+        moverMotor('e','f',velTestParaFrente);                                             
         moverMotor('d','f',velTestParaFrente);
         //pararMotor();
     }
     else if(dist_esq && !dist_fesq && dist_cent && !dist_fdir && dist_dir){ //os frontais das pontas
-        moverMotor('e','f',velTestParaFrente);                                             //lembrar de mudar para 100 (0 apenas teste)
+        moverMotor('e','f',velTestParaFrente);                             
         moverMotor('d','f',velTestParaFrente);
         //pararMotor();
     }
@@ -740,7 +714,7 @@ void testarDistancia(){
     }
 }
 void testarLinha(){
-    int velTest = 20;
+    int velTest = 30;
     if(lin_fdir && lin_fesq){
         moverMotor('d','f',velTest);     //mudar pra frente
         moverMotor('e','f',velTest);
