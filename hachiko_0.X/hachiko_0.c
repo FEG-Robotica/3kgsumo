@@ -766,6 +766,7 @@ void testarMotor(){
     pararMotor();
     __delay_ms(2000);
 }
+
 void testarTMR(unsigned int b){
     b = (13 - b)*256/13;
     if(TMR0IF){             //estourou a flag do timer? (51,2 us)
