@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4431 ]
 [d frameptr 4065 ]
-"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/bt.h
 [v _setBT setBT `(v  1 e 1 0 ]
 "27
 [v _testBuff testBuff `(v  1 e 1 0 ]
@@ -13,11 +13,11 @@
 [v _readUSART readUSART `(uc  1 e 1 0 ]
 "48
 [v _stringUSART stringUSART `(v  1 e 1 0 ]
-"63 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/config.h
+"63 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/config.h
 [v _setIO setIO `(v  1 e 1 0 ]
-"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/pwm.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/pwm.h
 [v _setPWM setPWM `(v  1 e 1 0 ]
-"12 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/timer.h
+"12 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/timer.h
 [v _setTMR0 setTMR0 `(v  1 e 1 0 ]
 "21
 [v _setTMR1 setTMR1 `(v  1 e 1 0 ]
@@ -33,6 +33,8 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -47,23 +49,25 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"42 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
+"44 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X\hachiko_0.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"88
+"112
 [v _main main `(v  1 e 1 0 ]
-"344
+"664
 [v _moverMotor moverMotor `(v  1 e 1 0 ]
-"379
+"699
 [v _pararMotor pararMotor `(v  1 e 1 0 ]
 [v i2_pararMotor pararMotor `(v  1 e 1 0 ]
-"389
+"711
 [v _testarDistancia testarDistancia `(v  1 e 1 0 ]
-"437
+"759
 [v _linha linha `(v  1 e 1 0 ]
-"463
+"786
 [v _testarLinha testarLinha `(v  1 e 1 0 ]
-"504
+"855
 [v _estrela estrela `(v  1 e 1 0 ]
+"883
+[v _arco arco `(v  1 e 1 0 ]
 "366 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic18f4431.h
 [v _OVDCONS OVDCONS `VEuc  1 e 1 @3946 ]
 "436
@@ -396,29 +400,35 @@
 [v _TMR1IF TMR1IF `VEb  1 e 0 @31984 ]
 "9284
 [v _TMR1ON TMR1ON `VEb  1 e 0 @32360 ]
-"29 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
-[v _acao acao `*.32uc  1 e 2 0 ]
-"31
+"25 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X\hachiko_0.c
+[v _acao acao `*.2uc  1 e 2 0 ]
+"26
+[v _velocidade velocidade `ui  1 e 2 0 ]
+"27
 [v _ini ini `i  1 e 2 0 ]
-"32
+"28
 [v _flag flag `i  1 e 2 0 ]
-"88
+"112
 [v _main main `(v  1 e 1 0 ]
 {
-"211
-[v main@cont cont `i  1 a 2 18 ]
-"210
-[v main@aux aux `uc  1 a 1 20 ]
-"136
+"366
+[v main@cont_tmr_710 cont_tmr `uc  1 a 1 22 ]
+"365
+[v main@cont_zig cont_zig `uc  1 a 1 18 ]
+"252
+[v main@cont cont `i  1 a 2 19 ]
+"251
+[v main@aux aux `uc  1 a 1 21 ]
+"174
 [v main@cont_tmr cont_tmr `uc  1 a 1 17 ]
-"342
+"662
 } 0
-"463
+"786
 [v _testarLinha testarLinha `(v  1 e 1 0 ]
 {
-"489
+"816
 } 0
-"48 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
+"48 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/bt.h
 [v _stringUSART stringUSART `(v  1 e 1 0 ]
 {
 "49
@@ -427,7 +437,7 @@
 [v stringUSART@frase frase `*.32uc  1 p 2 1 ]
 "57
 } 0
-"21 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/timer.h
+"21 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/timer.h
 [v _setTMR1 setTMR1 `(v  1 e 1 0 ]
 {
 "42
@@ -437,17 +447,17 @@
 {
 "20
 } 0
-"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/pwm.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/pwm.h
 [v _setPWM setPWM `(v  1 e 1 0 ]
 {
 "16
 } 0
-"63 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/config.h
+"63 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/config.h
 [v _setIO setIO `(v  1 e 1 0 ]
 {
 "73
 } 0
-"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/bt.h
 [v _setBT setBT `(v  1 e 1 0 ]
 {
 "26
@@ -465,24 +475,24 @@
 {
 "29
 } 0
-"437 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
+"759 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X\hachiko_0.c
 [v _linha linha `(v  1 e 1 0 ]
 {
-"461
+"784
 } 0
-"504
+"855
 [v _estrela estrela `(v  1 e 1 0 ]
 {
-"528
+"879
 } 0
-"389
+"711
 [v _testarDistancia testarDistancia `(v  1 e 1 0 ]
 {
-"391
+"713
 [v testarDistancia@velTestParaFrente velTestParaFrente `i  1 a 2 11 ]
-"435
+"757
 } 0
-"344
+"664
 [v _moverMotor moverMotor `(v  1 e 1 0 ]
 {
 [v moverMotor@lado lado `uc  1 a 1 wreg ]
@@ -490,7 +500,7 @@
 [v moverMotor@sentido sentido `uc  1 p 1 7 ]
 [v moverMotor@velocidade velocidade `ui  1 p 2 8 ]
 [v moverMotor@lado lado `uc  1 a 1 10 ]
-"377
+"697
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -502,22 +512,22 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 3 ]
 "53
 } 0
-"379 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
+"699 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X\hachiko_0.c
 [v _pararMotor pararMotor `(v  1 e 1 0 ]
 {
-"388
+"710
 } 0
-"42
+"44
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"86
+"110
 } 0
-"379
+"699
 [v i2_pararMotor pararMotor `(v  1 e 1 0 ]
 {
-"388
+"710
 } 0
-"44 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
+"44 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0Backup.X/bt.h
 [v _readUSART readUSART `(uc  1 e 1 0 ]
 {
 "45

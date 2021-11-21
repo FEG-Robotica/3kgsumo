@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\hachiko_0.X.production.hex">
+  <executable name="dist/default/production\hachiko_0Backup.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>16384</length>
-      <used>6320</used>
-      <free>10064</free>
+      <used>9784</used>
+      <free>6600</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>768</length>
-      <used>32</used>
-      <free>736</free>
+      <used>34</used>
+      <free>734</free>
     </memory>
   </executable>
 </project>

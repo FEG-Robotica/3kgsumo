@@ -5384,7 +5384,7 @@ void setTMR1(){
     TMR1ON = 0;
 }
 # 7 "hachiko_0.c" 2
-# 28 "hachiko_0.c"
+# 24 "hachiko_0.c"
 char lado, sentido;
 char *acao;
 unsigned int velocidade;
@@ -5398,6 +5398,12 @@ void testarLinha();
 void linha();
 
 void estrela();
+void iniciar();
+void sensorUSART();
+void pwmUSART();
+void arco(unsigned int velocidade_dir, unsigned int velocidade_esq);
+void dibre();
+void testarTMR(unsigned int b);
 
 void __attribute__((picinterrupt(("")))) ISR(void){
     if(PIR1bits.RCIF){
@@ -5407,15 +5413,9 @@ void __attribute__((picinterrupt(("")))) ISR(void){
             RCSTAbits.CREN = 0x01;
         }
 
-        if(readUSART() == 'L') {
-            ini = 1;
-            acao = "linha";
-        }
+        if(readUSART() == 'L') acao = "linha";
 
-        if(readUSART() == 'D') {
-            ini = 1;
-            acao = "distancia";
-        }
+        if(readUSART() == 'D') acao = "distancia";
 
         if(readUSART() == 'T') {
             ini = 1;
@@ -5436,7 +5436,35 @@ void __attribute__((picinterrupt(("")))) ISR(void){
             acao = "estrela";
         }
 
-        if(readUSART() == 'G') ini = 1;
+        if(readUSART() == 'Z') acao = "zigzag";
+
+        if(readUSART() == 'R') acao = "teste";
+
+        if(readUSART() == 'X') acao = "gd";
+
+        if(readUSART() == 'Y') acao = "ge";
+
+        if(readUSART() == 'd') acao = "direito";
+
+        if(readUSART() == 'e') acao = "esquerdo";
+
+        if(readUSART() == 'f') acao = "frente";
+
+        if(readUSART() == 't') acao = "tras";
+
+        if(readUSART() == 'm') acao = "motor";
+
+        if(readUSART() == '+'){
+            velocidade += 10*600/100;
+            if(velocidade >= 600) velocidade = 10*600/100;
+        }
+
+        if(readUSART() == '-'){
+            velocidade -= 10*600/100;
+            if(velocidade <= 59) velocidade = 50*600/100;
+        }
+
+
 
         if(readUSART() == 'P'){
             pararMotor();
@@ -5453,13 +5481,27 @@ void main(void) {
     setTMR0();
     setTMR1();
 
+
+
+
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
 
     PORTDbits.RD0 = 0;
     PORTDbits.RD1 = 1;
 
+
+
+
+
+
+
     while(ini == 0){
+
+
+
+
+
 
     }
     stringUSART("Comecou");
@@ -5509,13 +5551,13 @@ void main(void) {
                     moverMotor('d','f',70);
                 }
                 else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-                    moverMotor('e','f',70);
-                    moverMotor('d','f',70);
+                    moverMotor('e','f',100);
+                    moverMotor('d','f',100);
 
                 }
                 else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
-                    moverMotor('e','f',70);
-                    moverMotor('d','f',70);
+                    moverMotor('e','f',100);
+                    moverMotor('d','f',100);
 
                 }
                 else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
@@ -5543,8 +5585,8 @@ void main(void) {
                     moverMotor('e','f',100);
                 }
                 else{
-                    moverMotor('d','f',100);
-                    moverMotor('e','f',100);
+                    moverMotor('d','f',70);
+                    moverMotor('e','f',70);
                 }
                 }
 
@@ -5564,27 +5606,25 @@ void main(void) {
         }
 
         if(acao == "toquinho"){
+
+
+
             TMR1ON = 1;
             TMR1L = 0xDE;
             TMR1H = 0x0B;
             char aux = 0x00;
             int cont = 0;
             while(aux < 0x0A){
-
                 if(TMR1IF){
                     TMR1IF = 0;
                     TMR1L = 0xDE;
                     TMR1H = 0x0B;
                     cont++;
                 }
-
-                if(!PORTCbits.RC4 || !PORTCbits.RC3) {
-                    linha();
-                } else {
                 if(cont < 10){
                     if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-                        moverMotor('e','t',80);
-                        moverMotor('d','f',80);
+                        moverMotor('e','t',70);
+                        moverMotor('d','f',70);
                     }
                     else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('e','f',100);
@@ -5613,8 +5653,8 @@ void main(void) {
                         moverMotor('d','f',70);
                     }
                     else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
-                        moverMotor('e','f',80);
-                        moverMotor('d','t',80);
+                        moverMotor('e','f',70);
+                        moverMotor('d','t',70);
                     }
                     else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
                         moverMotor('d','f',100);
@@ -5635,7 +5675,6 @@ void main(void) {
                     aux++;
                     picUSART(aux + 48);
                 }
-            }
 
                 if(acao == "parar"){
                     pararMotor();
@@ -5647,7 +5686,6 @@ void main(void) {
 
         if(acao == "estrela"){
             while(1){
-
                 estrela();
 
                 if(acao == "parar"){
@@ -5676,6 +5714,251 @@ void main(void) {
             }
         }
 
+        if(acao == "zigzag"){
+# 365 "hachiko_0.c"
+            char cont_zig = 0x00;
+            char cont_tmr = 0x00;
+            moverMotor('d','f',60);
+            moverMotor('e','t',60);
+            _delay((unsigned long)((70)*(20000000/4000.0)));
+
+
+
+            TMR1ON = 1;
+            TMR1L = 0xDE;
+            TMR1H = 0x0B;
+            while(cont_zig < 0x0C){
+                while(cont_tmr < 0x19){
+                    if(TMR1IF){
+
+
+
+                        TMR1IF = 0;
+                        TMR1L = 0xDE;
+                        TMR1H = 0x0B;
+                        cont_tmr++;
+                    }
+                    if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','t',60);
+                        moverMotor('d','f',60);
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','f',60);
+
+                    }
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','f',60);
+
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','t',60);
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','t',60);
+                    }
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','t',60);
+                        moverMotor('d','f',60);
+                    }
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','t',60);
+                        moverMotor('d','f',60);
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','t',60);
+                    }
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('d','f',60);
+                        moverMotor('e','f',60);
+                    }
+                    else{
+                        moverMotor('d','f',60);
+                        moverMotor('e','f',60);
+                    }
+                }
+                cont_tmr = 0x00;
+                pararMotor();
+                _delay((unsigned long)((10)*(20000000/4000.0)));
+                while(cont_tmr < 0x07){
+                    if(TMR1IF){
+
+
+
+                        TMR1IF = 0;
+                        TMR1L = 0xDE;
+                        TMR1H = 0x0B;
+                        cont_tmr++;
+                    }
+                    if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','t',60);
+                        moverMotor('d','f',60);
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','f',60);
+
+                    }
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','f',60);
+
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','t',60);
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && !PORTCbits.RC0 && !PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','t',60);
+                    }
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','t',60);
+                        moverMotor('d','f',60);
+                    }
+                    else if(PORTAbits.RA1 && !PORTAbits.RA4 && !PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
+                        moverMotor('e','t',60);
+                        moverMotor('d','f',60);
+                    }
+                    else if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && !PORTAbits.RA2){
+                        moverMotor('e','f',60);
+                        moverMotor('d','t',60);
+                    }
+                    else{
+                        moverMotor('d','t',60);
+                        moverMotor('e','f',60);
+                    }
+                }
+                pararMotor();
+                _delay((unsigned long)((10)*(20000000/4000.0)));
+
+                if(acao == "parar"){
+                    pararMotor();
+                    break;
+                }
+                cont_zig++;
+            }
+            TMR1ON = 0;
+            acao = " ";
+        }
+
+
+        if(acao == "esquerdo"){
+            velocidade = 10*600/100;
+            PORTBbits.RB7 = 1;
+            while(1){
+                if(acao == "tras"){
+                    PDC1L = 0x00;
+                    PDC1H = 0x00;
+                    PDC2L = velocidade & 0xFF;
+                    PDC2H = (velocidade >> 8) & 0xFF;
+                }
+                else if(acao == "frente"){
+                    PDC1L = velocidade & 0xFF;
+                    PDC1H = (velocidade >> 8) & 0xFF;
+                    PDC2L = 0x00;
+                    PDC2H = 0x00;
+                }
+                if(acao == "parar") break;
+            }
+        }
+
+        if(acao == "direito"){
+            velocidade = 10*600/100;
+            PORTBbits.RB6 = 1;
+            while(1){
+                if(acao == "frente"){
+                    PDC0L = velocidade & 0xFF;
+                    PDC0H = (velocidade >> 8) & 0xFF;
+                    PDC3L = 0x00;
+                    PDC3H = 0x00;
+                }
+                else if(acao == "tras"){
+                    PDC0L = 0x00;
+                    PDC0H = 0x00;
+                    PDC3L = velocidade & 0xFF;
+                    PDC3H = (velocidade >> 8) & 0xFF;
+                }
+                if(acao == "parar") break;
+            }
+        }
+
+        if(acao == "motor"){
+            velocidade = 10*600/100;
+            PORTBbits.RB6 = 1;
+            PORTBbits.RB7 = 1;
+            while(1){
+                if(acao == "frente"){
+                    PDC0L = velocidade & 0xFF;
+                    PDC0H = (velocidade >> 8) & 0xFF;
+                    PDC3L = 0x00;
+                    PDC3H = 0x00;
+
+                    PDC1L = velocidade & 0xFF;
+                    PDC1H = (velocidade >> 8) & 0xFF;
+                    PDC2L = 0x00;
+                    PDC2H = 0x00;
+                }
+                else if(acao == "tras"){
+                    PDC0L = 0x00;
+                    PDC0H = 0x00;
+                    PDC3L = velocidade & 0xFF;
+                    PDC3H = (velocidade >> 8) & 0xFF;
+
+                    PDC1L = 0x00;
+                    PDC1H = 0x00;
+                    PDC2L = velocidade & 0xFF;
+                    PDC2H = (velocidade >> 8) & 0xFF;
+                }
+                if(acao == "parar"){
+                    pararMotor();
+                    break;
+                }
+            }
+        }
+
+        if(acao == "teste"){
+
+            PORTBbits.RB7 = 1;
+            PORTBbits.RB6 = 1;
+# 589 "hachiko_0.c"
+            moverMotor('d','f',80);
+            moverMotor('e','f',80);
+            _delay((unsigned long)((500)*(20000000/4000.0)));
+
+            moverMotor('d','f',0);
+            moverMotor('e','f',0);
+            _delay((unsigned long)((2000)*(20000000/4000.0)));
+            moverMotor('d','t',80);
+            moverMotor('e','t',80);
+            _delay((unsigned long)((500)*(20000000/4000.0)));
+            pararMotor();
+            acao = ' ';
+
+        }
+
+        if(acao == "gd"){
+            moverMotor('e','f',60);
+            moverMotor('d','t',60);
+            _delay((unsigned long)((300)*(20000000/4000.0)));
+            pararMotor();
+            acao = ' ';
+
+        }
+
+        if(acao == "ge"){
+            moverMotor('e','t',60);
+            moverMotor('d','f',60);
+            _delay((unsigned long)((300)*(20000000/4000.0)));
+            pararMotor();
+            acao = ' ';
+
+        }
+
         if(!PORTAbits.RA2){
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('0');
@@ -5696,6 +5979,7 @@ void main(void) {
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('4');
         }
+# 659 "hachiko_0.c"
     }
 
     return;
@@ -5737,6 +6021,8 @@ void moverMotor(char lado, char sentido, unsigned int velocidade){
 }
 
 void pararMotor(){
+
+
     PDC0H = 0x00;
     PDC0L = 0x00;
     PDC1H = 0x00;
@@ -5817,6 +6103,7 @@ void linha(){
         moverMotor('d','f',velTest);
         moverMotor('e','t',velTest);
         _delay((unsigned long)((100)*(20000000/4000.0)));
+
     }
 }
 
@@ -5825,16 +6112,19 @@ void testarLinha(){
     if(PORTCbits.RC3 && PORTCbits.RC4){
         moverMotor('d','f',velTest);
         moverMotor('e','f',velTest);
+
     }
     else if(PORTCbits.RC3 && !PORTCbits.RC4){
         moverMotor('d','f',velTest);
         moverMotor('e','t',velTest);
         _delay((unsigned long)((300)*(20000000/4000.0)));
+
     }
     else if(!PORTCbits.RC3 && PORTCbits.RC4){
         moverMotor('d','t',velTest);
         moverMotor('e','f',velTest);
         _delay((unsigned long)((300)*(20000000/4000.0)));
+
     }
     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
         moverMotor('d','t',velTest);
@@ -5845,6 +6135,17 @@ void testarLinha(){
         moverMotor('d','f',velTest);
         moverMotor('e','t',velTest);
         _delay((unsigned long)((100)*(20000000/4000.0)));
+
+    }
+}
+void iniciar(){
+    if(readUSART() == 'G'){
+        picUSART('1');
+        while(readUSART() == 'G');
+        }
+    else if(readUSART() == 'S'){
+        picUSART('0');
+        while(readUSART() == 'S');
     }
 }
 
@@ -5861,6 +6162,20 @@ void testarMotor(){
     _delay((unsigned long)((2000)*(20000000/4000.0)));
 }
 
+void testarTMR(unsigned int b){
+    b = (13 - b)*256/13;
+    if(TMR0IF){
+        TMR0IF = 0;
+        TMR0L = b;
+
+
+
+            PORTDbits.RD0 = ~PORTDbits.RD0;
+            PORTDbits.RD1 = ~PORTDbits.RD1;
+
+
+    }
+}
 void estrela(){
     if(PORTCbits.RC3 && PORTCbits.RC4){
         testarDistancia();
@@ -5885,4 +6200,27 @@ void estrela(){
         moverMotor('e','f',70);
         _delay((unsigned long)((100)*(20000000/4000.0)));
     }
+}
+void toquinho(){
+
+}
+void arco(unsigned int velocidade_dir, unsigned int velocidade_esq){
+
+
+    moverMotor('d','f',velocidade_dir);
+    moverMotor('e','f',velocidade_esq);
+}
+void dibre(){
+
+
+
+
+    arco(75,90);
+    _delay((unsigned long)((70)*(20000000/4000.0)));
+    moverMotor('e','f',60);
+    moverMotor('d','t',60);
+    _delay((unsigned long)((150)*(20000000/4000.0)));
+}
+void pwmUSART(){
+
 }
