@@ -12,8 +12,8 @@
 #define dist_fesq       PORTAbits.RA4   //RA2
 #define dist_esq        PORTAbits.RA1   //RA4
 #define lin_fdir        PORTCbits.RC3
-#define lin_tdir        PORTCbits.RC5
-#define lin_tesq        PORTEbits.RE1
+#define lin_tdir        PORTCbits.RC5   // ignorar
+#define lin_tesq        PORTEbits.RE1   // ignorar
 #define lin_fesq        PORTCbits.RC4
 #define mtr_dir         PORTBbits.RB7
 #define mtr_esq         PORTBbits.RB6
@@ -25,11 +25,13 @@ char lado, sentido;
 char *acao;
 unsigned int velocidade;
 int ini = 0;
+int flag = 1;
 
 void moverMotor(char lado, char sentido, unsigned int velocidade);
 void pararMotor();
 void testarDistancia();
 void testarLinha();
+void linha();
 
 void estrela();
 void iniciar();
@@ -51,11 +53,24 @@ void __interrupt() ISR(void){
         
         if(readUSART() == 'D')  acao = "distancia";
         
-        if(readUSART() == 'T')  acao = "toquinho";
+        if(readUSART() == 'T') {
+            ini = 1;
+            acao = "toquinho";
+        }
         
-        if(readUSART() == 'A')  acao = "arco";
+        if(readUSART() == 'A') {
+            ini = 1;
+            acao = "arco";
+        }
+        if(readUSART() == 'F') {
+            ini = 1;
+            acao = "fEstrela";
+        }
         
-        if(readUSART() == 'E')  acao = "estrela";
+        if(readUSART() == 'E') {
+            ini = 1;
+            acao = "estrela";
+        }
         
         if(readUSART() == 'Z')  acao = "zigzag";
         
@@ -85,7 +100,7 @@ void __interrupt() ISR(void){
             if(velocidade <= 59)    velocidade = 50*velocidade_max/100; //senão rolar, usar 50%
         }
         
-        if(readUSART() == 'G')  ini = 1;
+        //if(readUSART() == 'G')  ini = 1;
         
         if(readUSART() == 'P'){
             pararMotor();
@@ -125,7 +140,9 @@ void main(void) {
         __delay_ms(6000);
         pararMotor();*/
     }
-    stringUSART("aqui");
+    stringUSART("Comecou");
+    
+    __delay_ms(5000);
     
     while(1){
         if(acao == "linha"){
@@ -156,9 +173,14 @@ void main(void) {
             TMR0H = 0xF8;
             char cont_tmr = 0x00;
             while(cont_tmr < 0x64){
+                
+                if(!lin_fesq || !lin_fdir) {
+                    linha();
+                } else {
+                
                 if(dist_esq && dist_fesq && dist_cent && dist_fdir && dist_dir){
-                    moverMotor('d','f',75); //mudar para 75 porque deu top
-                    moverMotor('e','f',90);
+                    moverMotor('d','f',50); //mudar para 75 porque deu top
+                    moverMotor('e','f',65);
                 }
                 else if(!dist_esq && dist_fesq && dist_cent && dist_fdir && dist_dir){       //apenas sensor esquerdo
                     moverMotor('e','t',60);
@@ -202,6 +224,7 @@ void main(void) {
                     moverMotor('d','f',60); //mudar para 75 porque deu top
                     moverMotor('e','f',90);
                 }
+                }
                 
                 if(TMR0IF){
                     TMR0IF  = 0;
@@ -227,7 +250,7 @@ void main(void) {
             TMR1H   = 0x0B;
             char aux = 0x00;
             int cont = 0;
-            while(aux < 0x0A){              //enquanto aux for menor que 10s 
+            while(aux < 0x0A){              //enquanto aux for menor que 10s
                 if(TMR1IF){
                     TMR1IF = 0;
                     TMR1L = 0xDE;           //inicializa o timer para base de tempo 100 ms 
@@ -299,6 +322,25 @@ void main(void) {
         
         if(acao == "estrela"){
             while(1){
+                estrela();
+                
+                if(acao == "parar"){
+                    pararMotor();
+                    break;
+                }
+            }
+        }
+        
+        if(acao == "fEstrela"){
+            while(1){
+                
+                if(flag == 1){
+                    moverMotor('d','f',100);
+                    moverMotor('e','f',100);
+                    __delay_ms(50);
+                    flag = 0;
+                }
+                
                 estrela();
                 
                 if(acao == "parar"){
@@ -667,8 +709,8 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
-    int velTest = 30;
-    int velTestParaFrente = 0;                                              //lembrar de mudar para 100 (0 apenas teste)
+    int velTest = 60;
+    int velTestParaFrente = 100;                                              //lembrar de mudar para 100 (0 apenas teste)
     if(!dist_esq && dist_fesq && dist_cent && dist_fdir && dist_dir){       //apenas sensor esquerdo
         moverMotor('e','t',velTest);
         moverMotor('d','f',velTest);
@@ -708,13 +750,41 @@ void testarDistancia(){
         moverMotor('d','t',velTest);
     }
     else{
-        //moverMotor('d','f',60);
-        //moverMotor('e','f',60);
-        pararMotor();
+        moverMotor('d','f',100);
+        moverMotor('e','f',100);
+        //pararMotor();
     }
 }
+
+void linha(){
+    int velTest = 50;
+    if(lin_fdir && !lin_fesq){
+        moverMotor('d','f',velTest);     //mudar pra frente
+        moverMotor('e','t',velTest);
+        __delay_ms(300);
+        //pararMotor();
+    }
+    else if(!lin_fdir && lin_fesq){
+        moverMotor('d','t',velTest);     //mudar pra trás
+        moverMotor('e','f',velTest);
+        __delay_ms(300);
+        //pararMotor();
+    }
+    else if(!lin_fdir && !lin_fesq){
+        moverMotor('d','t',velTest);     //mudar pra trás
+        moverMotor('e','t',velTest);
+        __delay_ms(100);
+        pararMotor();
+        __delay_ms(10);
+        moverMotor('d','f',velTest);     //mudar pra frente
+        moverMotor('e','t',velTest);
+        __delay_ms(100);
+        //pararMotor();
+    }
+}
+
 void testarLinha(){
-    int velTest = 30;
+    int velTest = 50;
     if(lin_fdir && lin_fesq){
         moverMotor('d','f',velTest);     //mudar pra frente
         moverMotor('e','f',velTest);
@@ -723,23 +793,24 @@ void testarLinha(){
     else if(lin_fdir && !lin_fesq){
         moverMotor('d','f',velTest);     //mudar pra frente
         moverMotor('e','t',velTest);
-        __delay_ms(100);
+        __delay_ms(300);
         //pararMotor();
     }
     else if(!lin_fdir && lin_fesq){
         moverMotor('d','t',velTest);     //mudar pra trás
         moverMotor('e','f',velTest);
-        __delay_ms(100);
+        __delay_ms(300);
         //pararMotor();
     }
     else if(!lin_fdir && !lin_fesq){
         moverMotor('d','t',velTest);     //mudar pra trás
         moverMotor('e','t',velTest);
-        __delay_ms(50);
+        __delay_ms(100);
         pararMotor();
         __delay_ms(10);
         moverMotor('d','f',velTest);     //mudar pra frente
         moverMotor('e','t',velTest);
+        __delay_ms(100);
         //pararMotor();
     }
 }
@@ -788,19 +859,22 @@ void estrela(){
     else if(!lin_fdir && lin_fesq){
         moverMotor('d','f',60);
         moverMotor('e','t',60);
+        __delay_ms(200);
     }
     else if(lin_fdir && !lin_fesq){
         moverMotor('d','t',60);
         moverMotor('e','f',60);
+        __delay_ms(200);
     }
     else if(!lin_fdir && !lin_fesq){
         moverMotor('d','t',60);
         moverMotor('e','t',60);
-        __delay_ms(50);
+        __delay_ms(100);
         pararMotor();
-        __delay_ms(50);
+        __delay_ms(10);
         moverMotor('d','t',60);
         moverMotor('e','f',60);
+        __delay_ms(200);
     }
 }
 void toquinho(){

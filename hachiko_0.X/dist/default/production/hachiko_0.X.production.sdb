@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4431 ]
 [d frameptr 4065 ]
-"1 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/bt.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
 [v _setBT setBT `(v  1 e 1 0 ]
 "27
 [v _testBuff testBuff `(v  1 e 1 0 ]
@@ -13,11 +13,11 @@
 [v _readUSART readUSART `(uc  1 e 1 0 ]
 "48
 [v _stringUSART stringUSART `(v  1 e 1 0 ]
-"63 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/config.h
+"63 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/config.h
 [v _setIO setIO `(v  1 e 1 0 ]
-"1 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/pwm.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/pwm.h
 [v _setPWM setPWM `(v  1 e 1 0 ]
-"12 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/timer.h
+"12 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/timer.h
 [v _setTMR0 setTMR0 `(v  1 e 1 0 ]
 "21
 [v _setTMR1 setTMR1 `(v  1 e 1 0 ]
@@ -49,22 +49,24 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"42 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
+"44 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"97
+"112
 [v _main main `(v  1 e 1 0 ]
-"634
+"664
 [v _moverMotor moverMotor `(v  1 e 1 0 ]
-"683
+"699
 [v _pararMotor pararMotor `(v  1 e 1 0 ]
 [v i2_pararMotor pararMotor `(v  1 e 1 0 ]
-"695
+"711
 [v _testarDistancia testarDistancia `(v  1 e 1 0 ]
-"742
+"759
+[v _linha linha `(v  1 e 1 0 ]
+"786
 [v _testarLinha testarLinha `(v  1 e 1 0 ]
-"809
+"855
 [v _estrela estrela `(v  1 e 1 0 ]
-"834
+"883
 [v _arco arco `(v  1 e 1 0 ]
 "366 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic18f4431.h
 [v _OVDCONS OVDCONS `VEuc  1 e 1 @3946 ]
@@ -104,7 +106,7 @@
 [v _PTCON1 PTCON1 `VEuc  1 e 1 @3966 ]
 "955
 [v _PTCON0 PTCON0 `VEuc  1 e 1 @3967 ]
-[s S327 . 1 `uc 1 RA0 1 0 :1:0 
+[s S458 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -114,7 +116,7 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "1078
-[s S336 . 1 `uc 1 AN0 1 0 :1:0 
+[s S467 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
@@ -123,7 +125,7 @@
 `uc 1 OSC2 1 0 :1:6 
 `uc 1 OSC1 1 0 :1:7 
 ]
-[s S345 . 1 `uc 1 . 1 0 :2:0 
+[s S476 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 VREFM 1 0 :1:2 
 `uc 1 VREFP 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
@@ -131,15 +133,15 @@
 `uc 1 CLKO 1 0 :1:6 
 `uc 1 CLKI 1 0 :1:7 
 ]
-[s S353 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S484 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[u S357 . 1 `S327 1 . 1 0 `S336 1 . 1 0 `S345 1 . 1 0 `S353 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES357  1 e 1 @3968 ]
+[u S488 . 1 `S458 1 . 1 0 `S467 1 . 1 0 `S476 1 . 1 0 `S484 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES488  1 e 1 @3968 ]
 "1198
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-[s S534 . 1 `uc 1 RB0 1 0 :1:0 
+[s S538 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -149,12 +151,12 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "1219
-[s S543 . 1 `uc 1 . 1 0 :3:0 
+[s S547 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S546 . 1 `S534 1 . 1 0 `S543 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES546  1 e 1 @3969 ]
-[s S393 . 1 `uc 1 RC0 1 0 :1:0 
+[u S550 . 1 `S538 1 . 1 0 `S547 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES550  1 e 1 @3969 ]
+[s S333 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -164,7 +166,7 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "1340
-[s S402 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S342 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 INT0 1 0 :1:3 
@@ -173,7 +175,7 @@
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S411 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S351 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T0CKI 1 0 :1:3 
@@ -182,16 +184,16 @@
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S420 . 1 `uc 1 . 1 0 :1:0 
+[s S360 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_FLTA 1 0 :1:1 
 ]
-[s S423 . 1 `uc 1 . 1 0 :2:0 
+[s S363 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_FLTB 1 0 :1:2 
 ]
-[s S426 . 1 `uc 1 . 1 0 :6:0 
+[s S366 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NOT_SS 1 0 :1:6 
 ]
-[s S429 . 1 `uc 1 . 1 0 :1:0 
+[s S369 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nFLTA 1 0 :1:1 
 `uc 1 nFLTB 1 0 :1:2 
 `uc 1 T5CKI 1 0 :1:3 
@@ -200,18 +202,18 @@
 `uc 1 nSS 1 0 :1:6 
 `uc 1 SDO 1 0 :1:7 
 ]
-[s S438 . 1 `uc 1 . 1 0 :1:0 
+[s S378 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 FLTA 1 0 :1:1 
 `uc 1 FLTB 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 SS 1 0 :1:6 
 ]
-[s S444 . 1 `uc 1 . 1 0 :1:0 
+[s S384 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[u S448 . 1 `S393 1 . 1 0 `S402 1 . 1 0 `S411 1 . 1 0 `S420 1 . 1 0 `S423 1 . 1 0 `S426 1 . 1 0 `S429 1 . 1 0 `S438 1 . 1 0 `S444 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES448  1 e 1 @3970 ]
+[u S388 . 1 `S333 1 . 1 0 `S342 1 . 1 0 `S351 1 . 1 0 `S360 1 . 1 0 `S363 1 . 1 0 `S366 1 . 1 0 `S369 1 . 1 0 `S378 1 . 1 0 `S384 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES388  1 e 1 @3970 ]
 "1535
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S289 . 1 `uc 1 RD0 1 0 :1:0 
@@ -398,33 +400,35 @@
 [v _TMR1IF TMR1IF `VEb  1 e 0 @31984 ]
 "9284
 [v _TMR1ON TMR1ON `VEb  1 e 0 @32360 ]
-"25 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
+"25 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
 [v _acao acao `*.2uc  1 e 2 0 ]
 "26
 [v _velocidade velocidade `ui  1 e 2 0 ]
 "27
 [v _ini ini `i  1 e 2 0 ]
-"97
+"28
+[v _flag flag `i  1 e 2 0 ]
+"112
 [v _main main `(v  1 e 1 0 ]
 {
-"324
-[v main@cont_tmr_702 cont_tmr `uc  1 a 1 22 ]
-"323
+"366
+[v main@cont_tmr_710 cont_tmr `uc  1 a 1 22 ]
+"365
 [v main@cont_zig cont_zig `uc  1 a 1 18 ]
-"229
+"252
 [v main@cont cont `i  1 a 2 19 ]
-"228
+"251
 [v main@aux aux `uc  1 a 1 21 ]
-"157
+"174
 [v main@cont_tmr cont_tmr `uc  1 a 1 17 ]
-"632
+"662
 } 0
-"742
+"786
 [v _testarLinha testarLinha `(v  1 e 1 0 ]
 {
-"771
+"816
 } 0
-"48 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/bt.h
+"48 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
 [v _stringUSART stringUSART `(v  1 e 1 0 ]
 {
 "49
@@ -433,7 +437,7 @@
 [v stringUSART@frase frase `*.32uc  1 p 2 1 ]
 "57
 } 0
-"21 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/timer.h
+"21 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/timer.h
 [v _setTMR1 setTMR1 `(v  1 e 1 0 ]
 {
 "42
@@ -443,17 +447,17 @@
 {
 "20
 } 0
-"1 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/pwm.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/pwm.h
 [v _setPWM setPWM `(v  1 e 1 0 ]
 {
 "16
 } 0
-"63 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/config.h
+"63 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/config.h
 [v _setIO setIO `(v  1 e 1 0 ]
 {
 "73
 } 0
-"1 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/bt.h
+"1 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
 [v _setBT setBT `(v  1 e 1 0 ]
 {
 "26
@@ -471,24 +475,24 @@
 {
 "29
 } 0
-"809 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
+"759 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
+[v _linha linha `(v  1 e 1 0 ]
+{
+"784
+} 0
+"855
 [v _estrela estrela `(v  1 e 1 0 ]
 {
-"830
+"879
 } 0
-"695
+"711
 [v _testarDistancia testarDistancia `(v  1 e 1 0 ]
 {
-"697
+"713
 [v testarDistancia@velTestParaFrente velTestParaFrente `i  1 a 2 11 ]
-"741
+"757
 } 0
-"683
-[v _pararMotor pararMotor `(v  1 e 1 0 ]
-{
-"694
-} 0
-"634
+"664
 [v _moverMotor moverMotor `(v  1 e 1 0 ]
 {
 [v moverMotor@lado lado `uc  1 a 1 wreg ]
@@ -496,7 +500,7 @@
 [v moverMotor@sentido sentido `uc  1 p 1 7 ]
 [v moverMotor@velocidade velocidade `ui  1 p 2 8 ]
 [v moverMotor@lado lado `uc  1 a 1 10 ]
-"681
+"697
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -508,17 +512,22 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 3 ]
 "53
 } 0
-"42 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X\hachiko_0.c
+"699 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X\hachiko_0.c
+[v _pararMotor pararMotor `(v  1 e 1 0 ]
+{
+"710
+} 0
+"44
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"95
+"110
 } 0
-"683
+"699
 [v i2_pararMotor pararMotor `(v  1 e 1 0 ]
 {
-"694
+"710
 } 0
-"44 C:\Users\Will\Desktop\Programacao\Robotica\Programas\3kgsumo\hachiko_0.X/bt.h
+"44 C:\Users\mathe\OneDrive - Unesp\Robotica\3kgsumo\hachiko_0.X/bt.h
 [v _readUSART readUSART `(uc  1 e 1 0 ]
 {
 "45

@@ -5212,8 +5212,7 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 2 3
-# 1 "hachiko_0.c" 2
-
+# 2 "hachiko_0.c" 2
 
 # 1 "./config.h" 1
 
@@ -5289,8 +5288,7 @@ void setIO(){
     ANSEL0 = 0x80;
     ANSEL1 = 0x01;
 }
-# 3 "hachiko_0.c" 2
-
+# 4 "hachiko_0.c" 2
 # 1 "./bt.h" 1
 void setBT(){
 # 12 "./bt.h"
@@ -5343,8 +5341,7 @@ void stringUSART(char *frase){
 void readString(){
 # 67 "./bt.h"
 }
-# 4 "hachiko_0.c" 2
-
+# 5 "hachiko_0.c" 2
 # 1 "./pwm.h" 1
 void setPWM(){
 
@@ -5362,8 +5359,7 @@ void setPWM(){
     PORTB = 0;
     PORTD = 0;
 }
-# 5 "hachiko_0.c" 2
-
+# 6 "hachiko_0.c" 2
 # 1 "./timer.h" 1
 # 12 "./timer.h"
 void setTMR0(){
@@ -5387,17 +5383,19 @@ void setTMR1(){
     TMR1CS = 0;
     TMR1ON = 0;
 }
-# 6 "hachiko_0.c" 2
+# 7 "hachiko_0.c" 2
 # 24 "hachiko_0.c"
 char lado, sentido;
 char *acao;
 unsigned int velocidade;
 int ini = 0;
+int flag = 1;
 
 void moverMotor(char lado, char sentido, unsigned int velocidade);
 void pararMotor();
 void testarDistancia();
 void testarLinha();
+void linha();
 
 void estrela();
 void iniciar();
@@ -5419,11 +5417,24 @@ void __attribute__((picinterrupt(("")))) ISR(void){
 
         if(readUSART() == 'D') acao = "distancia";
 
-        if(readUSART() == 'T') acao = "toquinho";
+        if(readUSART() == 'T') {
+            ini = 1;
+            acao = "toquinho";
+        }
 
-        if(readUSART() == 'A') acao = "arco";
+        if(readUSART() == 'A') {
+            ini = 1;
+            acao = "arco";
+        }
+        if(readUSART() == 'F') {
+            ini = 1;
+            acao = "fEstrela";
+        }
 
-        if(readUSART() == 'E') acao = "estrela";
+        if(readUSART() == 'E') {
+            ini = 1;
+            acao = "estrela";
+        }
 
         if(readUSART() == 'Z') acao = "zigzag";
 
@@ -5453,7 +5464,7 @@ void __attribute__((picinterrupt(("")))) ISR(void){
             if(velocidade <= 59) velocidade = 50*600/100;
         }
 
-        if(readUSART() == 'G') ini = 1;
+
 
         if(readUSART() == 'P'){
             pararMotor();
@@ -5493,7 +5504,9 @@ void main(void) {
 
 
     }
-    stringUSART("aqui");
+    stringUSART("Comecou");
+
+    _delay((unsigned long)((5000)*(20000000/4000.0)));
 
     while(1){
         if(acao == "linha"){
@@ -5524,9 +5537,14 @@ void main(void) {
             TMR0H = 0xF8;
             char cont_tmr = 0x00;
             while(cont_tmr < 0x64){
+
+                if(!PORTCbits.RC4 || !PORTCbits.RC3) {
+                    linha();
+                } else {
+
                 if(PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
-                    moverMotor('d','f',75);
-                    moverMotor('e','f',90);
+                    moverMotor('d','f',50);
+                    moverMotor('e','f',65);
                 }
                 else if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
                     moverMotor('e','t',60);
@@ -5569,6 +5587,7 @@ void main(void) {
                 else{
                     moverMotor('d','f',60);
                     moverMotor('e','f',90);
+                }
                 }
 
                 if(TMR0IF){
@@ -5676,8 +5695,27 @@ void main(void) {
             }
         }
 
+        if(acao == "fEstrela"){
+            while(1){
+
+                if(flag == 1){
+                    moverMotor('d','f',60);
+                    moverMotor('e','f',60);
+                    _delay((unsigned long)((50)*(20000000/4000.0)));
+                    flag = 0;
+                }
+
+                estrela();
+
+                if(acao == "parar"){
+                    pararMotor();
+                    break;
+                }
+            }
+        }
+
         if(acao == "zigzag"){
-# 323 "hachiko_0.c"
+# 365 "hachiko_0.c"
             char cont_zig = 0x00;
             char cont_tmr = 0x00;
             moverMotor('d','f',60);
@@ -5864,12 +5902,6 @@ void main(void) {
                     PDC1H = (velocidade >> 8) & 0xFF;
                     PDC2L = 0x00;
                     PDC2H = 0x00;
-
-
-
-
-
-
                 }
                 else if(acao == "tras"){
                     PDC0L = 0x00;
@@ -5881,12 +5913,6 @@ void main(void) {
                     PDC1H = 0x00;
                     PDC2L = velocidade & 0xFF;
                     PDC2H = (velocidade >> 8) & 0xFF;
-
-
-
-
-
-
                 }
                 if(acao == "parar"){
                     pararMotor();
@@ -5899,7 +5925,7 @@ void main(void) {
 
             PORTBbits.RB7 = 1;
             PORTBbits.RB6 = 1;
-# 559 "hachiko_0.c"
+# 589 "hachiko_0.c"
             moverMotor('d','f',80);
             moverMotor('e','f',80);
             _delay((unsigned long)((500)*(20000000/4000.0)));
@@ -5953,7 +5979,7 @@ void main(void) {
             _delay((unsigned long)((100)*(20000000/4000.0)));
             picUSART('4');
         }
-# 629 "hachiko_0.c"
+# 659 "hachiko_0.c"
     }
 
     return;
@@ -5964,17 +5990,10 @@ void moverMotor(char lado, char sentido, unsigned int velocidade){
     if(lado == 'e'){
         PORTBbits.RB6 = 1;
         if(sentido == 'f'){
-
             PDC1L = velocidade & 0xFF;
             PDC1H = (velocidade >> 8) & 0xFF;
             PDC2L = 0x00;
             PDC2H = 0x00;
-
-
-
-
-
-
         }
         else if(sentido == 't'){
 
@@ -5982,13 +6001,6 @@ void moverMotor(char lado, char sentido, unsigned int velocidade){
             PDC1H = 0x00;
             PDC2L = velocidade & 0xFF;
             PDC2H = (velocidade >> 8) & 0xFF;
-
-
-
-
-
-
-
         }
     }
     else if(lado == 'd'){
@@ -6021,8 +6033,8 @@ void pararMotor(){
     PDC3L = 0x00;
 }
 void testarDistancia(){
-    int velTest = 20;
-    int velTestParaFrente = 0;
+    int velTest = 60;
+    int velTestParaFrente = 100;
     if(!PORTAbits.RA1 && PORTAbits.RA4 && PORTCbits.RC0 && PORTAbits.RA3 && PORTAbits.RA2){
         moverMotor('e','t',velTest);
         moverMotor('d','f',velTest);
@@ -6062,13 +6074,41 @@ void testarDistancia(){
         moverMotor('d','t',velTest);
     }
     else{
+        moverMotor('d','f',60);
+        moverMotor('e','f',60);
 
-
-        pararMotor();
     }
 }
+
+void linha(){
+    int velTest = 50;
+    if(PORTCbits.RC3 && !PORTCbits.RC4){
+        moverMotor('d','f',velTest);
+        moverMotor('e','t',velTest);
+        _delay((unsigned long)((300)*(20000000/4000.0)));
+
+    }
+    else if(!PORTCbits.RC3 && PORTCbits.RC4){
+        moverMotor('d','t',velTest);
+        moverMotor('e','f',velTest);
+        _delay((unsigned long)((300)*(20000000/4000.0)));
+
+    }
+    else if(!PORTCbits.RC3 && !PORTCbits.RC4){
+        moverMotor('d','t',velTest);
+        moverMotor('e','t',velTest);
+        _delay((unsigned long)((100)*(20000000/4000.0)));
+        pararMotor();
+        _delay((unsigned long)((10)*(20000000/4000.0)));
+        moverMotor('d','f',velTest);
+        moverMotor('e','t',velTest);
+        _delay((unsigned long)((100)*(20000000/4000.0)));
+
+    }
+}
+
 void testarLinha(){
-    int velTest = 20;
+    int velTest = 50;
     if(PORTCbits.RC3 && PORTCbits.RC4){
         moverMotor('d','f',velTest);
         moverMotor('e','f',velTest);
@@ -6077,23 +6117,24 @@ void testarLinha(){
     else if(PORTCbits.RC3 && !PORTCbits.RC4){
         moverMotor('d','f',velTest);
         moverMotor('e','t',velTest);
-        _delay((unsigned long)((100)*(20000000/4000.0)));
+        _delay((unsigned long)((300)*(20000000/4000.0)));
 
     }
     else if(!PORTCbits.RC3 && PORTCbits.RC4){
         moverMotor('d','t',velTest);
         moverMotor('e','f',velTest);
-        _delay((unsigned long)((100)*(20000000/4000.0)));
+        _delay((unsigned long)((300)*(20000000/4000.0)));
 
     }
     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
         moverMotor('d','t',velTest);
         moverMotor('e','t',velTest);
-        _delay((unsigned long)((50)*(20000000/4000.0)));
+        _delay((unsigned long)((100)*(20000000/4000.0)));
         pararMotor();
         _delay((unsigned long)((10)*(20000000/4000.0)));
         moverMotor('d','f',velTest);
         moverMotor('e','t',velTest);
+        _delay((unsigned long)((100)*(20000000/4000.0)));
 
     }
 }
@@ -6120,6 +6161,7 @@ void testarMotor(){
     pararMotor();
     _delay((unsigned long)((2000)*(20000000/4000.0)));
 }
+
 void testarTMR(unsigned int b){
     b = (13 - b)*256/13;
     if(TMR0IF){
@@ -6141,19 +6183,22 @@ void estrela(){
     else if(!PORTCbits.RC3 && PORTCbits.RC4){
         moverMotor('d','f',60);
         moverMotor('e','t',60);
+        _delay((unsigned long)((200)*(20000000/4000.0)));
     }
     else if(PORTCbits.RC3 && !PORTCbits.RC4){
         moverMotor('d','t',60);
         moverMotor('e','f',60);
+        _delay((unsigned long)((200)*(20000000/4000.0)));
     }
     else if(!PORTCbits.RC3 && !PORTCbits.RC4){
         moverMotor('d','t',60);
         moverMotor('e','t',60);
-        _delay((unsigned long)((50)*(20000000/4000.0)));
+        _delay((unsigned long)((100)*(20000000/4000.0)));
         pararMotor();
-        _delay((unsigned long)((50)*(20000000/4000.0)));
+        _delay((unsigned long)((10)*(20000000/4000.0)));
         moverMotor('d','t',60);
         moverMotor('e','f',60);
+        _delay((unsigned long)((200)*(20000000/4000.0)));
     }
 }
 void toquinho(){
